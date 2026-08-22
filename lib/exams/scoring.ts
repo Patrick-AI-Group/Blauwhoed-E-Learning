@@ -1,0 +1,3 @@
+export type ScoredAnswer = { correct: boolean; security: boolean };
+export function scoreExam(answers: ScoredAnswer[], passPercentage: number) { const total = answers.length; const correct = answers.filter((item) => item.correct).length; const security = answers.filter((item) => item.security); const score = total ? Math.round((correct / total) * 100) : 0; const securityScore = security.length ? Math.round((security.filter((item) => item.correct).length / security.length) * 100) : 100; return { score, securityScore, passed: score >= passPercentage && securityScore === 100 }; }
+export function attemptExpired(startedAt: Date, limitMinutes: number, now = new Date()) { return now.getTime() >= startedAt.getTime() + limitMinutes * 60_000; }

@@ -1,0 +1,3 @@
+import { describe, expect, it } from "vitest";
+import { attemptExpired, scoreExam } from "@/lib/exams/scoring";
+describe("exam scoring", () => { it("vereist 100% security", () => expect(scoreExam([{ correct: true, security: false }, { correct: false, security: true }], 50).passed).toBe(false)); it("scoort correct", () => expect(scoreExam([{ correct: true, security: true }, { correct: true, security: false }], 70)).toEqual({ score: 100, securityScore: 100, passed: true })); it("autoriseert tijd server-side", () => expect(attemptExpired(new Date("2026-01-01T10:00:00Z"), 30, new Date("2026-01-01T10:31:00Z"))).toBe(true)); });
