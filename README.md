@@ -1,36 +1,33 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Blauwhoed AI Academy
 
-## Getting Started
+Intern e-learningplatform voor praktisch, veilig en verantwoord AI-gebruik binnen gebiedsontwikkeling. De applicatie gebruikt Next.js 15, Neon Postgres/Drizzle, Clerk Organizations, Anthropic, OpenAI embeddings, Upstash, Resend en Vercel Blob.
 
-First, run the development server:
+## Architectuur
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+```text
+app/                 App Router-pagina's, server actions en route handlers
+components/          toegankelijke UI en de split-view opdrachtwerkplek
+db/                  Drizzle-schema, migraties en volledige Nederlandse seed
+lib/auth             Clerk-identiteit en server-side rolcontrole
+lib/security         PII-detectie en beveiligingsregels
+lib/assignments      rubricbeoordeling en gevalideerde Claude-output
+lib/exams            server-side score-, security- en timerlogica
+tests/unit           Vitest voor gates, scoring en PII
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Alle voortgang, inzendingen en examens worden server-side opgeslagen. `/beheer` controleert rollen op de server. AI-invoer passeert de lokale PII-guard en Upstash-limieten voordat een externe API wordt aangeroepen.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Lokaal starten
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. Kopieer `.env.example` naar `.env.local` en vul de accountsleutels in.
+2. Activeer Organizations in Clerk en zet `publicMetadata.role` op een ondersteunde rol.
+3. Voer `pnpm db:migrate` en daarna `pnpm db:seed` uit.
+4. Start met `pnpm dev`.
 
-## Learn More
+De seed levert 4 tracks, 21 modules, 84 lessen, 45 praktijkopdrachten, 200 examenvragen, 8 examens, 15 kennisdocumenten, 25 voorbeeldprompts en 8 demogebruikers. De demo-e-mailadressen eindigen bewust op `.invalid`.
 
-To learn more about Next.js, take a look at the following resources:
+## Validatie en uitrol
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Gebruik `pnpm test` en `pnpm build`. Koppel de repository daarna aan Vercel, voeg dezelfde omgevingsvariabelen toe en gebruik Neon als productie-Postgres. `vercel.json` plant de dagelijkse retentiecontrole. Stel voor productie een eigen Clerk-domein, Microsoft Entra SSO, Resend-domeinvalidatie en Blob-token in.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Certificaat-PDF's en uploads zijn ontworpen voor private Vercel Blob-opslag; publieke verificatie toont uitsluitend naam, niveau, datum en geldigheid. Chattranscripten worden na 12 maanden leeggemaakt en examenpogingen na 24 maanden verwijderd. Certificaten blijven 7 jaar bewaard.
