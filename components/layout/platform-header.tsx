@@ -1,0 +1,4 @@
+import Link from "next/link";
+import { Logo } from "./logo";
+const links = [["Leren", "/leren"], ["Opdrachten", "/opdrachten"], ["Certificaten", "/certificaten"], ["Kennisbank", "/kennisbank"], ["Beheer", "/beheer"]];
+export function PlatformHeader() { return <header className="sticky top-0 z-40 border-b bg-white/95 backdrop-blur"><div className="container-page flex h-16 items-center justify-between"><Logo/><nav className="hidden items-center gap-6 text-sm md:flex" aria-label="Platformnavigatie">{links.map(([label, href]) => <Link key={href} href={href} className="hover:text-bh-blue-600">{label}</Link>)}</nav><div className="flex items-center gap-4 text-sm"><span className="text-bh-grey-600">NL</span><div className="grid h-9 w-9 place-items-center rounded-full bg-bh-blue-100 font-medium text-bh-blue-900" aria-label="Profiel van Noor de Wit">NW</div></div></div></header>; }

@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+:root {
+  --bh-blue-900: #14284b;
+  --bh-blue-600: #2b5797;
+  --bh-blue-100: #e8eef7;
+  --bh-ink: #1a1a1a;
+  --bh-grey-600: #6b7280;
+  --bh-grey-200: #e5e7eb;
+  --bh-canvas: #ffffff;
+  --bh-sand: #f5f2ed;
+  --bh-green: #2e7d5b;
+  --bh-amber: #c97a16;
+  --bh-red: #b3261e;
+}
+
+@theme inline {
+  --color-bh-blue-900: var(--bh-blue-900);
+  --color-bh-blue-600: var(--bh-blue-600);
+  --color-bh-blue-100: var(--bh-blue-100);
+  --color-bh-ink: var(--bh-ink);
+  --color-bh-grey-600: var(--bh-grey-600);
+  --color-bh-grey-200: var(--bh-grey-200);
+  --color-bh-canvas: var(--bh-canvas);
+  --color-bh-sand: var(--bh-sand);
+  --color-bh-green: var(--bh-green);
+  --color-bh-amber: var(--bh-amber);
+  --color-bh-red: var(--bh-red);
+  --font-sans: var(--font-inter-tight);
+}
+
+* { border-color: var(--bh-grey-200); }
+html { scroll-behavior: smooth; }
+body { background: var(--bh-canvas); color: var(--bh-ink); font-size: 1rem; line-height: 1.65; }
+a, button, input, textarea, select { outline-offset: 3px; }
+:focus-visible { outline: 2px solid var(--bh-blue-600); }
+::selection { background: var(--bh-blue-100); color: var(--bh-blue-900); }
+.container-page { width: min(100% - 2rem, 80rem); margin-inline: auto; }
+.text-balance { text-wrap: balance; }
+@media (min-width: 768px) { .container-page { width: min(100% - 4rem, 80rem); } }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; } }
