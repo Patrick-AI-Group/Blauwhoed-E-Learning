@@ -1,0 +1,5 @@
+import { desc } from "drizzle-orm";
+import { db } from "@/db";
+import { knowledgeDocuments } from "@/db/schema";
+export const dynamic = "force-dynamic";
+export default async function KnowledgePage() { const docs = await db.select().from(knowledgeDocuments).orderBy(desc(knowledgeDocuments.updatedAt)).limit(30); return <main className="container-page py-12"><p className="text-sm text-bh-blue-600">Betrouwbare bronnen</p><h1 className="mt-3 text-5xl font-normal text-bh-blue-900">Kennisbank</h1><form className="mt-10 max-w-2xl"><label htmlFor="q" className="sr-only">Zoeken</label><input id="q" name="q" className="w-full rounded-lg border px-5 py-4" placeholder="Zoek in AI-beleid, handleidingen en voorbeelden…"/></form><div className="mt-10 grid gap-4 md:grid-cols-2">{docs.map((doc) => <article key={doc.id} className="rounded-lg border p-6"><p className="text-sm text-bh-blue-600">{doc.type}</p><h2 className="mt-4 text-xl text-bh-blue-900">{doc.titel}</h2><p className="mt-2 text-sm text-bh-grey-600">Bron: {doc.bron}</p></article>)}</div></main>; }
