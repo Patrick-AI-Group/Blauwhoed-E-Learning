@@ -23,7 +23,7 @@ export default async function UsersAdmin() {
       </p>
       <form
         action={inviteUsersCsv}
-        className="mt-8 flex flex-wrap items-end gap-3 rounded-lg border bg-white p-5"
+        className="mt-8 card flex flex-wrap items-end gap-3 p-5"
       >
         <label className="grid gap-1 text-sm">
           Bulk uitnodigen via CSV
@@ -34,17 +34,17 @@ export default async function UsersAdmin() {
             name="file"
             type="file"
             accept=".csv,text/csv"
-            className="rounded-lg border p-2"
+            className="card p-2"
             required
           />
         </label>
-        <button className="rounded-lg bg-bh-blue-900 px-4 py-2.5 text-white">
+        <button className="btn btn-primary btn-sm">
           Uitnodigingen versturen
         </button>
       </form>
-      <div className="mt-6 overflow-x-auto rounded-lg border bg-white">
+      <div className="card mt-6 overflow-x-auto">
         <table className="w-full text-left text-sm">
-          <thead className="bg-bh-sand">
+          <thead className="bg-bh-sand text-xs font-bold uppercase tracking-wider text-bh-grey-600">
             <tr>
               <th className="p-4">Naam</th>
               <th>Afdeling</th>
@@ -69,13 +69,13 @@ export default async function UsersAdmin() {
                     <select
                       name="role"
                       defaultValue={item.rol}
-                      className="rounded-lg border px-2 py-1.5"
+                      className="field !w-auto !py-1.5"
                     >
                       {roles.map((role) => (
                         <option key={role}>{role}</option>
                       ))}
                     </select>
-                    <button className="rounded-lg bg-bh-blue-900 px-3 py-1.5 text-white">
+                    <button className="btn btn-primary btn-sm">
                       Opslaan
                     </button>
                   </form>

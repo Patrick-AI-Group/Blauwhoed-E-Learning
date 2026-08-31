@@ -30,7 +30,7 @@ export function ExamStart({ examId }: { examId: string }) {
           })
         }
         disabled={pending}
-        className="mt-8 rounded-lg bg-bh-blue-900 px-6 py-3 text-white"
+        className="btn btn-primary mt-8"
       >
         {pending ? "Examen voorbereiden…" : "Start examen"}
       </button>
@@ -86,7 +86,7 @@ export function ExamRunner({
   const question = questions[index];
   if (result)
     return (
-      <section className="mx-auto max-w-2xl rounded-lg border p-10 text-center">
+      <section className="card mx-auto max-w-2xl p-10 text-center">
         <CheckCircle2
           className={`mx-auto ${result.passed ? "text-bh-green" : "text-bh-red"}`}
           size={44}
@@ -139,7 +139,7 @@ export function ExamRunner({
             style={{ width: `${((index + 1) / questions.length) * 100}%` }}
           />
         </div>
-        <h1 className="text-3xl font-normal leading-snug text-bh-blue-900">
+        <h1 className="text-3xl leading-snug text-bh-blue-900">
           {question.vraag}
         </h1>
         {question.type === "scenario_open" ? (
@@ -149,7 +149,7 @@ export function ExamRunner({
               setAnswers({ ...answers, [question.id]: event.target.value })
             }
             onBlur={(event) => choose(event.target.value)}
-            className="mt-8 min-h-48 w-full rounded-lg border p-4"
+            className="mt-8 min-h-48 w-full card p-4"
             aria-label="Antwoord"
           />
         ) : (
@@ -179,7 +179,7 @@ export function ExamRunner({
                       );
                     } else choose(value);
                   }}
-                  className={`rounded-lg border p-4 text-left ${selected ? "border-bh-blue-600 bg-bh-blue-100" : "hover:bg-bh-sand"}`}
+                  className={`card p-4 text-left ${selected ? "border-bh-blue-600 bg-bh-blue-50 font-semibold" : "bg-white hover:border-bh-blue-600 hover:bg-bh-blue-50"}`}
                 >
                   {option}
                 </button>
@@ -195,14 +195,14 @@ export function ExamRunner({
         <button
           disabled={index === 0}
           onClick={() => setIndex(index - 1)}
-          className="rounded-lg border px-5 py-2.5 disabled:opacity-40"
+          className="btn btn-outline btn-sm"
         >
           Vorige
         </button>
         {index < questions.length - 1 ? (
           <button
             onClick={() => setIndex(index + 1)}
-            className="rounded-lg bg-bh-blue-900 px-5 py-2.5 text-white"
+            className="btn btn-primary btn-sm"
           >
             Volgende
           </button>
@@ -214,7 +214,7 @@ export function ExamRunner({
                 setResult(await submitExam({ attemptId })),
               )
             }
-            className="rounded-lg bg-bh-green px-5 py-2.5 text-white"
+            className="btn btn-primary btn-sm !bg-bh-green"
           >
             {pending ? "Inleveren…" : "Examen inleveren"}
           </button>

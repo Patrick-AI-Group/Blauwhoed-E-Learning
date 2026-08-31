@@ -4,7 +4,7 @@ import { db } from "@/db";
 import { questions, tracks } from "@/db/schema";
 import { saveQuestion, softDelete } from "@/lib/actions/admin";
 export const dynamic = "force-dynamic";
-const field = "rounded-lg border px-3 py-2";
+const field = "field";
 export default async function QuestionsAdmin({
   searchParams,
 }: {
@@ -25,7 +25,7 @@ export default async function QuestionsAdmin({
     <main>
       <h1 className="text-4xl text-bh-blue-900">Vragenbank</h1>
       <div className="mt-8 grid gap-6 xl:grid-cols-[1fr_1fr]">
-        <section className="rounded-lg border bg-white p-5">
+        <section className="card p-5">
           <div className="max-h-[680px] divide-y overflow-auto">
             {items.map((item) => (
               <Link
@@ -52,7 +52,7 @@ export default async function QuestionsAdmin({
             ))}
           </div>
         </section>
-        <section className="rounded-lg border bg-white p-6">
+        <section className="card p-6">
           <h2 className="text-xl">
             {selected ? "Vraag bewerken" : "Vraag toevoegen"}
           </h2>
@@ -130,7 +130,7 @@ export default async function QuestionsAdmin({
               />{" "}
               Security/AVG
             </label>
-            <button className="rounded-lg bg-bh-blue-900 px-4 py-2.5 text-white">
+            <button className="btn btn-primary btn-sm">
               Opslaan
             </button>
           </form>

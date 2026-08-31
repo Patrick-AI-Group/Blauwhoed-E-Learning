@@ -64,7 +64,7 @@ export default async function ExamPage({
   }
   return (
     <main className="container-page py-12">
-      <div className="max-w-3xl rounded-lg border p-8 md:p-12">
+      <div className="card max-w-3xl p-8 md:p-12">
         <div className="flex gap-3 text-sm">
           <Link
             href={`/examen/${slug}`}
@@ -80,7 +80,7 @@ export default async function ExamPage({
             Securitydeeltoets
           </Link>
         </div>
-        <h1 className="mt-5 text-5xl font-normal text-bh-blue-900">
+        <h1 className="mt-5 text-5xl text-bh-blue-900">
           {exam.titel}
         </h1>
         <p className="mt-6 text-lg text-bh-grey-600">

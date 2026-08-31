@@ -4,7 +4,7 @@ import { db } from "@/db";
 import { knowledgeChunks, knowledgeDocuments } from "@/db/schema";
 import { saveKnowledgeDocument, softDelete } from "@/lib/actions/admin";
 export const dynamic = "force-dynamic";
-const field = "rounded-lg border px-3 py-2";
+const field = "field";
 export default async function KnowledgeAdmin({
   searchParams,
 }: {
@@ -31,7 +31,7 @@ export default async function KnowledgeAdmin({
         tutor.
       </p>
       <div className="mt-8 grid gap-6 xl:grid-cols-2">
-        <section className="rounded-lg border bg-white p-5">
+        <section className="card p-5">
           {items.map((item) => (
             <Link
               key={item.id}
@@ -43,7 +43,7 @@ export default async function KnowledgeAdmin({
             </Link>
           ))}
         </section>
-        <section className="rounded-lg border bg-white p-6">
+        <section className="card p-6">
           <h2 className="text-xl">
             {selected ? "Document bewerken" : "Document toevoegen"}
           </h2>
@@ -86,7 +86,7 @@ export default async function KnowledgeAdmin({
               placeholder="Volledige goedgekeurde brontekst"
               required
             />
-            <button className="rounded-lg bg-bh-blue-900 px-4 py-2.5 text-white">
+            <button className="btn btn-primary btn-sm">
               Opslaan en indexeren
             </button>
           </form>

@@ -4,7 +4,7 @@ import { db } from "@/db";
 import { assignments, modules } from "@/db/schema";
 import { saveAssignment, softDelete } from "@/lib/actions/admin";
 export const dynamic = "force-dynamic";
-const field = "rounded-lg border px-3 py-2";
+const field = "field";
 export default async function AssignmentAdmin({
   searchParams,
 }: {
@@ -24,7 +24,7 @@ export default async function AssignmentAdmin({
     <main>
       <h1 className="text-4xl text-bh-blue-900">Opdrachten beheren</h1>
       <div className="mt-8 grid gap-6 xl:grid-cols-2">
-        <section className="max-h-[760px] divide-y overflow-auto rounded-lg border bg-white p-5">
+        <section className="card max-h-[760px] divide-y overflow-auto p-5">
           {items.map((item) => (
             <Link
               key={item.id}
@@ -38,7 +38,7 @@ export default async function AssignmentAdmin({
             </Link>
           ))}
         </section>
-        <section className="rounded-lg border bg-white p-6">
+        <section className="card p-6">
           <h2 className="text-xl">
             {selected ? "Opdracht bewerken" : "Opdracht toevoegen"}
           </h2>
@@ -127,7 +127,7 @@ export default async function AssignmentAdmin({
                 required
               />
             </label>
-            <button className="rounded-lg bg-bh-blue-900 px-4 py-2.5 text-white">
+            <button className="btn btn-primary btn-sm">
               Opslaan
             </button>
           </form>
