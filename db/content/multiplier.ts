@@ -41,7 +41,7 @@ const track: TrackSeed = {
               {
                 heading: "Van longlist naar shortlist",
                 body:
-                  "Een goede scan levert eerst een brede longlist op — tien tot twintig taken is normaal voor een afdeling. Daarna volgt de trechter. Schrap eerst de taken met verboden invoer die niet redelijkerwijs te anonimiseren is: alles rond individuele persoonsgegevens, biedstrategieën en grondposities valt af of vraagt eerst een aangepaste werkwijze. Schrap vervolgens taken waar de tijdwinst verwaarloosbaar is: een kwartier per maand automatiseren is de implementatie-inspanning zelden waard. Wat overblijft is je shortlist van drie tot vijf kansen die je in de volgende les gaat prioriteren. Leg per kans vast wat de taak nu kost, wat er mis kan gaan en wie de taak uitvoert. Dat lijkt administratie, maar het is je bewijsmateriaal: zonder deze onderbouwing wordt elk gesprek met je teamlead over prioriteiten een welles-nietesdiscussie op onderbuikgevoel.",
+                  "Een goede scan levert eerst een brede longlist op — tien tot twintig taken is normaal voor een afdeling. Daarna volgt de trechter. Schrap eerst de taken met persoonsgegevens die niet redelijkerwijs te anonimiseren zijn: die vallen af of vragen eerst een aangepaste werkwijze. Taken met vertrouwelijke bedrijfsinformatie — biedstrategieën, grondposities — vallen niet per se af, maar vragen een check: mag dit dataniveau in de tool die je voor ogen hebt, en is dat de moeite waard gezien de impact? Schrap vervolgens taken waar de tijdwinst verwaarloosbaar is: een kwartier per maand automatiseren is de implementatie-inspanning zelden waard. Wat overblijft is je shortlist van drie tot vijf kansen die je in de volgende les gaat prioriteren. Leg per kans vast wat de taak nu kost, wat er mis kan gaan en wie de taak uitvoert. Dat lijkt administratie, maar het is je bewijsmateriaal: zonder deze onderbouwing wordt elk gesprek met je teamlead over prioriteiten een welles-nietesdiscussie op onderbuikgevoel.",
               },
             ],
             takeaway:
@@ -64,7 +64,7 @@ const track: TrackSeed = {
               {
                 heading: "Scoor mee: zes taken van team Verkoop Rivierzicht",
                 body:
-                  "Neem het fictieve verkoopteam van project Rivierzicht. Scoor deze zes taken zelf voordat je verder leest: 1) wekelijkse veelgestelde vragen van kopers beantwoorden per e-mail, 2) de VON-prijslijst per woningtype actualiseren, 3) bezichtigingen inplannen met optanten, 4) verslagen van kopersgesprekken samenvatten voor het dossier, 5) de maandelijkse verkooprapportage voor de directie opstellen, 6) een boze koper te woord staan over een opleverdatum. Uitwerking: taken 1, 4 en 5 scoren op alle drie of twee signalen — repetitief tekstwerk waar onder tijdsdruk fouten in sluipen. Taak 3 is repetitief maar nauwelijks tekstueel; agendasoftware helpt hier meer dan een taalmodel. Taak 2 bevat individuele prijsinformatie die niet in een AI-tool thuishoort. Taak 6 is menselijk maatwerk: hier telt empathie, niet efficiëntie. Vergelijk je eigen scores met deze uitwerking en analyseer vooral de plekken waar je afweek — daar zit je leerwinst.",
+                  "Neem het fictieve verkoopteam van project Rivierzicht. Scoor deze zes taken zelf voordat je verder leest: 1) wekelijkse veelgestelde vragen van kopers beantwoorden per e-mail, 2) de VON-prijslijst per woningtype actualiseren, 3) bezichtigingen inplannen met optanten, 4) verslagen van kopersgesprekken samenvatten voor het dossier, 5) de maandelijkse verkooprapportage voor de directie opstellen, 6) een boze koper te woord staan over een opleverdatum. Uitwerking: taken 1, 4 en 5 scoren op alle drie of twee signalen — repetitief tekstwerk waar onder tijdsdruk fouten in sluipen. Taak 3 is repetitief maar nauwelijks tekstueel; agendasoftware helpt hier meer dan een taalmodel. Taak 2 is grotendeels overtypen van vaste velden; een spreadsheet-koppeling helpt hier meer dan een taalmodel. Taak 6 is menselijk maatwerk: hier telt empathie, niet efficiëntie. Vergelijk je eigen scores met deze uitwerking en analyseer vooral de plekken waar je afweek — daar zit je leerwinst.",
                 example:
                   "Let op taak 4: kopersgesprekken bevatten persoonsgegevens. De taak scoort hoog op AI-potentieel, maar kan alleen door met geanonimiseerde verslagen te werken — namen vervangen door rollen vóór de AI-stap. Potentieel en randvoorwaarde noteer je allebei.",
               },
@@ -93,7 +93,7 @@ const track: TrackSeed = {
                 body:
                   "Zet elke kans op twee assen. Impact: hoeveel tijd of kwaliteit levert het op, voor hoeveel mensen, hoe vaak? Risico: wat kan er misgaan — met persoonsgegevens, met vertrouwelijke projectinformatie, met fouten die extern zichtbaar worden? Zo ontstaan vier kwadranten. Hoge impact, laag risico: hier begin je, dit zijn je startkansen. Hoge impact, hoog risico: hier is de winst groot maar zijn eerst maatregelen nodig, zoals anonimisering, een DPIA-light of extra controle — plan deze als tweede golf. Lage impact, laag risico: prima oefenmateriaal voor collega's die nog moeten wennen, maar geen prioriteit. Lage impact, hoog risico: bewust niet doen, en leg vast wáárom niet, zodat de vraag niet elk kwartaal terugkomt. Presenteer de matrix aan je teamlead als voorstel, niet als voldongen feit: de teamlead kent afwegingen die jij niet ziet, zoals aankomende reorganisaties of lopende gevoeligheden.",
                 example:
-                  "In de matrix van het fictieve team Tenders & Acquisitie belandde 'eisen extraheren uit openbare uitvraagdocumenten' in het startkwadrant: veel tijdwinst, openbare stukken, laag risico. 'Conceptbiedingen laten aanscherpen door AI' belandde bij bewust-niet-doen: biedstrategieën zijn verboden invoer.",
+                  "In de matrix van het fictieve team Tenders & Acquisitie belandde 'eisen extraheren uit openbare uitvraagdocumenten' in het startkwadrant: veel tijdwinst, openbare stukken, laag risico. 'Conceptbiedingen laten aanscherpen door AI' belandde bij bewust-niet-doen: het risico dat een onopgemerkte AI-aanname in de biedstrategie sluipt weegt zwaarder dan de tijdwinst, ook al mag de informatie zelf in Copilot.",
               },
               {
                 heading: "Klein beginnen is een strategie, geen gebrek aan ambitie",
@@ -297,7 +297,7 @@ const track: TrackSeed = {
       geschatteMinuten: 50,
       lessons: [
         {
-          titel: "Vijf rollen, één keten van verantwoordelijkheid",
+          titel: "Zes rollen, één keten van verantwoordelijkheid",
           type: "tekst",
           geschatteMinuten: 12,
           content: {
@@ -307,7 +307,7 @@ const track: TrackSeed = {
               {
                 heading: "De rollen en hun kern",
                 body:
-                  "Vijf rollen dragen samen het AI-gebruik bij Blauwhoed. De gebruiker is en blijft verantwoordelijk voor elke toepassing van AI-output in het werk — die verantwoordelijkheid is niet overdraagbaar aan het model, de tool of een collega die 'zei dat het mocht'. De teamlead ziet toe op verantwoord gebruik binnen het team, neemt besluiten over toepassingen en kan herkansingen voor examens toekennen. De beoordelaar toetst ingeleverde opdrachten in de Academy. De privacycontactpersoon beslist over alles wat persoonsgegevens raakt: van de vraag of iets gedeeld mag worden tot de beoordeling of een DPIA-light volstaat. En de multiplier — jij — begeleidt collega's, signaleert kansen en risico's in de afdeling en is het eerste aanspreekpunt vóór de formele kanalen. Onthoud het patroon: de gebruiker doet, de teamlead besluit, de multiplier begeleidt en signaleert, de privacycontactpersoon beslist over privacy. Wie welke pet draagt, moet in elke situatie in één zin te benoemen zijn.",
+                  "Zes rollen dragen samen het AI-gebruik bij Blauwhoed. De gebruiker is en blijft verantwoordelijk voor elke toepassing van AI-output in het werk — die verantwoordelijkheid is niet overdraagbaar aan het model, de tool of een collega die 'zei dat het mocht'. De teamlead ziet toe op verantwoord gebruik binnen het team, neemt besluiten over toepassingen en kan herkansingen voor examens toekennen. De beoordelaar toetst ingeleverde opdrachten in de Academy. De privacycontactpersoon beslist over alles wat persoonsgegevens raakt: van de vraag of iets gedeeld mag worden tot de beoordeling of een DPIA-light volstaat. De AI-coördinator beheert het toolregister en de aanvraagprocedure, organiseert de jaarlijkse beleidsreview en is mede-ontvanger van incidentmeldingen — het aanspreekpunt voor de vraag 'welke tools mogen wat', naast de privacycontactpersoon die beslist over 'wat mag met wiens gegevens'. En de multiplier — jij — begeleidt collega's, signaleert kansen en risico's in de afdeling en is het eerste aanspreekpunt vóór de formele kanalen. Onthoud het patroon: de gebruiker doet, de teamlead besluit, de multiplier begeleidt en signaleert, de privacycontactpersoon beslist over privacy, de AI-coördinator beheert het instrumentarium. Wie welke pet draagt, moet in elke situatie in één zin te benoemen zijn.",
                 example:
                   "Een medewerker van het fictieve team Kopersbegeleiding wil AI inzetten om klachtenmails samen te vatten. De gebruiker voert uit en blijft verantwoordelijk voor de samenvattingen; de multiplier helpt met de werkstroom en anonimisering; de teamlead besluit of het team dit gaat doen; de privacycontactpersoon beoordeelt de omgang met de persoonsgegevens in de klachten.",
               },
@@ -325,7 +325,7 @@ const track: TrackSeed = {
               },
             ],
             takeaway:
-              "Ken de vijf rollen en blijf in de jouwe: de multiplier begeleidt en signaleert, de teamlead besluit, de privacycontactpersoon oordeelt over privacy — en die keten beschermt iedereen, ook jou.",
+              "Ken de zes rollen en blijf in de jouwe: de multiplier begeleidt en signaleert, de teamlead besluit, de privacycontactpersoon oordeelt over privacy, de AI-coördinator beheert het instrumentarium — en die keten beschermt iedereen, ook jou.",
           },
         },
         {
@@ -410,7 +410,7 @@ const track: TrackSeed = {
               {
                 heading: "Woensdag: het stille incident",
                 body:
-                  "Bij de koffieautomaat vangt Fatima op dat een junior collega 'laatst iets stoms deed met dat AI-ding' — een conceptversie van de grondbiedingsstrategie voor een tenderlocatie zou in een AI-tool zijn geplakt om er een presentatie van te maken. De collega zelf zwijgt erover; ze hoort het van een ander. Dit is de lastigste situatie uit de week: een vermoeden van een serieus incident (tenderstukken en biedstrategieën zijn verboden invoer), maar tweedehands informatie en een collega die zich duidelijk schaamt. Wat níet kan: het negeren omdat het geruchtencircuit geen officiële melding is — een vermoeden van een incident met vertrouwelijke stukken moet de incidentroute in. Wat óók niet kan: de collega publiekelijk confronteren of de melding buiten hem om afhandelen alsof hij verdachte is. Fatima kiest de directe, menselijke route: ze zoekt de collega dezelfde dag persoonlijk op, benoemt wat ze hoorde, en legt uit dat melden geen sanctie oplevert maar verzwijgen wel. Samen doen ze binnen het uur de melding bij IT en de privacycontactpersoon, met de feiten die de collega zelf het beste kent: welke tool, welke versie van het stuk, wanneer.",
+                  "Bij de koffieautomaat vangt Fatima op dat een junior collega 'laatst iets stoms deed met dat AI-ding' — een conceptversie van de grondbiedingsstrategie voor een tenderlocatie zou in een AI-tool zijn geplakt om er een presentatie van te maken. De collega zelf zwijgt erover; ze hoort het van een ander. Dit is de lastigste situatie uit de week: een vermoeden van een serieus incident — 'dat AI-ding' klinkt niet als Copilot onder een Blauwhoed-account, en zolang niet vaststaat welke tool het was, moet je ervan uitgaan dat vertrouwelijke tenderstukken buiten een gedekte omgeving zijn beland — maar tweedehands informatie en een collega die zich duidelijk schaamt. Wat níet kan: het negeren omdat het geruchtencircuit geen officiële melding is — een vermoeden van een incident met vertrouwelijke stukken moet de incidentroute in, al was het maar om vast te stellen welke tool het was en of er reden tot zorg is. Wat óók niet kan: de collega publiekelijk confronteren of de melding buiten hem om afhandelen alsof hij verdachte is. Fatima kiest de directe, menselijke route: ze zoekt de collega dezelfde dag persoonlijk op, benoemt wat ze hoorde, en legt uit dat melden geen sanctie oplevert maar verzwijgen wel. Samen doen ze binnen het uur de melding bij IT en de privacycontactpersoon, met de feiten die de collega zelf het beste kent: welke tool, welke versie van het stuk, wanneer.",
               },
               {
                 heading: "Vrijdag: de teamlead die het te druk heeft",
@@ -1372,7 +1372,7 @@ const track: TrackSeed = {
         "De collega in het teamoverleg vragen of het klopt",
       ],
       juist: 1,
-      toelichting: "Een vermoeden van een incident met verboden invoer moet de meldroute in, maar menselijk: direct en persoonlijk, zonder publieke confrontatie, met de nadruk dat melden geen sanctie oplevert.",
+      toelichting: "Zolang niet vaststaat welke tool het was, moet je uitgaan van het risico dat vertrouwelijke tenderstukken buiten een gedekte omgeving zijn beland; een vermoeden van zo'n incident moet de meldroute in, maar menselijk: direct en persoonlijk, zonder publieke confrontatie, met de nadruk dat melden geen sanctie oplevert.",
       tags: ["security", "verantwoordelijkheid"],
       moeilijkheid: 5,
       isSecurity: true,
@@ -1407,7 +1407,7 @@ const track: TrackSeed = {
       moduleSlug: "ai-kansen-scannen",
       titel: "AI-kansenscan voor team Kust & Kade",
       opdrachttekst:
-        "Het fictieve team Kust & Kade (acht personen) werkt aan een binnenstedelijke herontwikkeling met 120 woningen en voert onder meer deze taken uit: participatieverslagen uitwerken, wekelijkse voortgangsrapportages opstellen, kopersvragen beantwoorden, tenderuitvragen analyseren, bewonersbrieven schrijven en biedingsstrategieën voorbereiden. Voer voor dit team een AI-kansenscan uit. Scoor minimaal zes taken op de drie signalen (repetitief, tekstueel, foutgevoelig) met per taak één zin onderbouwing. Plaats de taken vervolgens in de impact-risicomatrix en benoem expliciet welke taken afvallen vanwege verboden invoer. Sluit af met een gemotiveerde keuze voor één startkans, inclusief de randvoorwaarden die vóór de start geregeld moeten zijn.",
+        "Het fictieve team Kust & Kade (acht personen) werkt aan een binnenstedelijke herontwikkeling met 120 woningen en voert onder meer deze taken uit: participatieverslagen uitwerken, wekelijkse voortgangsrapportages opstellen, kopersvragen beantwoorden, tenderuitvragen analyseren, bewonersbrieven schrijven en biedingsstrategieën voorbereiden. Voer voor dit team een AI-kansenscan uit. Scoor minimaal zes taken op de drie signalen (repetitief, tekstueel, foutgevoelig) met per taak één zin onderbouwing. Plaats de taken vervolgens in de impact-risicomatrix en benoem expliciet welk dataniveau (openbaar, intern, vertrouwelijk of persoonsgegevens) elke taak raakt en welke randvoorwaarde daarbij hoort. Sluit af met een gemotiveerde keuze voor één startkans, inclusief de randvoorwaarden die vóór de start geregeld moeten zijn.",
       moeilijkheid: 3,
       type: "workflow",
       rubric: {
@@ -1427,9 +1427,9 @@ const track: TrackSeed = {
             gewicht: 30,
             max: 30,
             niveaus: {
-              goed: "Taken met verboden invoer (zoals biedingsstrategieën) zijn expliciet uitgesloten of van randvoorwaarden voorzien, met juiste verwijzing naar het beleid.",
-              voldoende: "Risicovolle taken zijn deels herkend, maar de uitsluiting of randvoorwaarde is niet overal scherp benoemd.",
-              onvoldoende: "Taken met verboden invoer zijn zonder voorbehoud als kans opgenomen.",
+              goed: "Taken met een hoger dataniveau zijn correct herkend en van passende randvoorwaarden voorzien (bijvoorbeeld: biedingsstrategieën alleen in Copilot of de Academy, kopersvragen pas na anonimisering of DPIA-light), met juiste verwijzing naar de dataclassificatie.",
+              voldoende: "Risicovolle taken zijn deels herkend, maar de randvoorwaarde is niet overal scherp benoemd.",
+              onvoldoende: "Taken met een hoger dataniveau zijn zonder enige randvoorwaarde als kans opgenomen.",
             },
           },
           {
@@ -1451,7 +1451,7 @@ const track: TrackSeed = {
         aangeleverdeTaken: 6,
       },
       referentieUitwerking:
-        "Een sterke uitwerking scoort alle zes taken expliciet en sluit biedingsstrategieën direct uit als verboden invoer, met verwijzing naar het AI-gebruiksbeleid. Participatieverslagen en voortgangsrapportages komen als beste kansen uit de matrix; kopersvragen krijgen de randvoorwaarde van anonimisering. De startkeuze valt op één kleine, zichtbare taak — bijvoorbeeld voortgangsrapportages — met als randvoorwaarden een nulmeting, een goedgekeurde tool en een afgesproken controleslag. De motivatie verwijst naar snelheid van zichtbaar resultaat en laag risico, niet naar de indrukwekkendste technologie.",
+        "Een sterke uitwerking scoort alle zes taken expliciet en herkent biedingsstrategieën als vertrouwelijk — toegestaan in Copilot en de Academy, maar met de kanttekening dat het team dit soort AI-ondersteuning bewust beperkt tot een direct gecontroleerd gesprek in plaats van een geautomatiseerde werkstroom. Participatieverslagen en voortgangsrapportages komen als beste kansen uit de matrix; kopersvragen krijgen de randvoorwaarde van anonimisering, want dat raakt persoonsgegevens. De startkeuze valt op één kleine, zichtbare taak — bijvoorbeeld voortgangsrapportages — met als randvoorwaarden een nulmeting, een goedgekeurde tool en een afgesproken controleslag. De motivatie verwijst naar snelheid van zichtbaar resultaat en laag risico, niet naar de indrukwekkendste technologie.",
       beoordeling: "ai",
     },
     {
@@ -1663,6 +1663,56 @@ const track: TrackSeed = {
       beoordeling: "beide",
     },
     {
+      moduleSlug: "verantwoordelijkheden",
+      titel: "AI-coördinator of privacycontactpersoon: wie pak je erbij?",
+      opdrachttekst:
+        "Vier collega's uit de fictieve afdeling Ontwikkeling Meerzicht kloppen in dezelfde week bij je aan. (1) Een collega wil weten welke stappen ze moet zetten om een nieuwe beeldgeneratie-app voor sfeerimpressies te laten goedkeuren. (2) Een collega twijfelt of een klachtenoverzicht na haar anonimisering echt niet meer herleidbaar is. (3) Een teamlid vraagt zich af of het AI-beleid nog wel klopt, nu er vorige maand een incident was met een niet-goedgekeurde tool. (4) Een collega wil weten welke tools zijn goedgekeurd voor contractanalyse en wie daar de tooleigenaar van is. Bepaal per vraag of die naar de AI-coördinator gaat, naar de privacycontactpersoon, naar beiden, of dat je hem zelf beantwoordt — en leg in één zin per vraag uit waarom.",
+      moeilijkheid: 3,
+      type: "veiligheidscasus",
+      rubric: {
+        criteria: [
+          {
+            naam: "Juiste routekeuze",
+            gewicht: 45,
+            max: 45,
+            niveaus: {
+              goed: "Alle vier de vragen krijgen de juiste route: aanvraagprocedure/AI-coördinator (1), privacycontactpersoon (2), AI-coördinator voor de jaarlijkse review-vraag (3), en zelf beantwoorden vanuit het toolregister (4).",
+              voldoende: "Drie van de vier routes zijn juist, met een verdedigbare motivering voor de afwijking.",
+              onvoldoende: "Meerdere routes zijn verwisseld, bijvoorbeeld een anonimiseringsoordeel zelf vellen of bij de AI-coördinator neerleggen.",
+            },
+          },
+          {
+            naam: "Onderscheid AI-coördinator versus privacycontactpersoon",
+            gewicht: 35,
+            max: 35,
+            niveaus: {
+              goed: "Legt scherp uit dat de AI-coördinator over het instrumentarium gaat (toolregister, aanvraagprocedure, jaarlijkse review) en de privacycontactpersoon over privacy-oordelen over concrete gegevens.",
+              voldoende: "Het onderscheid is aanwezig maar wordt niet bij elke vraag consequent toegepast.",
+              onvoldoende: "De twee rollen worden door elkaar gehaald of als uitwisselbaar behandeld.",
+            },
+          },
+          {
+            naam: "Rolvastheid van de multiplier",
+            gewicht: 20,
+            max: 20,
+            niveaus: {
+              goed: "De multiplier beantwoordt alleen vraag 4 zelf (want dat staat vast in het toolregister) en oordeelt nergens zelf over privacy of toolgoedkeuring.",
+              voldoende: "De multiplier blijft grotendeels binnen de eigen rol, met één te stellige eigen inschatting.",
+              onvoldoende: "De multiplier velt zelf een privacy- of goedkeuringsoordeel dat bij een andere rol hoort.",
+            },
+          },
+        ],
+      },
+      startcontext: {
+        afdeling: "Ontwikkeling Meerzicht (fictief)",
+        vragen: 4,
+        rollen: ["AI-coördinator", "privacycontactpersoon", "multiplier"],
+      },
+      referentieUitwerking:
+        "Vraag 1 gaat naar de AI-coördinator: die beheert het toolregister en de aanvraagprocedure voor nieuwe vakspecifieke apps. Vraag 2 is een privacy-oordeel over een concrete dataset en gaat naar de privacycontactpersoon — geen enkele multiplier of coördinator velt dat oordeel zelf. Vraag 3 gaat naar de AI-coördinator: die organiseert de jaarlijkse beleidsreview en agendeert patronen uit incidentmeldingen. Vraag 4 beantwoordt de multiplier zelf: welke tools goedgekeurd zijn en wie tooleigenaar is, staat vast in het toolregister en is uitleggen wat vaststaat — geen oordeel over een onzekere situatie.",
+      beoordeling: "ai",
+    },
+    {
       moduleSlug: "dpia-light",
       titel: "DPIA-light voor de huurdersverzoeken-assistent",
       opdrachttekst:
@@ -1712,6 +1762,59 @@ const track: TrackSeed = {
       referentieUitwerking:
         "Een sterke uitwerking minimaliseert eerst: voor samenvatten en categoriseren zijn naam en telefoonnummer niet nodig en worden gezondheidsdetails waar mogelijk gefilterd vóór invoer. De drie risico's volgen het schema, zoals de urgente melding die als regulier wordt gecategoriseerd, herleidbare gegevens bij de leverancier, en huurders met gebrekkig Nederlands die slechter worden bediend; de maatregelen zijn respectievelijk een urgentiewoordenlijst met menselijke check dezelfde dag, anonimisering plus een goedgekeurde tool, en een maandelijkse steekproef per taalniveau. De eigenaar is bijvoorbeeld de coördinator dagelijks onderhoud, met herziening bij elke wijziging en minimaal jaarlijks. Het advies signaleert dat gezondheidsdetails een gevoelige categorie zijn en legt de light-of-volledig-vraag expliciet voor aan de privacycontactpersoon.",
       beoordeling: "handmatig",
+    },
+    {
+      moduleSlug: "dpia-light",
+      titel: "DPIA-light of volledige DPIA: de grens bepalen",
+      opdrachttekst:
+        "Vier fictieve afdelingen overwegen elk een nieuwe AI-toepassing, kort beschreven in de startcontext. Bepaal per toepassing of een DPIA-light volstaat of dat een volledige DPIA wettelijk verplicht is, en benoem welke trigger(s) daarbij de doorslag geven (groot risico voor betrokkenen, grote schaal, geautomatiseerde besluitvorming over personen zonder betekenisvolle menselijke tussenkomst, bijzondere persoonsgegevens zoals gezondheid). Geef per toepassing ook het praktische vervolgadvies: wie betrek je, en mag de toepassing al starten met voorbereidingen of moet alles wachten op de uitkomst?",
+      moeilijkheid: 4,
+      type: "document_analyse",
+      rubric: {
+        criteria: [
+          {
+            naam: "Juiste classificatie",
+            gewicht: 45,
+            max: 45,
+            niveaus: {
+              goed: "Alle vier de toepassingen krijgen de juiste classificatie (DPIA-light of volledige DPIA), met een correcte inschatting van de wettelijke verplichting.",
+              voldoende: "Drie van de vier classificaties zijn juist, met een navolgbare redenering bij de afwijking.",
+              onvoldoende: "Meerdere toepassingen zijn verkeerd geclassificeerd, of het onderscheid DPIA-light/volledig wordt niet gemaakt.",
+            },
+          },
+          {
+            naam: "Triggerherkenning",
+            gewicht: 35,
+            max: 35,
+            niveaus: {
+              goed: "Benoemt per toepassing de concrete trigger (schaal, geautomatiseerde besluitvorming, bijzondere gegevens) die de zwaarte bepaalt, niet alleen het eindoordeel.",
+              voldoende: "De triggers worden genoemd maar niet altijd gekoppeld aan de juiste toepassing.",
+              onvoldoende: "Triggers ontbreken; het oordeel oogt intuïtief in plaats van onderbouwd.",
+            },
+          },
+          {
+            naam: "Praktisch vervolgadvies",
+            gewicht: 20,
+            max: 20,
+            niveaus: {
+              goed: "Het advies is uitvoerbaar: helder wie wordt betrokken en of voorbereidingen door mogen lopen of alles moet wachten op de uitkomst.",
+              voldoende: "Het advies is aanwezig maar blijft algemeen ('overleggen met privacy').",
+              onvoldoende: "Er is geen vervolgadvies, of de toepassing mag ondanks een volledige-DPIA-trigger toch al starten.",
+            },
+          },
+        ],
+      },
+      startcontext: {
+        toepassingen: [
+          "Team Kopersbegeleiding: AI vat binnengekomen kopersvragen samen tot conceptantwoorden voor 40 kopers per project, een medewerker controleert en verstuurt.",
+          "Team HR: AI rangschikt binnengekomen sollicitaties automatisch op 'match met het functieprofiel' zonder menselijke voorselectie.",
+          "Team Verhuur & Beheer: AI categoriseert onderhoudsverzoeken van circa 2.000 huurders per jaar, waarin soms gezondheidsdetails staan (zie ook de vorige opdracht in deze module).",
+          "Team Communicatie: AI genereert eerste concepten voor nieuwsbriefteksten op basis van een door de redacteur aangeleverde puntenlijst, altijd mens gecontroleerd vóór verzending.",
+        ],
+      },
+      referentieUitwerking:
+        "Kopersbegeleiding: DPIA-light volstaat — persoonsgegevens op beperkte schaal, met menselijke controle vóór verzending; geen geautomatiseerde besluitvorming. HR: volledige DPIA verplicht — geautomatiseerde rangschikking van sollicitanten zonder menselijke tussenkomst is precies de combinatie die de wet als hoogrisico aanmerkt; dit mag niet starten voordat de DPIA is afgerond en waarschijnlijk niet zonder aanpassing van het proces. Verhuur & Beheer: DPIA-light kan, mits gezondheidsdetails als bijzondere categorie expliciet worden meegewogen en er een lage triggerdrempel voor opschaling naar een volledige DPIA wordt afgesproken bij groei van het volume. Communicatie: geen DPIA nodig — geen persoonsgegevens in de toepassing zelf. Het vervolgadvies verschilt navenant: HR wacht volledig op de uitkomst en betrekt juridisch, de andere drie kunnen met de lichte route en de juiste eigenaar door.",
+      beoordeling: "ai",
     },
     {
       moduleSlug: "collega-s-begeleiden",

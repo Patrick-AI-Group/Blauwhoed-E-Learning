@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { and, eq } from "drizzle-orm";
-import { ArrowLeft, Bot, Clock3, Lightbulb } from "lucide-react";
+import { ArrowLeft, Bot, Clock3, Lightbulb, Sparkles } from "lucide-react";
 import { notFound } from "next/navigation";
 import { db } from "@/db";
 import { lessons, modules, progress, tracks } from "@/db/schema";
@@ -36,7 +36,7 @@ export default async function LessonPage({ params }: { params: Promise<{ track: 
       </div>
       <div className="container-page grid gap-12 py-12 lg:grid-cols-[minmax(0,72ch)_300px]">
         <article className="card p-8 md:p-12">
-          <p className="inline-flex items-center gap-3"><span className="pill bg-bh-blue-50 capitalize text-bh-blue-700">{lesson.type}</span><span className="inline-flex items-center gap-1 text-sm text-bh-grey-600"><Clock3 size={14} /> {lesson.geschatteMinuten} minuten</span></p>
+          <p className="inline-flex flex-wrap items-center gap-3"><span className="pill bg-bh-blue-50 capitalize text-bh-blue-700">{lesson.type}</span><span className="inline-flex items-center gap-1 text-sm text-bh-grey-600"><Clock3 size={14} /> {lesson.geschatteMinuten} minuten</span>{lesson.type === "interactief" && <Link href={`/oefenen?lesson=${lesson.id}`} className="inline-flex items-center gap-1 pill bg-bh-blue-900 text-white hover:bg-bh-blue-600"><Sparkles size={14} /> Open in de oefenomgeving</Link>}</p>
           <h1 className="mt-5 text-4xl text-bh-blue-900 md:text-5xl">{lesson.titel}</h1>
           {content.intro && <p className="mt-7 text-xl leading-relaxed text-bh-grey-600">{content.intro}</p>}
           <PortableContent value={lesson.content} />

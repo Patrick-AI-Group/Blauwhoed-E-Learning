@@ -291,7 +291,7 @@ const track: TrackSeed = {
       titel: "Data en tabellen",
       doelen: [
         "Ongestructureerde informatie met AI omzetten naar bruikbare tabellen en vaste formats",
-        "AI de rekenopzet laten maken en de berekening zelf gecontroleerd uitvoeren",
+        "Beoordelen wanneer je AI-rekenwerk kunt vertrouwen en wanneer je het narekent",
         "Opties gestructureerd vergelijken met een beslistabel waarin de mens weegt",
       ],
       geschatteMinuten: 50,
@@ -307,7 +307,7 @@ const track: TrackSeed = {
               {
                 heading: "Structureren is de kracht van het model",
                 body:
-                  "Waar taalmodellen wankel zijn in rekenen, zijn ze juist sterk in structureren: uit een lap tekst de relevante elementen halen en die in een vast format zetten. Denk aan een reeks mails van makelaars omzetten naar een overzicht per woningtype, of de kernpunten uit vijf adviesrapporten in één vergelijkingstabel. De sleutel is dat jíj het format definieert, tot op kolomniveau: welke velden, in welke volgorde, met welke eenheden. Vraag niet 'zet dit in een tabel', maar 'maak een tabel met de kolommen onderwerp, bedrag in euro's inclusief btw, deadline, afzender'. Specificeer ook wat er moet gebeuren bij ontbrekende informatie: 'vul dan onbekend in' — anders vult het model gaten met plausibele aannames en zie je niet meer welke cellen echt uit de bron komen. Een vast format is bovendien controleerbaar: je ziet in één oogopslag of er cellen leeg, dubbel of verdacht zijn.",
+                  "Taalmodellen zijn sterk in structureren: uit een lap tekst de relevante elementen halen en die in een vast format zetten. Denk aan een reeks mails van makelaars omzetten naar een overzicht per woningtype, of de kernpunten uit vijf adviesrapporten in één vergelijkingstabel. De sleutel is dat jíj het format definieert, tot op kolomniveau: welke velden, in welke volgorde, met welke eenheden. Vraag niet 'zet dit in een tabel', maar 'maak een tabel met de kolommen onderwerp, bedrag in euro's inclusief btw, deadline, afzender'. Specificeer ook wat er moet gebeuren bij ontbrekende informatie: 'vul dan onbekend in' — anders vult het model gaten met plausibele aannames en zie je niet meer welke cellen echt uit de bron komen. Een vast format is bovendien controleerbaar: je ziet in één oogopslag of er cellen leeg, dubbel of verdacht zijn.",
                 example:
                   "Een verkoopcoördinator van Project Stadstuin (fictief) plakt twaalf geanonimiseerde vragen van kopersbegeleiding in een prompt: 'Maak een tabel met kolommen: onderwerp, woningtype, vraag samengevat in één zin, urgentie (hoog/middel/laag volgens genoemde deadlines), ontbreekt informatie: onbekend.'",
               },
@@ -329,35 +329,35 @@ const track: TrackSeed = {
           },
         },
         {
-          titel: "Waarom AI niet rekent maar de rekenopzet maakt",
+          titel: "Rekenwerk: vertrouwen naar risico, niet blind wantrouwen",
           type: "tekst",
           geschatteMinuten: 13,
           content: {
             intro:
-              "Een taalmodel oogt cijfervast, maar rekent niet zoals een rekenmachine. Voor werk waar bedragen tellen — en dat is bij ons bijna alles — geldt daarom een simpele rolverdeling: AI maakt de rekenopzet, jij maakt de som.",
+              "Een paar jaar geleden struikelden taalmodellen geregeld over meerstapsberekeningen. Bij de huidige generatie is dat grotendeels voorbij: moderne modellen rekenen betrouwbaar, ook bij percentages op percentages, indexeringen en verdeelsleutels. Dat verandert de vraag die je stelt: niet meer 'mag dit wel', maar 'wat kost het als deze uitkomst onopgemerkt fout is'.",
             sections: [
               {
-                heading: "Waarom taalmodellen struikelen over sommen",
+                heading: "Waarom rekenen niet langer het zwakke punt is",
                 body:
-                  "Een taalmodel voorspelt tekst; het voert geen berekeningen uit zoals een spreadsheet dat doet. Bij eenvoudige sommen gaat dat vaak goed, maar bij meerstapsberekeningen — percentages op percentages, indexeringen, verdeelsleutels — sluipen er fouten in die er betrouwbaar uitzien. Dat is het verraderlijke: een fout bedrag staat in dezelfde vloeiende zin als een goed bedrag, met evenveel zelfvertrouwen gepresenteerd. De verificatiechecklist zegt het al: rekenwerk van taalmodellen is onbetrouwbaar bij meerstapsberekeningen. In gebiedsontwikkeling zijn de bedragen groot en de marges klein; een grondexploitatie of stichtingskostenopzet met één verkeerd doorgerekend percentage kan een besluit de verkeerde kant op duwen. De regel is daarom niet 'controleer AI-rekenwerk extra goed', maar strenger: laat het model de berekening niet maken. Er is namelijk een taakverdeling die wél veilig is en waarin het model alsnog veel werk uit handen neemt.",
+                  "Oudere taalmodellen voorspelden cijfers die er betrouwbaar uitzagen maar het regelmatig mis hadden — vandaar de oude vuistregel om AI-rekenwerk categorisch te wantrouwen. De modellen achter de huidige zakelijke tools redeneren rekenkundig veel steviger en maken bij het soort berekeningen dat in ons werk voorkomt zelden nog fouten. Dat betekent niet dat elke controle overbodig is, wél dat de controle voortaan het risico volgt in plaats van het wantrouwen. Bij een interne vuistregel, een eerste indicatie of een verkennende vergelijking volstaat een korte plausibiliteitscheck: klopt de orde van grootte, klopt de richting van het effect. Bij een cijfer waarop een besluit rust — een grondexploitatie, een stichtingskostenopzet, iets dat naar de gemeente of een koper gaat — reken je na in een spreadsheet met zichtbare formules. Niet omdat het model het waarschijnlijk fout doet, maar omdat de gevolgen van een gemiste fout daar te groot zijn om op waarschijnlijkheid te laten aankomen. In gebiedsontwikkeling zijn de bedragen groot en de marges klein; die verhouding tussen risico en controle blijft dus staan, ook nu de kans op een rekenfout zelf is gedaald.",
                 example:
-                  "Een medewerker vraagt het model de opbrengststijging bij 3% jaarlijkse indexering over vier jaar voor Project Havenkade (fictief). Het model geeft een stellig bedrag dat er redelijk uitziet — maar bij narekenen in de spreadsheet 2% te laag blijkt. In een haalbaarheidsanalyse was dat verschil ongemerkt doorgesijpeld.",
+                  "Een medewerker vraagt het model de opbrengststijging bij 3% jaarlijkse indexering over vier jaar voor Project Havenkade (fictief), voor een eerste interne inschatting. De uitkomst klopt bij narekenen. Voor de haalbaarheidsanalyse die naar de stuurgroep gaat, bouwt ze dezelfde berekening toch na in de spreadsheet — niet uit wantrouwen, maar omdat dat cijfer een besluit draagt.",
               },
               {
-                heading: "De rekenopzet: waar het model wél schittert",
+                heading: "De rekenopzet blijft je beste controlemiddel",
                 body:
-                  "Wat het model uitstekend kan, is de opzet van een berekening structureren: welke posten er zijn, in welke volgorde je rekent, welke aannames erachter zitten en waar de gevoeligheden liggen. Vraag dus niet om de uitkomst, maar om het recept: 'Maak een rekenopzet voor de vergelijking van deze twee onderhoudsscenario's: benoem alle kostenposten, de rekenstappen in volgorde, de benodigde invoerwaarden en de aannames die ik moet invullen.' Die opzet bouw je vervolgens na in een spreadsheet, waar elke formule zichtbaar en controleerbaar is en waar een gewijzigde invoerwaarde automatisch correct doorrekent. Zo combineer je het beste van twee werelden: het model denkt mee over volledigheid en structuur — vergeet je de plankosten niet, hoort er btw over deze post? — en de spreadsheet garandeert dat de sommen kloppen. Moet het model toch een indicatieve som doen, laat het dan expliciet stap voor stap rekenen en controleer elke stap; maar voor alles wat een besluit raakt, is de spreadsheet de rekenmachine.",
+                  "Ook nu je de uitkomst vaker kunt vertrouwen, blijft het waardevol om niet alleen het antwoord te vragen maar ook de opzet: welke posten er zijn, in welke volgorde je rekent, welke aannames erachter zitten en waar de gevoeligheden liggen. Dat is om twee redenen slim. Ten eerste maakt een zichtbare opzet fouten — de zeldzame keer dat ze toch optreden — direct herkenbaar, terwijl een kaal eindgetal niets prijsgeeft. Ten tweede denkt het model bij het structureren vaak mee over volledigheid: vergeet je de plankosten niet, hoort er btw over deze post? Vraag dus: 'Maak een rekenopzet voor de vergelijking van deze twee onderhoudsscenario's: benoem alle kostenposten, de rekenstappen in volgorde, de benodigde invoerwaarden en de aannames die ik moet invullen — en reken hem daarna door.' Bij cijfers die een besluit dragen, bouw je die opzet vervolgens na in een spreadsheet, waar elke formule zichtbaar en controleerbaar is en waar een gewijzigde invoerwaarde automatisch correct doorrekent. Zo combineer je het beste van twee werelden: het model denkt mee over structuur en volledigheid, de spreadsheet blijft de plek waar de sommen aantoonbaar kloppen.",
                 example:
-                  "Prompt: 'Ik wil twee gevelvarianten vergelijken op kosten over 30 jaar. Geef geen bedragen. Geef de rekenopzet: kostenposten, rekenstappen, benodigde invoer, aannames, en welke variabelen de uitkomst het sterkst beïnvloeden.'",
+                  "Prompt: 'Ik wil twee gevelvarianten vergelijken op kosten over 30 jaar. Geef de rekenopzet: kostenposten, rekenstappen, benodigde invoer, aannames, en welke variabelen de uitkomst het sterkst beïnvloeden. Reken hem daarna door.' Voor de eerste afweging is de uitkomst bruikbaar; komt er een investeringsbeslissing van, dan gaat dezelfde opzet de spreadsheet in.",
               },
               {
                 heading: "Cijfers presenteren zonder gezichtsverlies",
                 body:
-                  "De rolverdeling werkt door tot in de presentatie van cijfers. Laat het model gerust helpen met de tekst róndom een berekening — de toelichting bij een investeringsvoorstel, de leesbare samenvatting van een gevoeligheidsanalyse — maar laat elk getal in die tekst uit jouw spreadsheet komen, niet uit het model. Praktische werkwijze: schrijf of plak eerst de definitieve cijfers, en vraag het model daarna om er begeleidende tekst bij te schrijven met de instructie 'gebruik uitsluitend de cijfers die ik aanlever; verzin of herbereken niets'. Controleer daarna of elk genoemd getal letterlijk overeenkomt met je bron — modellen ronden soms eigenhandig af of rekenen een percentage 'behulpzaam' om. Voor de goede orde: concept-jaarcijfers vóór publicatie zijn verboden invoer, en projectfinanciën deel je alleen binnen de goedgekeurde tools. Wie deze discipline aanhoudt, hoeft nooit een directieoverleg mee te maken waarin een AI-verzonnen getal moet worden teruggenomen.",
+                  "Bij cijfers die een besluit dragen, houd je de bron van het getal leidend boven het gemak van het model. Laat het model gerust helpen met de tekst róndom een berekening — de toelichting bij een investeringsvoorstel, de leesbare samenvatting van een gevoeligheidsanalyse — maar laat elk getal in die tekst uit je geverifieerde bron komen, niet uit het geheugen van het model. Praktische werkwijze: schrijf of plak eerst de definitieve cijfers, en vraag het model daarna om er begeleidende tekst bij te schrijven met de instructie 'gebruik uitsluitend de cijfers die ik aanlever; verzin of herbereken niets'. Controleer daarna of elk genoemd getal letterlijk overeenkomt met je bron — modellen ronden soms eigenhandig af of formuleren een percentage 'behulpzaam' anders. Voor de goede orde: concept-jaarcijfers vóór publicatie zijn vertrouwelijke informatie en horen dus binnen de goedgekeurde tools zoals Copilot, nooit daarbuiten. Wie deze discipline aanhoudt bij de cijfers die er echt toe doen, hoeft nooit een directieoverleg mee te maken waarin een getal moet worden teruggenomen.",
               },
             ],
             takeaway:
-              "Laat AI de rekenopzet en de toelichting maken, maar voer elke berekening die ertoe doet zelf uit in een spreadsheet met controleerbare formules.",
+              "Rekenwerk is niet langer het zwakke punt van AI, maar de controle blijft het gevolg volgen: plausibiliteitscheck bij een indicatie, narekenen in een spreadsheet bij een cijfer dat een besluit draagt.",
           },
         },
         {
@@ -557,7 +557,7 @@ const track: TrackSeed = {
               {
                 heading: "Opnames, transcripties en de spelregels",
                 body:
-                  "Steeds vaker begint een verslag bij een opname of automatische transcriptie, en daar gelden extra spelregels. Een opname maak je alleen met medeweten van de deelnemers: meld het aan het begin van het overleg en leg vast dat het is gemeld. Gebruik voor transcriptie uitsluitend door IT goedgekeurde tools — een gratis transcriptiedienst is een niet-goedgekeurde verwerker van stemmen en namen, en daarmee verboden terrein. Een ruwe transcriptie is bovendien vólgeautomatiseerd persoonsgegeven: elke spreker is per zin geïdentificeerd. Anonimiseer dus ook transcripties vóór verdere AI-verwerking, en verwijder de opname zodra het verslag is vastgesteld; bewaren 'voor de zekerheid' is in strijd met dataminimalisatie. Gaat het toch mis — een transcript met namen in een niet-goedgekeurde tool geplakt — dan geldt de incidentprocedure: stop de sessie, verwijder niets zelf, en meld het direct bij IT en de privacycontactpersoon. Melden is professioneel; de melder krijgt nooit de schuld.",
+                  "Steeds vaker begint een verslag bij een opname of automatische transcriptie, en daar gelden extra spelregels. Een opname maak je alleen met medeweten van de deelnemers: meld het aan het begin van het overleg en leg vast dat het is gemeld. Zitten er externen bij — een gemeente, bewoners, een aannemer — dan meld je dat vooraf, in de uitnodiging of de agenda, niet pas mondeling zodra iedereen al zit: externen kunnen dan nog kiezen om niet mee te doen aan een opgenomen overleg, wat mondeling ter plekke lastig ligt. Gebruik voor transcriptie uitsluitend door IT goedgekeurde tools — een gratis transcriptiedienst is een niet-goedgekeurde verwerker van stemmen en namen, en daarmee verboden terrein. Een ruwe transcriptie is bovendien vólgeautomatiseerd persoonsgegeven: elke spreker is per zin geïdentificeerd. Anonimiseer dus ook transcripties vóór verdere AI-verwerking, en verwijder de opname zodra het verslag is vastgesteld; bewaren 'voor de zekerheid' is in strijd met dataminimalisatie. Gaat het toch mis — een transcript met namen in een niet-goedgekeurde tool geplakt — dan geldt de incidentprocedure: stop de sessie, verwijder niets zelf, en meld het direct bij IT en de privacycontactpersoon. Melden is professioneel; de melder krijgt nooit de schuld.",
               },
             ],
             takeaway:
@@ -691,14 +691,14 @@ const track: TrackSeed = {
               {
                 heading: "Waarom goedgekeurde tools het verschil maken",
                 body:
-                  "Het verschil tussen een goedgekeurde en een niet-goedgekeurde tool zit onder de motorkap, precies op de punten die IT en privacy toetsen bij elke aanvraag: is er een verwerkersovereenkomst, waar worden gegevens opgeslagen (bij voorkeur binnen de EER), is modeltraining op bedrijfsdata uitgesloten, en is de toegang zakelijk beheerd zodat Blauwhoed grip houdt op accounts en rechten. Gratis consumentenversies van chatbots falen op vrijwel al die punten: invoer kan voor modeltraining worden gebruikt, er is geen verwerkersovereenkomst, het account is persoonlijk in plaats van zakelijk, en bij vertrek van een medewerker verliest Blauwhoed elk zicht op wat er ooit is gedeeld. Daarom zijn ze verboden voor werkgerelateerde invoer — niet omdat de techniek slechter zou zijn, maar omdat de juridische en organisatorische waarborgen ontbreken. Wil je een nieuwe tool gebruiken, dan is de route: aanvraag bij IT met doel, soort gegevens en gebruikersgroep. Zelf alvast beginnen 'om te testen' is geen testen, maar een verwerking zonder waarborgen.",
+                  "Het verschil tussen een goedgekeurde en een niet-goedgekeurde tool zit onder de motorkap, precies op de punten die IT en privacy toetsen bij elke aanvraag: is er een verwerkersovereenkomst, waar worden gegevens opgeslagen (bij voorkeur binnen de EER), is modeltraining op bedrijfsdata uitgesloten, en is de toegang zakelijk beheerd zodat Blauwhoed grip houdt op accounts en rechten. Gratis consumentenversies van chatbots falen op vrijwel al die punten: invoer kan voor modeltraining worden gebruikt, er is geen verwerkersovereenkomst, het account is persoonlijk in plaats van zakelijk, en bij vertrek van een medewerker verliest Blauwhoed elk zicht op wat er ooit is gedeeld. Daarom zijn ze verboden voor werkgerelateerde invoer — niet omdat de techniek slechter zou zijn, maar omdat de juridische en organisatorische waarborgen ontbreken. Wil je een nieuwe tool gebruiken, dan is de route: aanvraag bij de AI-coördinator met doel, soort gegevens en gebruikersgroep. Zelf alvast beginnen 'om te testen' is geen testen, maar een verwerking zonder waarborgen. Nog een reden om zakelijk beheerde toegang serieus te nemen: Copilot ziet en doorzoekt wat jíj mag zien binnen M365 — niet meer, maar ook niet minder. Staat een document met de verkeerde rechten in SharePoint of Teams, dan kan Copilot het net zo goed tonen aan iedereen die er via jouw zoekopdracht bijkomt. Juiste documentrechten zijn daarmee niet alleen een IT-kwestie maar onderdeel van verantwoord Copilot-gebruik: twijfel je over de rechten op een gevoelig document, check dat voordat je Copilot er breed op loslaat.",
                 example:
                   "Een projectteam wil een handige nieuwe AI-notuleertool proberen die een teamlid privé gebruikt. In plaats van de opname van het overleg van Project De Groene Kade (fictief) te uploaden, dient de teamlead een tooladvies-aanvraag in bij IT. Twee weken later is er óf een goedgekeurd alternatief, óf een onderbouwd nee.",
               },
               {
                 heading: "Het verhaal kunnen vertellen",
                 body:
-                  "AI-geletterdheid is onder de EU AI Act een verplichting: organisaties moeten zorgen dat medewerkers de werking, mogelijkheden en risico's van AI voldoende kennen. Op niveau 2 hoort daarbij dat je de route van een prompt in gewone taal kunt uitleggen — aan een collega die twijfelt, aan een koper die vraagt of zijn gegevens 'in ChatGPT' belanden, aan een gemeente die wil weten hoe zorgvuldig Blauwhoed met participatie-input omgaat. Het verhaal in vier zinnen: wij gebruiken alleen goedgekeurde AI-tools waarmee contractueel is geregeld dat invoer niet voor modeltraining wordt gebruikt; persoonsgegevens anonimiseren we vóórdat er AI aan te pas komt; een mens controleert en besluit altijd; en er gelden vaste bewaartermijnen waarna gegevens worden verwijderd. Wie dit verhaal kan vertellen, kan ook de grens bewaken: je herkent direct waarom een verzoek als 'zet die bewonersreacties even in je eigen chatbot-account' niet door de vier zinnen komt. Ken je de details niet, verwijs dan naar de privacycontactpersoon — doorverwijzen is ook geletterdheid.",
+                  "AI-geletterdheid is sinds 2 februari 2025 een wettelijke verplichting onder de EU AI Act: organisaties moeten zorgen dat medewerkers de werking, mogelijkheden en risico's van AI voldoende kennen. De Blauwhoed AI Academy en de jaarlijkse hercertificering geven hier concreet invulling aan. Op niveau 2 hoort daarbij dat je de route van een prompt in gewone taal kunt uitleggen — aan een collega die twijfelt, aan een koper die vraagt of zijn gegevens 'in ChatGPT' belanden, aan een gemeente die wil weten hoe zorgvuldig Blauwhoed met participatie-input omgaat. Het verhaal in vier zinnen: wij gebruiken alleen goedgekeurde AI-tools waarmee contractueel is geregeld dat invoer niet voor modeltraining wordt gebruikt; persoonsgegevens anonimiseren we vóórdat er AI aan te pas komt; een mens controleert en besluit altijd; en er gelden vaste bewaartermijnen waarna gegevens worden verwijderd. Wie dit verhaal kan vertellen, kan ook de grens bewaken: je herkent direct waarom een verzoek als 'zet die bewonersreacties even in je eigen chatbot-account' niet door de vier zinnen komt. Ken je de details niet, verwijs dan naar de privacycontactpersoon — doorverwijzen is ook geletterdheid.",
               },
             ],
             takeaway:
@@ -1113,15 +1113,15 @@ const track: TrackSeed = {
     },
     {
       type: "mc",
-      vraag: "Je wilt de opbrengststijging bij 3% jaarlijkse indexering over vier jaar weten. Wat is de juiste werkwijze?",
+      vraag: "Je wilt de opbrengststijging bij 3% jaarlijkse indexering over vier jaar weten, als onderdeel van een haalbaarheidsanalyse die naar de stuurgroep gaat. Wat is de juiste werkwijze?",
       opties: [
-        "AI de rekenopzet laten maken en de berekening zelf uitvoeren in een spreadsheet",
+        "AI de rekenopzet laten tonen en de berekening zelf narekenen in een spreadsheet",
         "Het model de som laten maken en het antwoord overnemen als het plausibel oogt",
         "Het model de som drie keer laten maken en het meest voorkomende antwoord kiezen",
         "De berekening overslaan en een ervaringscijfer gebruiken",
       ],
       juist: 0,
-      toelichting: "Rekenwerk van taalmodellen is onbetrouwbaar bij meerstapsberekeningen; het model structureert de opzet, de spreadsheet garandeert dat de som klopt.",
+      toelichting: "Moderne taalmodellen rekenen doorgaans betrouwbaar, maar bij een cijfer dat een besluit draagt, reken je toch na in een spreadsheet: het model structureert de opzet, de spreadsheet maakt de som controleerbaar en aantoonbaar juist.",
       tags: ["tabellen", "rekenen"],
       moeilijkheid: 2,
       isSecurity: false,
@@ -1281,9 +1281,9 @@ const track: TrackSeed = {
     },
     {
       type: "waar_onwaar",
-      vraag: "Taalmodellen zijn betrouwbaar in meerstapsberekeningen, zolang je de vraag maar precies formuleert.",
+      vraag: "Omdat moderne taalmodellen rekenwerk betrouwbaar uitvoeren, hoef je bij een cijfer dat een besluit draagt, zoals een grondexploitatie, niet meer na te rekenen.",
       juist: false,
-      toelichting: "Ook met een perfecte vraag blijft rekenwerk van taalmodellen onbetrouwbaar bij meerdere stappen; laat het model de opzet maken en reken zelf in een spreadsheet.",
+      toelichting: "Rekenwerk is betrouwbaarder geworden, maar bij cijfers die een besluit dragen blijft narekenen in een spreadsheet de norm — niet omdat het model het waarschijnlijk fout doet, maar omdat de gevolgen van een gemiste fout te groot zijn om op waarschijnlijkheid te laten aankomen.",
       tags: ["tabellen", "rekenen"],
       moeilijkheid: 2,
       isSecurity: false,
@@ -1361,7 +1361,7 @@ const track: TrackSeed = {
         "Begeleidende tekst schrijven bij cijfers die jij aanlevert, zonder zelf te herrekenen",
       ],
       juist: [0, 1, 3],
-      toelichting: "Structureren, opzetten en toelichten zijn de sterke kanten; de doorrekening zelf hoort in een spreadsheet met controleerbare formules.",
+      toelichting: "Structureren, opzetten en toelichten kan een taalmodel goed; de definitieve doorrekening van een cijfer dat een besluit draagt, hoort toch in een spreadsheet met controleerbare formules — niet omdat het model onbetrouwbaar rekent, maar omdat de uitkomst aantoonbaar juist moet zijn.",
       tags: ["tabellen", "rekenen"],
       moeilijkheid: 3,
       isSecurity: false,
@@ -1662,6 +1662,58 @@ const track: TrackSeed = {
       beoordeling: "ai",
     },
     {
+      moduleSlug: "data-en-tabellen",
+      titel: "Rekenopzet vragen én weten wanneer je narekent",
+      opdrachttekst:
+        "Je stelt voor het fictieve Project Havenkade een investeringsmemo op voor de directie: het effect van 2,5% jaarlijkse indexering op de opbrengst over drie jaar, gegeven in de startcontext. Schrijf eerst de prompt waarmee je het model om de rekenopzet vraagt (niet alleen de uitkomst) — inclusief kostenposten, rekenstappen en aannames. Beargumenteer daarna in drie tot vier zinnen of je de uitkomst van het model in dit geval direct zou overnemen na een plausibiliteitscheck, of dat je hem zelf zou narekenen in een spreadsheet, en waarom. Alle gegevens zijn fictief.",
+      moeilijkheid: 2,
+      type: "prompt_oefening",
+      rubric: {
+        criteria: [
+          {
+            naam: "Kwaliteit van de rekenopzet-prompt",
+            gewicht: 40,
+            max: 40,
+            niveaus: {
+              goed: "De prompt vraagt expliciet om de opzet (posten, stappen, aannames) in plaats van alleen een eindgetal, en is compleet met de gegeven startwaarden.",
+              voldoende: "De prompt vraagt om een berekening maar niet expliciet om de opzet, of mist één van de gevraagde onderdelen.",
+              onvoldoende: "De prompt vraagt alleen om het eindbedrag zonder opzet of aannames.",
+            },
+          },
+          {
+            naam: "Juiste risicoafweging",
+            gewicht: 40,
+            max: 40,
+            niveaus: {
+              goed: "Herkent dat dit cijfer een besluit van de directie draagt en dus wordt nagerekend in een spreadsheet, met de juiste redenering (gevolg van een fout, niet principieel wantrouwen).",
+              voldoende: "Kiest de juiste kant (narekenen) maar de redenering leunt nog op 'AI kan niet rekenen' in plaats van op het gevolg van een fout.",
+              onvoldoende: "Neemt de uitkomst zonder meer over, of vermijdt AI voor rekenwerk volledig zonder onderscheid naar risico.",
+            },
+          },
+          {
+            naam: "Toepassing op de casus",
+            gewicht: 20,
+            max: 20,
+            niveaus: {
+              goed: "Gebruikt de aangeleverde cijfers en het percentage correct en consistent in de prompt.",
+              voldoende: "Gebruikt de cijfers grotendeels correct, met een kleine onnauwkeurigheid.",
+              onvoldoende: "Gebruikt andere cijfers dan de startcontext of laat ze weg.",
+            },
+          },
+        ],
+      },
+      startcontext: {
+        project: "Project Havenkade (fictief)",
+        basisopbrengst: "€ 4.200.000 (jaar 0)",
+        indexering: "2,5% per jaar, samengesteld",
+        periode: "3 jaar",
+        bestemming: "Investeringsmemo voor de directie",
+      },
+      referentieUitwerking:
+        "Een sterke prompt luidt in de geest van: 'Maak de rekenopzet voor de opbrengststijging van Project Havenkade (fictief) bij 2,5% samengestelde jaarlijkse indexering over 3 jaar op een basisopbrengst van € 4.200.000: benoem de rekenstappen in volgorde, de gebruikte formule en eventuele aannames. Reken hem daarna door.' De afweging benoemt dat dit cijfer een directiebesluit draagt, dus wordt de uitkomst nagerekend in een spreadsheet met dezelfde opzet — niet omdat het model waarschijnlijk fout rekent, maar omdat de gevolgen van een onopgemerkte fout in een investeringsmemo te groot zijn om op waarschijnlijkheid te laten aankomen.",
+      beoordeling: "ai",
+    },
+    {
       moduleSlug: "vergaderingen",
       titel: "Ruwe notulen naar besluitenlijst",
       opdrachttekst:
@@ -1709,6 +1761,56 @@ const track: TrackSeed = {
       },
       referentieUitwerking:
         "Een sterke uitwerking vervangt de vier namen door rollen via een lokale sleuteltabel en laat de rondvraagpassage over de zieke collega volledig buiten de AI-invoer. De prompt vraagt het vierkolomsformat met strikte scheiding, het verbod om iets toe te voegen en 'onbekend' bij ontbrekende deadlines. De besluitenlijst bevat gevelvariant B (eigenaar kostenadviseur, deadline 15/11) als besluit, de plattegrondenvraag als actie met deadline onbekend, en de versobering van de parkeerkelder als openstaande vraag — het punt dat het model waarschijnlijk ten onrechte tot besluit zou promoveren.",
+      beoordeling: "ai",
+    },
+    {
+      moduleSlug: "vergaderingen",
+      titel: "Opname met externen: wat moet er vooraf geregeld zijn?",
+      opdrachttekst:
+        "Volgende week is er een fictief overleg over Project Zuiderveld met een vertegenwoordiger van de gemeente en de uitvoerder van de aannemer erbij. Een collega stelt voor: 'Laten we het gewoon opnemen voor de automatische transcriptie, dat scheelt notuleren — ik zeg het wel even bij de opening.' Beoordeel dit voorstel: wat klopt er niet aan de timing van de aankondiging, en wat moet er in plaats daarvan vóór het overleg geregeld zijn? Beschrijf vervolgens welke tool je voor de transcriptie gebruikt en wat je doet met de opname en de ruwe transcriptie ná afloop. Alle gegevens zijn fictief.",
+      moeilijkheid: 2,
+      type: "veiligheidscasus",
+      rubric: {
+        criteria: [
+          {
+            naam: "Timing van de aankondiging",
+            gewicht: 40,
+            max: 40,
+            niveaus: {
+              goed: "Herkent dat externen vooraf — in de uitnodiging of agenda — moeten weten dat het overleg wordt opgenomen, niet pas mondeling bij de opening, en legt uit waarom (kunnen dan nog kiezen om niet mee te doen aan een opgenomen overleg).",
+              voldoende: "Herkent dat er iets mis is met de timing, maar de onderbouwing blijft vaag.",
+              onvoldoende: "Keurt het voorstel goed zoals het is, of mist het onderscheid tussen interne en externe deelnemers.",
+            },
+          },
+          {
+            naam: "Toolkeuze voor transcriptie",
+            gewicht: 30,
+            max: 30,
+            niveaus: {
+              goed: "Kiest uitsluitend een door IT goedgekeurde transcriptietool en benoemt waarom een gratis dienst hier niet mag (niet-goedgekeurde verwerker van stemmen en namen).",
+              voldoende: "Kiest een goedgekeurde tool maar onderbouwt niet waarom een gratis dienst is uitgesloten.",
+              onvoldoende: "Stelt een niet-goedgekeurde of ongespecificeerde tool voor.",
+            },
+          },
+          {
+            naam: "Bewaren en verwijderen",
+            gewicht: 30,
+            max: 30,
+            niveaus: {
+              goed: "Beschrijft dat de ruwe transcriptie wordt geanonimiseerd vóór verdere AI-verwerking en dat de opname wordt verwijderd zodra het verslag is vastgesteld.",
+              voldoende: "Noemt verwijderen of anonimiseren, maar niet beide.",
+              onvoldoende: "Laat bewaren en verwijderen onbenoemd, of stelt voor de opname 'voor de zekerheid' te bewaren.",
+            },
+          },
+        ],
+      },
+      startcontext: {
+        project: "Project Zuiderveld (fictief)",
+        deelnemers: "Projectteam Blauwhoed, een vertegenwoordiger van de gemeente, de uitvoerder van de aannemer",
+        voorstelCollega: "Overleg opnemen voor automatische transcriptie, aankondiging pas mondeling bij de opening",
+      },
+      referentieUitwerking:
+        "Een sterk antwoord wijst de timing af: bij externe deelnemers hoort de aankondiging vooraf, in de uitnodiging of agenda, zodat de gemeente- en aannemersvertegenwoordiger nog kunnen kiezen om niet mee te doen aan een opgenomen overleg — mondeling bij de opening is te laat. Voor de transcriptie wordt uitsluitend een door IT goedgekeurde tool gebruikt, nooit een gratis dienst, omdat die een niet-goedgekeurde verwerker van stemmen en namen zou zijn. Na afloop wordt de ruwe transcriptie eerst geanonimiseerd voordat er verder mee wordt gewerkt — elke spreker is er anders per zin in geïdentificeerd — en de opname zelf wordt verwijderd zodra het verslag is vastgesteld; langer bewaren 'voor de zekerheid' is in strijd met dataminimalisatie.",
       beoordeling: "ai",
     },
     {

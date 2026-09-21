@@ -6,8 +6,8 @@ export const kennisbank: KnowledgeDoc[] = [
     titel: "AI-gebruiksbeleid Blauwhoed", bron: "Blauwhoed · Directie", type: "beleid",
     chunks: [
       "Het AI-gebruiksbeleid geldt voor iedere medewerker, elke AI-tool en ieder project van Blauwhoed. AI mag worden ingezet ter ondersteuning van het werk, nooit als vervanging van menselijke besluitvorming. De medewerker die AI-output gebruikt blijft volledig verantwoordelijk voor de inhoud, ook wanneer de fout aantoonbaar door het model is gemaakt.",
-      "Verboden invoer voor elke AI-tool: persoonsgegevens van kopers, huurders, omwonenden, sollicitanten of collega's; individuele VON-prijzen en kortingsafspraken; tenderstukken en biedstrategieën; grondposities en aankooponderhandelingen; contractvoorwaarden met afwijkende clausules; en concept-jaarcijfers vóór publicatie. Anonimiseer of gebruik een fictieve replica voordat je met AI werkt.",
-      "Alleen door IT goedgekeurde AI-tools zijn toegestaan: de tools binnen de Blauwhoed AI Academy, de zakelijke Microsoft 365 Copilot-licentie en door IT verstrekte API-toegang. Gratis consumentenversies van chatbots zijn verboden voor werkgerelateerde invoer, omdat invoer daar voor modeltraining gebruikt kan worden.",
+      "Blauwhoed classificeert informatie in vier dataniveaus. Openbaar en intern mogen in elke goedgekeurde tool. Vertrouwelijk — individuele VON-prijzen en kortingsafspraken, tenderstukken en biedstrategieën, grondposities en aankooponderhandelingen, afwijkende contractvoorwaarden, concept-jaarcijfers vóór publicatie — mag in Microsoft 365 Copilot onder de zakelijke tenant en in de Academy-omgeving; bij een vakspecifieke app alleen als de verwerkersovereenkomst dat dekt. Persoonsgegevens van kopers, huurders, omwonenden, sollicitanten of collega's mogen alleen in tools of werkstromen waarvoor een DPIA(-light) is gedaan; kandidaatgegevens (cv's, motivatiebrieven) zijn een strengere subcategorie en gaan nooit een AI-tool in. Anonimiseer of gebruik een fictieve replica voordat persoonsgegevens met AI worden verwerkt. Geen enkel dataniveau gaat in een niet-goedgekeurde tool.",
+      "Drie toolcategorieën zijn goedgekeurd: Microsoft 365 Copilot onder de zakelijke tenant, voor iedereen en het dagelijkse werk; vakspecifieke AI-applicaties per vakgebied, elk met een tooleigenaar (bijvoorbeeld beeldgeneratie voor impressies, transcriptie, contract- of data-analyse); en de Blauwhoed AI Academy om te leren en oefenen. Alle drie staan met tooleigenaar en toegestane dataniveaus in het toolregister op het intranet, beheerd door de AI-coördinator. Gratis consumentenversies van chatbots zijn verboden voor werkgerelateerde invoer, omdat invoer daar voor modeltraining gebruikt kan worden.",
       "Bij twijfel of iets gedeeld mag worden geldt de omkeerregel: behandel informatie als vertrouwelijk totdat het tegendeel vaststaat. Vraag het je teamlead of de privacycontactpersoon. Twijfel is een stopsignaal, geen ruis.",
     ],
   },
@@ -33,7 +33,7 @@ export const kennisbank: KnowledgeDoc[] = [
     titel: "Procedure datalek en AI-incident", bron: "Blauwhoed · Privacy & IT", type: "beleid",
     chunks: [
       "Heb je vertrouwelijke informatie of persoonsgegevens in een AI-tool ingevoerd? Stop direct met de sessie, maak geen nieuwe kopieën van de gegevens en verwijder niets zelf: bewaar relevante feiten zoals tijdstip, tool en soort gegevens.",
-      "Meld het incident direct bij IT en de privacycontactpersoon, ook buiten kantooruren en ook als je twijfelt of het echt een datalek is. De organisatie beoordeelt binnen 72 uur of melding bij de Autoriteit Persoonsgegevens verplicht is; die termijn begint bij ontdekking, niet bij bevestiging.",
+      "Meld het incident direct bij IT en de privacycontactpersoon, ook buiten kantooruren en ook als je twijfelt of het echt een datalek is. De organisatie beoordeelt binnen 72 uur of melding bij de Autoriteit Persoonsgegevens verplicht is; die termijn begint bij ontdekking, niet bij bevestiging. De AI-coördinator ontvangt meldingen mee als beheerder van het toolregister en agendeert terugkerende patronen voor de jaarlijkse beleidsreview.",
       "Een melding leidt nooit tot een sanctie voor de melder. Blauwhoed hanteert een meldcultuur zonder schuldvraag: snel melden beperkt schade en is een teken van professionaliteit. Niet melden of verzwijgen is wél verwijtbaar.",
       "Voorbeelden van een te melden AI-incident: een klantenlijst in een prompt geplakt, een tenderdocument geüpload naar een niet-goedgekeurde tool, AI-output met verzonnen feiten die al extern gedeeld is, of inloggegevens gedeeld in een chatgesprek.",
     ],
@@ -53,7 +53,16 @@ export const kennisbank: KnowledgeDoc[] = [
       "De EU AI Act deelt AI-systemen in naar risico: verboden praktijken (zoals social scoring), hoog risico (zoals AI voor werving en selectie of kredietbeoordeling), beperkt risico met transparantieplicht (zoals chatbots) en minimaal risico. De verplichtingen verschillen per categorie.",
       "Voor Blauwhoed relevant: AI die sollicitanten beoordeelt of rangschikt valt in de hoogrisicocategorie en vereist menselijke controle, documentatie en bias-monitoring. Gebruik AI in werving alleen ter ondersteuning, nooit als beslisser, en leg vast hoe de mens het eindoordeel velt.",
       "Transparantieplicht: waar mensen met AI interacteren of AI-gegenereerde content zien, moet dat kenbaar zijn. Bewonerscommunicatie die met AI-ondersteuning is geschreven maar door een medewerker is gecontroleerd en verstuurd, geldt als menselijke communicatie; een chatbot op een projectwebsite moet zich wel als zodanig bekendmaken.",
-      "AI-geletterdheid is een wettelijke verplichting: organisaties die AI inzetten moeten zorgen dat medewerkers voldoende kennis hebben van de werking, mogelijkheden en risico's. De Blauwhoed AI Academy en de jaarlijkse hercertificering geven hier invulling aan.",
+      "AI-geletterdheid is sinds 2 februari 2025 een wettelijke verplichting: organisaties die AI inzetten moeten zorgen dat medewerkers voldoende kennis hebben van de werking, mogelijkheden en risico's. De Blauwhoed AI Academy en de jaarlijkse hercertificering geven hier invulling aan.",
+      "Een zuiver AI-gegenereerd beeld — zonder noemenswaardige menselijke creatieve inbreng — geniet doorgaans geen auteursrechtelijke bescherming, omdat auteursrecht een menselijke maker veronderstelt. Claim daarom geen exclusief eigendom op puur AI-gegenereerde impressies richting gemeente of koper; dit rechtsgebied ontwikkelt zich nog, dus check twijfel over exclusiviteit bij de tooleigenaar of de privacycontactpersoon.",
+    ],
+  },
+  {
+    titel: "Governance: wie doet wat bij AI-beleid", bron: "Blauwhoed · Directie", type: "beleid",
+    chunks: [
+      "Blauwhoed heeft één AI-coördinator die het toolregister beheert (de actuele lijst goedgekeurde tools met tooleigenaar en toegestane dataniveaus), de aanvraagprocedure voor nieuwe tools bewaakt samen met IT en de privacycontactpersoon, en het volledige AI-beleid minimaal jaarlijks herziet.",
+      "Elke vakspecifieke AI-applicatie heeft een tooleigenaar: iemand die de tool functioneel beheert, weet wat de verwerkersovereenkomst dekt, en het aanspreekpunt is voor vragen over die tool. Twijfel je of vertrouwelijke informatie in een vakspecifieke app mag, vraag het de tooleigenaar — neem het niet aan.",
+      "Een aanvraag voor een nieuwe AI-tool dien je in bij de AI-coördinator met drie elementen: het doel, de soort gegevens en de gewenste gebruikersgroep. IT en de privacycontactpersoon toetsen op verwerkersovereenkomst, EER-opslag, uitsluiting van modeltraining en beheersbaarheid van toegang.",
     ],
   },
   {
@@ -62,7 +71,7 @@ export const kennisbank: KnowledgeDoc[] = [
       "Controleer elke feitelijke bewering in AI-output vóór gebruik: cijfers, data, namen, wetsartikelen, normen en citaten. Taalmodellen formuleren onjuistheden even vloeiend als waarheden; overtuigingskracht is geen bewijs.",
       "Hallucinaties herken je aan te specifieke details zonder bron (exacte percentages, artikelnummers, jaartallen), aan bronvermeldingen die niet vindbaar zijn, en aan antwoorden die precies bevestigen wat je hoopte te horen. Vraag bij twijfel: 'Op welke bron baseer je dit en hoe zeker ben je?'",
       "De vier verificatiestappen: 1) markeer alle controleerbare feiten in de output, 2) verifieer elk feit in de oorspronkelijke bron of bij een collega met domeinkennis, 3) verwijder of corrigeer wat niet te verifiëren is, 4) leg bij belangrijke documenten vast wie gecontroleerd heeft.",
-      "Rekenwerk van taalmodellen is onbetrouwbaar bij meerstapsberekeningen. Laat AI de rekenopzet structureren, maar voer de berekening zelf uit in een spreadsheet of laat het model expliciet stap voor stap rekenen en controleer elke stap.",
+      "De huidige generatie taalmodellen rekent betrouwbaar, ook bij meerstapsberekeningen. Controleer daarom niet langer uit principieel wantrouwen, maar naar risico: bij een cijfer dat een besluit draagt, laat je AI de rekenopzet tonen en voer je de berekening zelf uit in een spreadsheet met controleerbare formules; bij een indicatie volstaat een plausibiliteitscheck.",
     ],
   },
   {
@@ -108,8 +117,8 @@ export const kennisbank: KnowledgeDoc[] = [
   {
     titel: "Goedgekeurde AI-tools en aanvraagprocedure", bron: "Blauwhoed · IT", type: "beleid",
     chunks: [
-      "De actuele lijst goedgekeurde AI-tools staat op het intranet onder IT > AI-tools. Kernlijst: de Blauwhoed AI Academy-omgeving voor leren en oefenen, Microsoft 365 Copilot onder de zakelijke tenant voor dagelijks werk, en projectspecifieke API-toegang via IT.",
-      "Een nieuwe tool aanvragen: dien bij IT een aanvraag in met doel, soort gegevens dat verwerkt wordt en gewenste gebruikersgroep. IT en de privacycontactpersoon toetsen op verwerkersovereenkomst, dataopslag binnen de EER, uitsluiting van modeltraining op bedrijfsdata en beheersbaarheid van toegang.",
+      "Het toolregister op het intranet onder IT > AI-tools bevat drie categorieën: Microsoft 365 Copilot onder de zakelijke tenant (voor iedereen), vakspecifieke AI-applicaties per vakgebied met een tooleigenaar, en de Blauwhoed AI Academy-omgeving voor leren en oefenen. De AI-coördinator beheert dit register.",
+      "Een nieuwe tool aanvragen: dien bij de AI-coördinator een aanvraag in met doel, soort gegevens dat verwerkt wordt en gewenste gebruikersgroep. IT en de privacycontactpersoon toetsen op verwerkersovereenkomst, dataopslag binnen de EER, uitsluiting van modeltraining op bedrijfsdata en beheersbaarheid van toegang.",
       "Waarom gratis consumententools verboden zijn: invoer kan voor modeltraining worden gebruikt, er is geen verwerkersovereenkomst, accounts zijn persoonlijk in plaats van zakelijk beheerd, en bij vertrek van een medewerker verliest Blauwhoed elk zicht op wat er gedeeld is.",
     ],
   },

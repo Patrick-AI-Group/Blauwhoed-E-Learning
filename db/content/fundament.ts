@@ -64,20 +64,22 @@ const track: TrackSeed = {
                   "Voor Project Zonneweide (fictief) vraagt een omgevingsmanager: 'Herschrijf deze technische passage over warmtepompen voor bewoners zonder technische achtergrond, maximaal 100 woorden.' Dat is een ideale AI-taak: de feiten staan in de invoer, het model doet alleen de vertaalslag in taal.",
               },
               {
-                heading: "De zwakke kant: feiten, rekenen en actualiteit",
+                heading: "De zwakke kant: feiten en actualiteit",
                 body:
-                  "Drie soorten taken gaan structureel mis. Ten eerste feitenkennis: het model heeft geen actuele en betrouwbare kennis van wetgeving, normen, prijzen of jouw projecten. Wat het daarover zegt, is een voorspelling die toevallig kan kloppen. Ten tweede rekenwerk: bij berekeningen met meerdere stappen — een grondexploitatie, een indexering, een oppervlakteberekening — maakt een taalmodel geregeld fouten, ook bij ogenschijnlijk eenvoudige sommen. Het rekent niet, het voorspelt cijfers die eruitzien als een uitkomst. Ten derde actualiteit: de trainingsdata lopen tot een bepaald moment en jouw organisatiekennis zit er helemaal niet in. Vragen over 'de huidige rentestand' of 'ons beleid voor tenders' leveren verouderde of verzonnen antwoorden op. Voor al deze taken geldt: gebruik de juiste bron of het juiste gereedschap, zoals een spreadsheet voor rekenwerk en het intranet voor beleid.",
+                  "Eén soort taak gaat structureel mis: feitenkennis. Het model heeft geen actuele en betrouwbare kennis van wetgeving, normen, prijzen of jouw projecten. Wat het daarover zegt, is een voorspelling die toevallig kan kloppen. Dat geldt ook voor actualiteit: de trainingsdata lopen tot een bepaald moment, en zonder extra gereedschap zit jouw organisatiekennis er helemaal niet in. Vragen over 'de huidige rentestand' of 'ons beleid voor tenders' leveren dan verouderde of verzonnen antwoorden op — tenzij de tool grounding heeft: Copilot bijvoorbeeld kan binnen je werk wél het actuele intranet en de documenten raadplegen waar jij toegang toe hebt, en levert dan een op bronnen gebaseerd antwoord in plaats van een voorspelling. Ken dus het verschil tussen 'het kale model dat alleen voorspelt' en 'de tool die voor jou zoekt en citeert' — en check bij twijfel of een antwoord een bron noemt die je kunt narekenen. Rekenwerk hoort tegenwoordig niet meer bij de zwakke kant: de modellen achter Copilot en vergelijkbare zakelijke tools rekenen inmiddels betrouwbaar, zeker bij het soort berekeningen dat in ons werk voorkomt. Dat betekent niet dat controle overbodig is — bij cijfers die een besluit dragen, controleer je altijd, ongeacht hoe waarschijnlijk het is dat ze kloppen. Hoe die risico-proportionele controle eruitziet, leer je in de volgende module.",
+                example:
+                  "Vraag je Copilot naar 'ons beleid voor tenders', dan doorzoekt de tool — mits je de juiste toegang hebt — het Blauwhoed-intranet en citeert het relevante beleidsdocument. Vraag je hetzelfde aan een kaal taalmodel zonder toegang tot dat intranet, dan krijg je een plausibel klinkend maar verzonnen antwoord. Zelfde vraag, andere tool, ander risico.",
               },
               {
                 heading: "De grijze zone: ondersteunen mag, beslissen niet",
                 body:
-                  "Tussen sterk en zwak ligt een grijze zone: taken waarbij AI kan ondersteunen, maar waar het eindoordeel bij een mens moet blijven. Een conceptadvies opstellen, een eerste risicoanalyse structureren, argumenten voor en tegen een variant op een rij zetten — dat kan allemaal, mits jij het resultaat behandelt als een concept van een stagiair: nuttig als startpunt, nooit als eindproduct. Het AI-gebruiksbeleid van Blauwhoed is hier expliciet over: AI ondersteunt het werk en vervangt nooit menselijke besluitvorming. Jij blijft verantwoordelijk voor alles wat je met AI-output doet, ook als de fout aantoonbaar door het model is gemaakt. Stel jezelf bij elke taak twee vragen. Eén: lever ik zelf de feiten aan, of moet het model ze kennen? Twee: is dit een concept dat ik controleer, of een besluit dat ik uitbesteed? Alleen bij 'zelf aanleveren' en 'concept' zit je goed.",
+                  "Tussen sterk en zwak ligt een grijze zone: taken waarbij AI kan ondersteunen, maar waar het eindoordeel bij een mens moet blijven. Een conceptadvies opstellen, een eerste risicoanalyse structureren, argumenten voor en tegen een variant op een rij zetten — dat kan allemaal, mits jij het resultaat behandelt als een concept van een stagiair: nuttig als startpunt, nooit als eindproduct. Het AI-gebruiksbeleid van Blauwhoed is hier expliciet over: AI ondersteunt het werk en vervangt nooit menselijke besluitvorming. Jij blijft verantwoordelijk voor alles wat je met AI-output doet, ook als de fout aantoonbaar door het model is gemaakt. Stel jezelf bij elke taak twee vragen. Eén: lever ik zelf de feiten aan, of moet het model ze kennen? Twee: is dit een concept dat ik controleer, of een besluit dat ik uitbesteed? Alleen bij 'zelf aanleveren' en 'concept' zit je goed. Let bij dat controleren specifiek op eenzijdigheid: een AI-gegenereerde doelgroepanalyse of een beeld van een wijk en zijn bewoners kan onbedoeld stereotype patronen uit de trainingsdata herhalen — een 'typisch gezin' dat er opvallend eenvormig uitziet, of een doelgroepbeschrijving die één groep onzichtbaar maakt. Behandel zo'n signaal net als een feitelijke fout: benoemen en corrigeren voordat het verder gaat. Werk je structureel met dit soort AI-analyses, dan hoort bias-monitoring bij de DPIA-light die daar op niveau 4 bij hoort.",
                 example:
                   "Een ontwikkelmanager laat AI de voor- en nadelen van twee verkavelingsvarianten voor Project Rietveldkwartier (fictief) op een rij zetten. Prima startpunt. De keuze tussen de varianten maakt het team zelf, met de grondexploitatie en het stedenbouwkundig advies erbij.",
               },
             ],
             takeaway:
-              "AI is sterk in taal en structuur, zwak in feiten, rekenwerk en actualiteit. Ondersteunen mag altijd, beslissen doet altijd een mens.",
+              "AI is sterk in taal, structuur en — bij de huidige generatie modellen — ook rekenwerk, maar zwak in feitenkennis zonder toegang tot een bron. Ondersteunen mag altijd, beslissen doet altijd een mens.",
           },
         },
         {
@@ -152,7 +154,7 @@ const track: TrackSeed = {
       doelen: [
         "Herkennen van signalen dat AI-output verzonnen of onjuist kan zijn",
         "Toepassen van de vier verificatiestappen op AI-output vóór gebruik",
-        "Beoordelen wanneer rekenwerk van een taalmodel extra controle vereist",
+        "Beoordelen hoeveel controle AI-rekenwerk verdient, naar gelang het gevolg van een fout",
       ],
       geschatteMinuten: 45,
       lessons: [
@@ -241,15 +243,15 @@ const track: TrackSeed = {
                   "Stap drie: verwijder of corrigeer wat niet te verifiëren is. Wees hier streng. Een bewering die je niet kunt bevestigen, gaat eruit of wordt herschreven met een expliciete slag om de arm ('nog te bevestigen bij de gemeente'). De verleiding is groot om een plausibel detail te laten staan omdat het de tekst completer maakt — precies zo sluipen hallucinaties in documenten. Onthoud: een gat in je tekst is zichtbaar en herstelbaar, een verzonnen feit is onzichtbaar en reist mee naar elke volgende versie. Stap vier: leg bij belangrijke documenten vast wie gecontroleerd heeft. Een regel onderaan volstaat: 'Feiten geverifieerd door [rol], [datum].' Dat is geen bureaucratie maar duidelijkheid: de volgende lezer weet wat de status is, en de organisatie kan bij een fout terugvinden waar het proces hapert. Voor welke documenten dit geldt: alles wat extern gaat, alles waarop een besluit rust, en alles wat anderen als bron gaan hergebruiken.",
               },
               {
-                heading: "Rekenwerk: altijd wantrouwen",
+                heading: "Rekenwerk: controle naar gevolg, niet blind wantrouwen",
                 body:
-                  "Voor cijfers geldt een eigen regel: wantrouw rekenwerk van taalmodellen, ook als de uitkomst geloofwaardig oogt. Bij meerstapsberekeningen — een stichtingskostenopzet, een indexering over meerdere jaren, een gemiddelde over categorieën — voorspelt het model cijfers die op uitkomsten líjken. Soms kloppen ze, en juist dat maakt het verraderlijk: je went aan goede antwoorden en mist de keer dat het misgaat. De juiste taakverdeling: laat het model de rekenopzet structureren — welke posten, welke volgorde, welke aannames — en voer de berekening zelf uit in een spreadsheet. Kan dat echt niet, laat het model dan expliciet stap voor stap rekenen en controleer elke tussenstap; dat maakt fouten in elk geval zichtbaar. En check bij elke tabel die AI produceert of de totalen werkelijk de som van de regels zijn. Verrassend vaak is het antwoord nee, ook in verder keurige output.",
+                  "Cijfers verdienen geen apart wantrouwen meer, wél proportionele controle. De huidige generatie taalmodellen rekent, zeker bij meerstapsberekeningen als een stichtingskostenopzet, een indexering over meerdere jaren of een gemiddelde over categorieën, betrouwbaar — een groot verschil met eerdere modellen, die inderdaad geregeld plausibel ogende maar foute uitkomsten produceerden. Dat verandert de vraag die je stelt. Niet meer 'kan ik dit rekenwerk ooit vertrouwen', maar 'wat kost het als deze uitkomst onopgemerkt fout is'. Bij een interne vuistregel of een eerste indicatie is een korte plausibiliteitscheck genoeg: klopt de orde van grootte, klopt het teken. Bij een cijfer waarop een besluit rust — een grondexploitatie, een stichtingskostenopzet, iets dat naar de gemeente of een koper gaat — reken je na in een spreadsheet met zichtbare, controleerbare formules, niet omdat het model het waarschijnlijk fout doet, maar omdat de kosten van een gemiste fout daar te hoog zijn om op waarschijnlijkheid te varen. Vraag het model in dat geval ook om zijn rekenopzet te tonen — welke posten, welke volgorde, welke aannames — zodat jij of een collega elke stap kan volgen in plaats van alleen de uitkomst te geloven. En check bij elke tabel die AI produceert of de totalen werkelijk de som van de regels zijn; dat kost seconden en vangt de zeldzame keer dat het toch misgaat.",
                 example:
-                  "Een financieel medewerker vraagt AI om de opzet voor een indexeringsberekening van de aanneemsom van Project Rietveldkwartier (fictief): welke stappen, welke index, welke peildata. De opzet is nuttig. De berekening zelf doet ze in het rekenmodel van het team, en dat verschil is precies de bedoeling.",
+                  "Een financieel medewerker vraagt AI om een indexeringsberekening van de aanneemsom van Project Rietveldkwartier (fictief), inclusief de volledige rekenopzet: welke stappen, welke index, welke peildata. Voor een interne vuistregel neemt ze de uitkomst over na een snelle plausibiliteitscheck. Omdat dit cijfer straks in de stichtingskostenopzet komt die naar de directie gaat, bouwt ze de berekening bovendien na in het rekenmodel van het team — niet uit wantrouwen, maar omdat de uitkomst een besluit draagt.",
               },
             ],
             takeaway:
-              "Markeer feiten, verifieer ze in de bron, corrigeer wat niet te bevestigen is en leg de controle vast. Rekenwerk doe je in een spreadsheet, niet in een taalmodel.",
+              "Markeer feiten, verifieer ze in de bron, corrigeer wat niet te bevestigen is en leg de controle vast. Bij rekenwerk bepaalt het gevolg van een fout hoe zwaar je controleert, niet een principieel wantrouwen.",
           },
         },
         {
@@ -430,7 +432,7 @@ const track: TrackSeed = {
       slug: "veiligheid-i",
       titel: "Veiligheid I",
       doelen: [
-        "Benoemen welke informatie nooit in een AI-tool mag worden ingevoerd",
+        "De vier dataniveaus van Blauwhoed toepassen: welke informatie waar mag",
         "Toepassen van anonimiseren en het verschil met pseudonimiseren uitleggen",
         "Uitvoeren van de meldprocedure bij een (mogelijk) datalek of AI-incident",
       ],
@@ -438,37 +440,35 @@ const track: TrackSeed = {
       isSecurityModule: true,
       lessons: [
         {
-          titel: "De verboden lijst: wat nooit in een prompt mag",
+          titel: "Dataclassificatie: wat mag waar",
           type: "tekst",
           geschatteMinuten: 12,
           content: {
             intro:
-              "Sommige informatie mag nooit in een AI-tool, in geen enkele vorm en om geen enkele reden. Deze les behandelt de verboden lijst van Blauwhoed en, minstens zo belangrijk, waarom elke categorie erop staat.",
+              "Niet alle bedrijfsinformatie is even gevoelig, en niet elke AI-tool biedt dezelfde waarborgen. Blauwhoed werkt daarom met vier dataniveaus die precies bepalen wat waar mag. Deze les leert je de indeling en, minstens zo belangrijk, waarom hij zo is vastgesteld.",
             sections: [
               {
-                heading: "Persoonsgegevens: van kopers tot collega's",
+                heading: "Vier niveaus, van openbaar tot persoonsgegevens",
                 body:
-                  "Bovenaan de verboden lijst staan persoonsgegevens: alle informatie over herkenbare personen. Dat gaat om kopers, huurders, omwonenden, sollicitanten én collega's. En het gaat om meer dan namen: ook e-mailadressen, telefoonnummers, adressen, kentekens, foto's en combinaties die iemand herkenbaar maken — 'de bewoner van het hoekappartement die bezwaar maakte' is herleidbaar, ook zonder naam. Waarom dit verbod absoluut is: zodra persoonsgegevens in een AI-tool staan, heb je ze verwerkt in de zin van de AVG, en verlies je bij niet-goedgekeurde tools elke controle over waar ze belanden. Betrokkenen hebben daar nooit toestemming voor gegeven, en Blauwhoed kan haar wettelijke plichten — zoals gegevens wissen op verzoek — niet meer nakomen. De werkwijze is daarom altijd: anonimiseer vóór je met AI werkt, en voeg persoonlijke gegevens pas ná de AI-stap handmatig toe in de definitieve versie. Hoe dat anonimiseren precies werkt, leer je in de volgende les.",
-                example:
-                  "Fout: 'Schrijf een reactie aan dhr. Jansen, Lindenlaan 12, die klaagt over bouwlawaai.' Goed: 'Schrijf een reactie aan een omwonende die klaagt over bouwlawaai bij Project Rietveldkwartier (fictief).' De naam en het adres komen pas in de definitieve brief, buiten de AI-tool om.",
+                  "Blauwhoed classificeert informatie in vier niveaus, oplopend in gevoeligheid. Openbaar is informatie die al naar buiten mag of is — een gepubliceerde projecttekst, een goedgekeurd persbericht — en is vrij te gebruiken in elke goedgekeurde tool. Intern is werkinformatie die niet voor het publiek is maar ook niet bijzonder gevoelig, zoals een conceptplanning of een interne notitie, en is eveneens vrij in elke goedgekeurde tool. Vertrouwelijk is commercieel gevoelige informatie die de concurrentie- of onderhandelingspositie van Blauwhoed raakt: individuele VON-prijzen en kortingsafspraken, tenderstukken en biedstrategieën, grondposities en aankooponderhandelingen, contractvoorwaarden die afwijken van de standaard. En persoonsgegevens is alle informatie over herkenbare personen — de strengste categorie, met kandidaatgegevens van sollicitanten als bijzonder gevoelige subcategorie. Elk niveau heeft eigen regels voor welke tool het aan mag, en dat is precies waar de rest van deze les over gaat.",
               },
               {
-                heading: "Commercieel vertrouwelijk: prijzen, tenders, grondposities",
+                heading: "Vertrouwelijk: welkom in Copilot, buiten de deur bij de rest",
                 body:
-                  "De tweede groep beschermt de concurrentiepositie van Blauwhoed. Individuele VON-prijzen en kortingsafspraken: die zijn per koper onderhandeld en herleidbaar; lekken schaadt zowel de koper als de prijsstrategie. Tenderstukken en biedstrategieën: gebiedsontwikkeling is een competitieve markt en een uitgelekte biedstrategie kan een tender ter waarde van vele miljoenen kosten. Grondposities en aankooponderhandelingen: kennis over waar Blauwhoed grond wil verwerven drijft prijzen op en verzwakt de onderhandelingspositie fundamenteel. Contractvoorwaarden met afwijkende clausules: die verraden hoe ver Blauwhoed bereid is te gaan en zijn goud waard voor elke wederpartij. Bij al deze categorieën geldt hetzelfde mechanisme: informatie die je invoert in een tool die niet onder contract van Blauwhoed valt, is buiten je macht. Je weet niet waar die wordt opgeslagen, wie erbij kan en of die ooit in trainingsdata of bij derden opduikt. Het risico is onomkeerbaar — en dus is de regel: niet invoeren, ook niet 'even snel', ook niet gedeeltelijk.",
+                  "Vertrouwelijke bedrijfsinformatie — VON-prijzen, tenderstukken, biedstrategieën, grondposities, afwijkende contractvoorwaarden — mag in Microsoft 365 Copilot onder de zakelijke Blauwhoed-tenant én in de Academy-omgeving. De reden: beide blijven binnen de eigen, contractueel beveiligde omgeving van Blauwhoed, met een verwerkersovereenkomst, contractuele uitsluiting van modeltraining en zakelijk beheerde toegang — precies de waarborgen die vertrouwelijke informatie nodig heeft. Bij een vakspecifieke applicatie ligt dat genuanceerder: dat mag alleen als de verwerkersovereenkomst van díe tool vertrouwelijke bedrijfsinformatie expliciet dekt. Vraag dit na bij de tooleigenaar vóórdat je iets invoert; ga nooit uit van 'goedgekeurd is goedgekeurd', want de dekking verschilt per tool en per gegevenssoort. En in geen geval gaat vertrouwelijke informatie een niet-goedgekeurde tool in, ook niet 'even snel' of gedeeltelijk: daar ontbreekt elke waarborg en is het risico onomkeerbaar. Belangrijk: dat Copilot vertrouwelijke informatie mág verwerken is geen vrijbrief om alles erin te gooien. Dataminimalisatie blijft onverkort gelden — voer alleen in wat de taak echt nodig heeft, ook in een tool die het in theorie aankan.",
                 example:
-                  "Een projectontwikkelaar wil AI laten helpen met een biedbrief voor een gemeentelijke tender. De biedstrategie en het bedrag blijven erbuiten; hij vraagt het model alleen om de openbare beoordelingscriteria uit de (gepubliceerde) leidraad om te zetten in een checklist voor het team.",
+                  "Een projectontwikkelaar wil AI laten helpen met een biedbrief voor een gemeentelijke tender. In Copilot onder haar Blauwhoed-account mag de biedstrategie worden meegenomen als de taak dat echt vraagt — maar ze houdt de prompt toch minimaal: de openbare beoordelingscriteria en de kernboodschap, niet elk onderhandelingsdetail dat niet in de brief hoeft te landen. In een gratis chatbot-app blijft dit sowieso verboden, punt.",
               },
               {
-                heading: "Kandidaatgegevens en de omkeerregel bij twijfel",
+                heading: "Persoonsgegevens en kandidaatgegevens: de strengste categorie",
                 body:
-                  "Aparte aandacht verdienen gegevens van sollicitanten. Cv's, motivatiebrieven en gespreksverslagen zitten vol persoonsgegevens van mensen die kwetsbaar zijn in de relatie met een mogelijke werkgever. Bovendien is AI die kandidaten beoordeelt of rangschikt volgens de EU AI Act een hoogrisicotoepassing: dat vraagt om menselijke controle en documentatie, en is op niveau 1 simpelweg niet aan de orde. Voer dus nooit kandidaatgegevens in een AI-tool in, ook niet om 'even een samenvatting' van een cv te maken. Tot slot de belangrijkste regel van deze les, omdat geen lijst ooit compleet is: de omkeerregel. Behandel informatie als vertrouwelijk totdat het tegendeel vaststaat. Twijfel je of iets gedeeld mag worden, dan is die twijfel zelf het antwoord: niet invoeren, en eerst navragen bij je teamlead of de privacycontactpersoon. Twijfel is een stopsignaal, geen ruis. Niemand bij Blauwhoed is ooit in de problemen gekomen door één dag te wachten met een prompt; het omgekeerde is helaas niet waar.",
+                  "Persoonsgegevens zijn alle informatie over herkenbare personen: kopers, huurders, omwonenden, sollicitanten én collega's. Dat gaat om meer dan namen — ook e-mailadressen, telefoonnummers, adressen, kentekens, foto's en combinaties die iemand herkenbaar maken, zoals 'de bewoner van het hoekappartement die bezwaar maakte'. Dit niveau mag alleen in tools en werkstromen waarvoor een DPIA(-light) is gedaan, en de werkwijze is altijd: anonimiseer vóór je met AI werkt, voeg persoonlijke gegevens pas ná de AI-stap handmatig toe in de definitieve versie. Hoe dat anonimiseren precies werkt, leer je in de volgende les. Kandidaatgegevens vormen een nog strengere subcategorie: cv's, motivatiebrieven en gespreksverslagen zitten vol persoonsgegevens van mensen die kwetsbaar zijn in de relatie met een mogelijke werkgever, en AI die kandidaten beoordeelt of rangschikt is volgens de EU AI Act een hoogrisicotoepassing. Voer daarom nooit kandidaatgegevens in een AI-tool in, ook niet om 'even een samenvatting' van een cv te maken — dit ligt op niveau 1 simpelweg buiten bereik. En omdat geen classificatie ooit alle gevallen dekt, geldt tot slot de omkeerregel: twijfel je of iets gedeeld mag worden, dan is die twijfel zelf het antwoord. Niet invoeren, eerst navragen bij je teamlead of de privacycontactpersoon. Niemand bij Blauwhoed is ooit in de problemen gekomen door één dag te wachten met een prompt; het omgekeerde is helaas niet waar.",
                 example:
-                  "Een HR-medewerker wil AI gebruiken om een vacaturetekst voor Project Zonneweide (fictief) aantrekkelijker te maken. Prima: een vacaturetekst is openbaar. Dezelfde tool gebruiken om binnengekomen cv's samen te vatten mag niet — dat zijn kandidaatgegevens.",
+                  "Een HR-medewerker wil AI gebruiken om een vacaturetekst voor Project Zonneweide (fictief) aantrekkelijker te maken. Prima: een vacaturetekst is openbaar. Dezelfde tool gebruiken om binnengekomen cv's samen te vatten mag niet — dat zijn kandidaatgegevens, ongeacht welke tool het is.",
               },
             ],
             takeaway:
-              "Persoonsgegevens, VON-prijzen, tenderstukken, grondposities, afwijkende contractvoorwaarden en kandidaatgegevens: nooit in een AI-tool. Bij twijfel geldt de omkeerregel: vertrouwelijk tot het tegendeel vaststaat.",
+              "Vier niveaus: openbaar en intern mogen overal, vertrouwelijk mag in Copilot en de Academy maar niet zomaar in vakspecifieke apps of niet-goedgekeurde tools, persoonsgegevens alleen na een DPIA. Bij twijfel geldt de omkeerregel: vertrouwelijk tot het tegendeel vaststaat.",
           },
         },
         {
@@ -558,7 +558,7 @@ const track: TrackSeed = {
               {
                 heading: "Wat er daarna gebeurt — en waarom melden veilig is",
                 body:
-                  "Na je melding neemt de organisatie het over. De privacycontactpersoon beoordeelt de ernst: welke gegevens, hoeveel mensen, welk risico voor betrokkenen. Daaruit volgt of melding bij de Autoriteit Persoonsgegevens verplicht is en of betrokkenen geïnformeerd moeten worden. IT beoordeelt de technische kant: kan de invoer bij de leverancier verwijderd worden, moeten wachtwoorden of toegangen worden aangepast. Jij hoort wat er van jou nog nodig is — meestal alleen je feitenrelaas. En dan het belangrijkste om te onthouden: een melding leidt nooit tot een sanctie voor de melder. Blauwhoed hanteert bewust een meldcultuur zonder schuldvraag, omdat elke drempel om te melden de schade vergroot. Snel melden is een teken van professionaliteit en wordt ook zo behandeld. Wat wél verwijtbaar is: niet melden, te laat melden of informatie achterhouden. Sla deze les op waar je hem terugvindt, want je hebt hem nodig op een moment dat je hoofd er niet naar staat. De meldroute staat ook op het intranet onder Privacy > Datalek melden.",
+                  "Na je melding neemt de organisatie het over. De privacycontactpersoon beoordeelt de ernst: welke gegevens, hoeveel mensen, welk risico voor betrokkenen. Daaruit volgt of melding bij de Autoriteit Persoonsgegevens verplicht is en of betrokkenen geïnformeerd moeten worden. IT beoordeelt de technische kant: kan de invoer bij de leverancier verwijderd worden, moeten wachtwoorden of toegangen worden aangepast. De AI-coördinator ontvangt elke melding mee als beheerder van het toolregister: gaat het om een tool die vaker misbruikt wordt of om een categorie die stelselmatig verkeerd wordt begrepen, dan agendeert die dat voor de jaarlijkse beleidsreview. Jij hoort wat er van jou nog nodig is — meestal alleen je feitenrelaas. En dan het belangrijkste om te onthouden: een melding leidt nooit tot een sanctie voor de melder. Blauwhoed hanteert bewust een meldcultuur zonder schuldvraag, omdat elke drempel om te melden de schade vergroot. Snel melden is een teken van professionaliteit en wordt ook zo behandeld. Wat wél verwijtbaar is: niet melden, te laat melden of informatie achterhouden. Sla deze les op waar je hem terugvindt, want je hebt hem nodig op een moment dat je hoofd er niet naar staat. De meldroute staat ook op het intranet onder Privacy > Datalek melden.",
                 example:
                   "Ezelsbrug voor het moment zelf, ook bruikbaar als geheugensteun op een post-it: STOP — BEWAAR — MELD — VOLG. Stop de sessie, bewaar de feiten, meld bij IT en privacy, volg hun instructies. In die volgorde, zonder eigen opruimacties ertussen.",
               },
@@ -588,27 +588,27 @@ const track: TrackSeed = {
               "Niet elke AI-tool is verboden en niet elke tool is toegestaan — er is een duidelijke lijst. Deze les behandelt welke tools je mag gebruiken, waar je die lijst vindt en, belangrijker, waaróm juist deze tools zijn goedgekeurd.",
             sections: [
               {
-                heading: "De kernlijst: Academy, Copilot en API-toegang via IT",
+                heading: "De drie toolcategorieën: Copilot, vakspecifieke apps, Academy",
                 body:
-                  "De actuele lijst met goedgekeurde AI-tools staat op het intranet onder IT > AI-tools; die pagina is altijd leidend, want de lijst verandert. De kern bestaat uit drie categorieën. Eén: de Blauwhoed AI Academy-omgeving, waarin je leert en oefent — inclusief de oefenchat en de opdrachten. Twee: Microsoft 365 Copilot onder de zakelijke tenant van Blauwhoed, voor het dagelijkse werk in mail, documenten en vergaderingen. Drie: projectspecifieke API-toegang die IT verstrekt voor bijzondere toepassingen. Let op de precieze formulering bij Copilot: het gaat om de zakelijke licentie onder de Blauwhoed-tenant. Dezelfde Microsoft-producten onder een privéaccount vallen er niet onder, ook al ziet het scherm er hetzelfde uit. Controleer bij twijfel rechtsboven met welk account je bent ingelogd. Binnen de goedgekeurde tools gelden bovendien nog steeds alle regels uit Veiligheid I: goedgekeurd betekent dat de leverancier en de inrichting deugen, niet dat elke invoer ineens mag. De verboden lijst blijft onverkort van kracht.",
+                  "Blauwhoed werkt met drie categorieën goedgekeurde tools, elk met een eigen rol. Eén: Microsoft 365 Copilot onder de zakelijke Blauwhoed-tenant, voor iedereen toegestaan en het standaardgereedschap voor het dagelijkse werk in mail, documenten en vergaderingen. Let op de precieze formulering: het gaat om de zakelijke licentie onder de Blauwhoed-tenant. Dezelfde Microsoft-producten onder een privéaccount vallen er niet onder, ook al ziet het scherm er hetzelfde uit — controleer bij twijfel rechtsboven met welk account je bent ingelogd. Twee: vakspecifieke AI-applicaties, per vakgebied goedgekeurd voor een specifieke taak die Copilot niet (goed genoeg) doet — denk aan beeldgeneratie voor sfeerimpressies, transcriptie van overleggen, of contract- en data-analyse. Elke vakspecifieke tool heeft een tooleigenaar: iemand die de tool functioneel beheert, weet wat de verwerkersovereenkomst wel en niet dekt, en het aanspreekpunt is voor vragen over die specifieke tool. Drie: de Blauwhoed AI Academy-omgeving, waarin je leert en oefent — inclusief de oefenchat en de opdrachten. Alle drie staan met naam, tooleigenaar en toegestane dataniveaus in het toolregister op het intranet onder IT > AI-tools; die pagina is altijd leidend, want de lijst verandert. Alles daarbuiten — inclusief gratis of privé-accounts van ChatGPT en vergelijkbare diensten — is verboden voor werkinformatie, ongeacht hoe onschuldig de taak lijkt.",
                 example:
-                  "Een projectassistent van Project Rietveldkwartier (fictief) vat het geanonimiseerde bouwoverleg samen met Copilot onder haar Blauwhoed-account: toegestaan. Dezelfde samenvatting maken in een chatbot onder haar privéaccount: niet toegestaan, ook al is de taak identiek.",
+                  "Een projectassistent van Project Rietveldkwartier (fictief) vat het geanonimiseerde bouwoverleg samen met Copilot onder haar Blauwhoed-account: toegestaan. Wil ze er ook een sfeerimpressie bij laten genereren, dan gebruikt ze de vakspecifieke beeldgeneratietool uit het toolregister, niet Copilot en niet een gratis app op haar telefoon.",
               },
               {
                 heading: "Waarom deze tools wel: de vier toetsstenen",
                 body:
-                  "De goedgekeurde tools hebben iets gemeen: ze zijn getoetst op vier punten, en die toetsstenen vertellen je precies waarom de lijst is zoals hij is. Ten eerste de verwerkersovereenkomst: er ligt een contract dat vastlegt wat de leverancier met ingevoerde gegevens mag doen — en vooral wat niet. Ten tweede dataopslag binnen de EER, zodat Europese privacyregels afdwingbaar blijven. Ten derde uitsluiting van modeltraining: contractueel is vastgelegd dat jouw invoer niet wordt gebruikt om modellen te trainen. Voor de Academy geldt bijvoorbeeld dat prompts via de beveiligde server van Blauwhoed naar de modelleverancier gaan, met precies die uitsluiting. Ten vierde beheersbaarheid van toegang: accounts zijn zakelijk beheerd, zodat Blauwhoed toegang kan intrekken bij vertrek van een medewerker en kan zien welke tools in gebruik zijn. Wie deze vier toetsstenen kent, begrijpt ook meteen waarom een willekeurige gratis app faalt: meestal op alle vier tegelijk. Dat inzicht is nuttiger dan de lijst uit je hoofd leren.",
+                  "De goedgekeurde tools hebben iets gemeen: ze zijn getoetst op vier punten, en die toetsstenen vertellen je precies waarom de lijst is zoals hij is. Ten eerste de verwerkersovereenkomst: er ligt een contract dat vastlegt wat de leverancier met ingevoerde gegevens mag doen — en vooral wat niet, en bij vakspecifieke tools ook tot welk dataniveau die dekking reikt. Ten tweede dataopslag binnen de EER, zodat Europese privacyregels afdwingbaar blijven. Ten derde uitsluiting van modeltraining: contractueel is vastgelegd dat jouw invoer niet wordt gebruikt om modellen te trainen. Voor de Academy geldt bijvoorbeeld dat prompts via de beveiligde server van Blauwhoed naar de modelleverancier gaan, met precies die uitsluiting. Ten vierde beheersbaarheid van toegang: accounts zijn zakelijk beheerd, zodat Blauwhoed toegang kan intrekken bij vertrek van een medewerker en kan zien welke tools in gebruik zijn. De AI-coördinator houdt het toolregister met deze vier toetsstenen actueel en herziet het geheel — lijst, classificatie, procedures — minimaal jaarlijks. Wie deze vier toetsstenen kent, begrijpt ook meteen waarom een willekeurige gratis app faalt: meestal op alle vier tegelijk.",
               },
               {
                 heading: "Goedgekeurd is niet grenzeloos",
                 body:
-                  "Een veelgemaakte denkfout: 'de tool is goedgekeurd, dus alles mag erin'. Zo werkt het niet. De goedkeuring zegt iets over de tool en de leverancier; jouw verantwoordelijkheid voor de invoer blijft volledig bestaan. De verboden lijst — persoonsgegevens, VON-prijzen, tenderstukken, grondposities, afwijkende contractvoorwaarden, kandidaatgegevens — geldt in elke tool, ook de goedgekeurde. Waarom, als de leverancier toch onder contract staat? Omdat dataminimalisatie een zelfstandige AVG-plicht is: je verwerkt alleen wat noodzakelijk is voor het doel, ongeacht hoe goed de verwerker is. Omdat elk systeem gehackt of verkeerd geconfigureerd kan raken, en wat er niet in staat, kan er niet uit lekken. En omdat gewoontevorming telt: wie in de veilige omgeving slordig invoert, neemt die gewoonte mee naar plekken waar het direct misgaat. De juiste houding is dus tweeledig: gebruik de goedgekeurde tools ruimhartig voor waar ze goed in zijn, en behandel je invoer overal even zorgvuldig. Goedgekeurde tool plus geanonimiseerde invoer — die combinatie is de standaard.",
+                  "Een veelgemaakte denkfout: 'de tool is goedgekeurd, dus alles mag erin'. Zo werkt het niet. De goedkeuring zegt iets over de tool en de leverancier; welk dataniveau erin mag, bepaalt de classificatie uit de vorige les, en jouw verantwoordelijkheid voor de invoer blijft volledig bestaan. Copilot mag openbare, interne én vertrouwelijke informatie verwerken; persoonsgegevens alleen na een DPIA; kandidaatgegevens nooit. Een vakspecifieke app mag vertrouwelijke informatie alleen als de eigen verwerkersovereenkomst dat dekt — vraag dit na bij de tooleigenaar, neem het niet aan. Waarom deze grenzen blijven bestaan, ook binnen een getoetste tool? Omdat dataminimalisatie een zelfstandige AVG-plicht is: je verwerkt alleen wat noodzakelijk is voor het doel, ongeacht hoe goed de verwerker is. Omdat elk systeem gehackt of verkeerd geconfigureerd kan raken, en wat er niet in staat, kan er niet uit lekken. En omdat gewoontevorming telt: wie in de veilige omgeving slordig invoert, neemt die gewoonte mee naar plekken waar het direct misgaat. De juiste houding is dus tweeledig: gebruik de goedgekeurde tools ruimhartig voor waar ze goed in zijn, en behandel je invoer overal even zorgvuldig. Goedgekeurde tool plus het juiste dataniveau — die combinatie is de standaard.",
                 example:
-                  "Een collega wil in de Academy-omgeving oefenen met een echte klachtenmail van een koper van Project De Houtwal (fictief), 'want deze omgeving is toch veilig'. Toch eerst anonimiseren: naam, adres en bouwnummer eruit. De omgeving is goedgekeurd; de invoerregels veranderen daardoor niet.",
+                  "Een collega wil in de Academy-omgeving oefenen met een echte klachtenmail van een koper van Project De Houtwal (fictief), 'want deze omgeving is toch veilig'. Toch eerst anonimiseren: namen zijn persoonsgegevens en die mogen pas na een DPIA. De omgeving is goedgekeurd; het dataniveau van de klacht verandert daardoor niet.",
               },
             ],
             takeaway:
-              "Goedgekeurd zijn de Academy-omgeving, zakelijke Copilot en API-toegang via IT — getoetst op verwerkersovereenkomst, EER-opslag, geen modeltraining en beheerde toegang. Goedgekeurd betekent nooit dat de invoerregels vervallen.",
+              "Drie toolcategorieën: Copilot voor iedereen, vakspecifieke apps per vakgebied met een tooleigenaar, en de Academy om te leren. Alles staat in het toolregister, beheerd door de AI-coördinator. Goedgekeurd betekent nooit dat elk dataniveau overal mag.",
           },
         },
         {
@@ -686,14 +686,14 @@ const track: TrackSeed = {
               {
                 heading: "De aanvraag: drie vragen die jij beantwoordt",
                 body:
-                  "Een aanvraag voor een nieuwe AI-tool dien je in bij IT en bestaat in de kern uit drie antwoorden. Eén: het doel — welk werk ga je met de tool doen en waarom volstaan de bestaande goedgekeurde tools daarvoor niet? Wees concreet: 'sneller werken' is geen doel, 'automatisch actielijsten uit bouwverslagen genereren, wat Copilot in ons proces niet gestructureerd doet' wel. Twee: de soort gegevens die de tool gaat verwerken. Dit is de belangrijkste vraag, want hij bepaalt de zwaarte van de toetsing. Alleen openbare of geanonimiseerde informatie? Of ook commercieel gevoelige of — spannender — persoonsgegevens? Wees hier eerlijk en volledig; een aanvraag die gegevenssoorten verzwijgt, leidt tot een goedkeuring die niets waard is. Drie: de gewenste gebruikersgroep — wie gaat de tool gebruiken, zodat toegang beheerd en beperkt kan worden. Een goede aanvraag past op één A4 en kost een half uur. Dat halve uur is de investering die het verschil maakt tussen gecontroleerd vooruitgaan en ongecontroleerd risico nemen.",
+                  "Een aanvraag voor een nieuwe AI-tool dien je in bij de AI-coördinator, die de procedure bewaakt en de aanvraag samen met IT en de privacycontactpersoon toetst, en bestaat in de kern uit drie antwoorden. Eén: het doel — welk werk ga je met de tool doen en waarom volstaan de bestaande goedgekeurde tools daarvoor niet? Wees concreet: 'sneller werken' is geen doel, 'automatisch actielijsten uit bouwverslagen genereren, wat Copilot in ons proces niet gestructureerd doet' wel. Twee: de soort gegevens die de tool gaat verwerken. Dit is de belangrijkste vraag, want hij bepaalt de zwaarte van de toetsing. Alleen openbare of geanonimiseerde informatie? Of ook commercieel gevoelige of — spannender — persoonsgegevens? Wees hier eerlijk en volledig; een aanvraag die gegevenssoorten verzwijgt, leidt tot een goedkeuring die niets waard is. Drie: de gewenste gebruikersgroep — wie gaat de tool gebruiken, zodat toegang beheerd en beperkt kan worden. Een goede aanvraag past op één A4 en kost een half uur. Dat halve uur is de investering die het verschil maakt tussen gecontroleerd vooruitgaan en ongecontroleerd risico nemen.",
                 example:
                   "Compacte voorbeeldaanvraag: 'Doel: geluidsmetingen uit rapporten samenvatten voor omgevingscommunicatie bij Project Zonneweide (fictief). Gegevens: geanonimiseerde meetrapporten van onze adviseur, geen persoonsgegevens. Gebruikers: de twee omgevingsmanagers van het project.'",
               },
               {
                 heading: "De toetsing: wat IT en privacy controleren",
                 body:
-                  "Na indiening toetsen IT en de privacycontactpersoon de tool op de vier bekende toetsstenen. De verwerkersovereenkomst: is er een contract dat de omgang met gegevens regelt, en dekt het de gegevenssoorten uit jouw aanvraag? Dataopslag binnen de EER: staan de gegevens op servers waar Europese regels afdwingbaar zijn? Uitsluiting van modeltraining: is contractueel vastgelegd dat invoer niet voor training wordt gebruikt — niet als instelling, maar als contractbepaling? En beheersbaarheid van toegang: kunnen accounts zakelijk worden beheerd, toegewezen en ingetrokken? Verwerkt de tool mogelijk persoonsgegevens, dan hoort er ook een DPIA-light bij: de verkorte risicoanalyse met vijf vragen over gegevens, doel, risico's, maatregelen en eigenaarschap. De uitkomst van de toetsing kent drie smaken: goedgekeurd (soms voor een specifieke gebruikersgroep of gegevenssoort), goedgekeurd onder voorwaarden (bijvoorbeeld alleen de zakelijke variant, of alleen geanonimiseerde invoer), of afgewezen met uitleg. Reken op enkele weken doorlooptijd — en gebruik de tool niet alvast tijdens het wachten, hoe verleidelijk ook. Een afwijzing is bovendien zelden het einde: vaak lost een zakelijke variant of een andere leverancier hetzelfde probleem wél toetsbaar op.",
+                  "Na indiening toetsen IT en de privacycontactpersoon de tool op de vier bekende toetsstenen; wordt de tool goedgekeurd, dan neemt de AI-coördinator hem met tooleigenaar en toegestane dataniveaus op in het toolregister op het intranet. De verwerkersovereenkomst: is er een contract dat de omgang met gegevens regelt, en dekt het de gegevenssoorten uit jouw aanvraag? Dataopslag binnen de EER: staan de gegevens op servers waar Europese regels afdwingbaar zijn? Uitsluiting van modeltraining: is contractueel vastgelegd dat invoer niet voor training wordt gebruikt — niet als instelling, maar als contractbepaling? En beheersbaarheid van toegang: kunnen accounts zakelijk worden beheerd, toegewezen en ingetrokken? Verwerkt de tool mogelijk persoonsgegevens, dan hoort er ook een DPIA-light bij: de verkorte risicoanalyse met vijf vragen over gegevens, doel, risico's, maatregelen en eigenaarschap. De uitkomst van de toetsing kent drie smaken: goedgekeurd (soms voor een specifieke gebruikersgroep of gegevenssoort), goedgekeurd onder voorwaarden (bijvoorbeeld alleen de zakelijke variant, of alleen geanonimiseerde invoer), of afgewezen met uitleg. Reken op enkele weken doorlooptijd — en gebruik de tool niet alvast tijdens het wachten, hoe verleidelijk ook. Een afwijzing is bovendien zelden het einde: vaak lost een zakelijke variant of een andere leverancier hetzelfde probleem wél toetsbaar op.",
               },
               {
                 heading: "Oefening: bereid je eigen aanvraag voor",
@@ -704,7 +704,7 @@ const track: TrackSeed = {
               },
             ],
             takeaway:
-              "Een aanvraag bestaat uit doel, gegevenssoorten en gebruikersgroep; IT en privacy toetsen op contract, EER-opslag, trainingsuitsluiting en toegangsbeheer. De procedure maakt ja mogelijk — maar pas gebruiken ná goedkeuring.",
+              "Een aanvraag bestaat uit doel, gegevenssoorten en gebruikersgroep, ingediend bij de AI-coördinator; IT en privacy toetsen op contract, EER-opslag, trainingsuitsluiting en toegangsbeheer. De procedure maakt ja mogelijk — maar pas gebruiken ná goedkeuring.",
           },
         },
       ],
@@ -750,12 +750,12 @@ const track: TrackSeed = {
       opties: [
         "Een door jou aangeleverd, geanonimiseerd verslag samenvatten in vijf zinnen",
         "De actuele grondprijs in een gemeente opvragen",
-        "Een indexeringsberekening over vijf jaar uitvoeren",
+        "De naam van de huidige wethouder ruimtelijke ordening opzoeken",
         "Het geldende bestemmingsplan van een locatie citeren",
       ],
       juist: 0,
       toelichting:
-        "Bij samenvatten van aangeleverde tekst doet het model waar het goed in is: taal bewerken. De andere taken vragen om feitenkennis of rekenwerk uit het model zelf.",
+        "Bij samenvatten van aangeleverde tekst doet het model waar het goed in is: taal bewerken. De andere taken vragen om actuele feitenkennis die het model zelf niet betrouwbaar heeft, tenzij de tool daarvoor een bron raadpleegt.",
       tags: ["toepassing", "taalmodel"],
       moeilijkheid: 1,
       isSecurity: false,
@@ -885,26 +885,26 @@ const track: TrackSeed = {
     },
     {
       type: "mc",
-      vraag: "Hoe ga je op niveau 1 het beste om met een meerstapsberekening, zoals een indexering van een aanneemsom?",
+      vraag: "Hoe ga je op niveau 1 het beste om met een meerstapsberekening, zoals een indexering van een aanneemsom, als de uitkomst een besluit gaat dragen?",
       opties: [
-        "De berekening door het model laten doen en de uitkomst afronden",
-        "Het model de rekenopzet laten structureren en zelf rekenen in een spreadsheet",
+        "De berekening door het model laten doen en de uitkomst zonder meer overnemen",
+        "Het model ook de rekenopzet laten tonen en de berekening controleren of zelf narekenen in een spreadsheet",
         "De berekening twee keer aan het model vragen en de uitkomsten middelen",
         "Berekeningen volledig vermijden zodra AI in het spel is",
       ],
       juist: 1,
       toelichting:
-        "Taalmodellen voorspellen cijfers in plaats van te rekenen; de opzet structureren mag, het rekenwerk hoort in een spreadsheet.",
+        "Moderne taalmodellen rekenen betrouwbaar, maar bij een uitkomst die een besluit draagt, controleer je die naar gevolg: laat de rekenopzet zien en reken zelf na in een spreadsheet met zichtbare formules.",
       tags: ["verificatie", "rekenwerk"],
       moeilijkheid: 2,
       isSecurity: false,
     },
     {
       type: "waar_onwaar",
-      vraag: "Als een AI-tabel netjes is opgemaakt, kun je erop vertrouwen dat de totalen de som van de regels zijn.",
+      vraag: "Bij een AI-tabel die de basis vormt voor een besluit, kun je op de opmaak afgaan om te weten of de totalen kloppen.",
       juist: false,
       toelichting:
-        "Opmaak zegt niets over rekenkwaliteit; controleer totalen altijd zelf, want modellen voorspellen cijfers in plaats van te rekenen.",
+        "Opmaak zegt niets over rekenkwaliteit. Moderne modellen rekenen doorgaans betrouwbaar, maar bij cijfers waarop een besluit rust, controleer je totalen altijd zelf — de kans op een fout is klein, het gevolg van een gemiste fout niet.",
       tags: ["rekenwerk", "verificatie"],
       moeilijkheid: 1,
       isSecurity: false,
@@ -1094,7 +1094,7 @@ const track: TrackSeed = {
       moeilijkheid: 3,
       isSecurity: false,
     },
-    // — Veiligheid: verboden invoer —
+    // — Veiligheid: dataclassificatie —
     {
       type: "mc",
       vraag: "Welke invoer is in ELKE AI-tool verboden, ook in de goedgekeurde?",
@@ -1161,27 +1161,27 @@ const track: TrackSeed = {
     },
     {
       type: "waar_onwaar",
-      vraag: "Individuele VON-prijzen en kortingsafspraken mogen wel in een goedgekeurde AI-tool, omdat daar een verwerkersovereenkomst voor is gesloten.",
-      juist: false,
+      vraag: "Individuele VON-prijzen en kortingsafspraken mogen in Microsoft 365 Copilot onder de zakelijke Blauwhoed-tenant, omdat die informatie als 'vertrouwelijk' is geclassificeerd en Copilot binnen de eigen tenant blijft.",
+      juist: true,
       toelichting:
-        "De verboden lijst geldt in elke tool, ook goedgekeurde: goedkeuring zegt iets over de leverancier, niet over wat er ingevoerd mag worden.",
-      tags: ["security", "verboden-invoer", "tools"],
+        "Vertrouwelijke bedrijfsinformatie mag in Copilot (zakelijke tenant) en de Academy. Bij een vakspecifieke app mag het alleen als de verwerkersovereenkomst van díe tool het dekt, en in niet-goedgekeurde tools mag het nooit.",
+      tags: ["security", "dataclassificatie", "tools"],
       moeilijkheid: 2,
       isSecurity: true,
     },
     {
       type: "meerdere_juist",
-      vraag: "Welke informatie staat op de verboden lijst voor AI-invoer? (meerdere antwoorden juist)",
+      vraag: "Welke informatie mag NOOIT in een AI-tool, ook niet in Copilot, tenzij er een DPIA voor is gedaan? (meerdere antwoorden juist)",
       opties: [
-        "Grondposities en aankooponderhandelingen",
+        "Namen en adressen van kopers",
         "Een geanonimiseerd klachtenoverzicht zonder herleidbare details",
-        "Contractvoorwaarden met afwijkende clausules",
+        "Cv's en motivatiebrieven van sollicitanten",
         "De openbare beoordelingscriteria uit een gepubliceerde tenderleidraad",
       ],
       juist: [0, 2],
       toelichting:
-        "Grondposities en afwijkende contractvoorwaarden zijn verboden invoer; goed geanonimiseerde en openbare informatie mag wel.",
-      tags: ["security", "verboden-invoer"],
+        "Persoonsgegevens — waaronder kandidaatgegevens — vormen het strengste dataniveau en mogen alleen na een DPIA(-light); goed geanonimiseerde en openbare informatie mag altijd, en vertrouwelijke bedrijfsinformatie mag inmiddels in Copilot.",
+      tags: ["security", "dataclassificatie"],
       moeilijkheid: 2,
       isSecurity: true,
     },
@@ -1299,13 +1299,13 @@ const track: TrackSeed = {
       vraag: "Welke tools staan in de kern van de goedgekeurde lijst van Blauwhoed?",
       opties: [
         "Elke bekende chatbot, zolang je trainingsgebruik uitzet in de instellingen",
-        "De Academy-omgeving, Microsoft 365 Copilot onder de zakelijke tenant en door IT verstrekte API-toegang",
+        "Microsoft 365 Copilot onder de zakelijke tenant, vakspecifieke apps met een tooleigenaar en de Academy-omgeving",
         "Alle Microsoft-producten, ook onder een privéaccount",
         "Alle tools die een externe samenwerkingspartner al gebruikt",
       ],
       juist: 1,
       toelichting:
-        "De kernlijst bestaat uit de Academy-omgeving, zakelijke Copilot en API-toegang via IT; de actuele lijst staat op het intranet.",
+        "De drie toolcategorieën zijn Copilot (voor iedereen), vakspecifieke apps per vakgebied met een tooleigenaar, en de Academy om te leren; het toolregister met de actuele lijst staat op het intranet.",
       tags: ["security", "tools"],
       moeilijkheid: 1,
       isSecurity: true,
@@ -1508,8 +1508,58 @@ const track: TrackSeed = {
         aanleiding: "Teamoverleg over verantwoord AI-gebruik",
       },
       referentieUitwerking:
-        "Een sterk antwoord legt uit dat een taalmodel woord voor woord het meest waarschijnlijke vervolg voorspelt en dus geen feitendatabase is, en dat output daarom overtuigend maar fout kan zijn. Het noemt sterke taken als samenvatten van aangeleverde verslagen en herschrijven van conceptbrieven, en zwakke taken als het opvragen van actuele normen of het doorrekenen van een grondexploitatie. Elke keuze is onderbouwd met het verschil tussen taal bewerken en feiten kennen. De afsluitende vuistregel luidt in de geest van: geef het model de feiten, laat het model de taal doen.",
+        "Een sterk antwoord legt uit dat een taalmodel woord voor woord het meest waarschijnlijke vervolg voorspelt en dus geen feitendatabase is, en dat output daarom overtuigend maar fout kan zijn. Het noemt sterke taken als samenvatten van aangeleverde verslagen en herschrijven van conceptbrieven, en zwakke taken als het opvragen van actuele normen of het benoemen van 'de huidige grondprijs' zonder bron. Elke keuze is onderbouwd met het verschil tussen taal bewerken en feiten kennen. De afsluitende vuistregel luidt in de geest van: geef het model de feiten, laat het model de taal doen.",
       beoordeling: "handmatig",
+    },
+    {
+      moduleSlug: "generatieve-ai-begrijpen",
+      titel: "Van tien losse vragen naar één sterke prompt",
+      opdrachttekst:
+        "Een collega werkte voor het fictieve Project Havenkade in één lang chatgesprek: ze plakte een verslag van twee pagina's en vroeg om 'een samenvatting van vijf zinnen voor collega's die er niet bij waren'. Daarna stelde ze in hetzelfde gesprek nog negen vervolgvragen over losse details. Toen ze aan het eind opnieuw vroeg om 'de samenvatting volgens de eerdere instructie', kreeg ze acht zinnen in plaats van vijf, en de doelgroep 'collega's' was verdwenen. Leg in twee tot drie zinnen uit wat hier misging, in termen van tokens en het contextvenster. Schrijf vervolgens één nieuwe, compacte prompt die in ÉÉN bericht alle benodigde informatie bevat (bron, taak, doelgroep, lengte-eis) zodat het gewenste resultaat in één keer goed komt — gebruik de startcontext als bron. Alle gegevens in deze opdracht zijn fictief.",
+      moeilijkheid: 1,
+      type: "prompt_oefening",
+      rubric: {
+        criteria: [
+          {
+            naam: "Verklaring van het mechanisme",
+            gewicht: 30,
+            max: 30,
+            niveaus: {
+              goed: "Legt correct uit dat het contextvenster eindig is en dat vroege instructies in een lang gesprek minder zwaar gaan meewegen of buiten beeld raken.",
+              voldoende: "De verklaring wijst in de juiste richting maar is onvolledig of te vaag over waarom dit gebeurt.",
+              onvoldoende: "De verklaring ontbreekt of wijt het probleem aan iets anders dan het contextvenster (bijvoorbeeld 'het model was moe').",
+            },
+          },
+          {
+            naam: "Kwaliteit van de herschreven prompt",
+            gewicht: 50,
+            max: 50,
+            niveaus: {
+              goed: "Eén compact bericht bevat bron, taak, doelgroep en lengte-eis expliciet en ondubbelzinnig, geschikt om in één keer het juiste resultaat te krijgen.",
+              voldoende: "De prompt bevat de meeste elementen, maar mist er één (bijvoorbeeld de doelgroep) of is onnodig lang en rommelig.",
+              onvoldoende: "De prompt herhaalt het oorspronkelijke probleem (verspreid over meerdere berichten) of mist meerdere kernelementen.",
+            },
+          },
+          {
+            naam: "Toepassing op de casus",
+            gewicht: 20,
+            max: 20,
+            niveaus: {
+              goed: "Gebruikt de aangeleverde startcontext correct en consistent, zonder verzonnen details toe te voegen.",
+              voldoende: "Gebruikt de startcontext grotendeels correct, met een kleine onnauwkeurigheid.",
+              onvoldoende: "Negeert de startcontext of voegt gegevens toe die er niet in staan.",
+            },
+          },
+        ],
+      },
+      startcontext: {
+        project: "Project Havenkade (fictief)",
+        bron: "Verslag van het bouwoverleg van 14 mei (fictief, twee pagina's, niet letterlijk aangeleverd in deze opdracht)",
+        oorspronkelijkeEis: "Samenvatting van maximaal vijf zinnen, voor collega's die niet bij het overleg waren, alleen besluiten en openstaande vragen",
+      },
+      referentieUitwerking:
+        "Een sterk antwoord legt uit dat het contextvenster van het model eindig is: naarmate het gesprek langer wordt, telt informatie van het begin — zoals de oorspronkelijke lengte- en doelgroep-eis — minder zwaar mee of raakt buiten beeld, waardoor latere verzoeken om 'de samenvatting van eerder' afwijken van de oorspronkelijke instructie. De herschreven prompt zet alle eisen compact in één bericht, bijvoorbeeld: 'Vat het verslag van het bouwoverleg van Project Havenkade van 14 mei (fictief) samen in maximaal vijf zinnen, voor collega's die er niet bij waren. Noem alleen besluiten en openstaande vragen, geen sfeerbeschrijving.' Geen verspreide vervolgvragen, geen impliciete aannames.",
+      beoordeling: "ai",
     },
     {
       moduleSlug: "hallucinaties-en-verificatie",
@@ -1866,6 +1916,56 @@ const track: TrackSeed = {
       },
       referentieUitwerking:
         "Een sterk antwoord keurt situatie 1 goed (goedgekeurde tool, zakelijke tenant, veilige invoer), wijst situatie 2 af omdat gratis consumententools verboden zijn voor werkinvoer en een privacy-instelling geen verwerkersovereenkomst vervangt — met als alternatief dezelfde taak in Copilot of de Academy-omgeving. Voor situatie 3 is het oordeel 'eerst aanvragen': nog niets ingevoerd, dus geen incident, maar gebruik kan pas na toetsing door IT en privacy op de vier toetsstenen; de vervolgstap is een aanvraag met doel, gegevenssoorten en gebruikersgroep.",
+      beoordeling: "ai",
+    },
+    {
+      moduleSlug: "goedgekeurde-tools",
+      titel: "Schrijf de aanvraag voor de transcriptietool",
+      opdrachttekst:
+        "Het fictieve team Participatie Havenkade wil de gespecialiseerde transcriptietool gebruiken die in de vorige opdracht nog niet op de goedgekeurde lijst stond: automatische transcripties van bewonersavonden, die vervolgens door het team worden samengevat. Schrijf de aanvraag die de AI-coördinator nodig heeft, in maximaal één A4. Beantwoord de drie vaste vragen (doel, soort gegevens, gewenste gebruikersgroep) en wees daarbij expliciet over het dataniveau: transcripties van bewonersavonden bevatten stemgeluid en uitspraken van met naam genoemde aanwezigen. Geef vervolgens aan welk van de vier toetsstenen jij, met de informatie die je nu hebt, nog niet kunt beantwoorden — en wat de AI-coördinator daarvoor bij de leverancier moet navragen. Alle gegevens zijn fictief.",
+      moeilijkheid: 2,
+      type: "workflow",
+      rubric: {
+        criteria: [
+          {
+            naam: "Doel en gebruikersgroep",
+            gewicht: 25,
+            max: 25,
+            niveaus: {
+              goed: "Het doel is concreet en verklaart waarom bestaande goedgekeurde tools hier niet volstaan; de gebruikersgroep is nauw en logisch afgebakend.",
+              voldoende: "Doel en gebruikersgroep zijn aanwezig maar één van de twee blijft algemeen ('handiger werken').",
+              onvoldoende: "Doel of gebruikersgroep ontbreekt, of het doel is niet meer dan een productnaam.",
+            },
+          },
+          {
+            naam: "Correcte dataniveau-inschatting",
+            gewicht: 45,
+            max: 45,
+            niveaus: {
+              goed: "Herkent dat ruwe transcripties met naam genoemde sprekers persoonsgegevens zijn (niet slechts 'vertrouwelijk'), en trekt daaruit de juiste conclusie dat dit een DPIA-light vereist vóór gebruik.",
+              voldoende: "Herkent dat het gevoelige informatie is, maar classificeert het niveau niet scherp of vergeet de DPIA-light te noemen.",
+              onvoldoende: "Behandelt de transcripties als algemene 'vertrouwelijke' bedrijfsinformatie zonder het persoonsgegevens-niveau te herkennen.",
+            },
+          },
+          {
+            naam: "Kritische blik op de toetsstenen",
+            gewicht: 30,
+            max: 30,
+            niveaus: {
+              goed: "Benoemt concreet welke toetssteen (bijvoorbeeld EER-opslag of uitsluiting modeltraining) nog niet te beantwoorden is zonder leveranciersinformatie, en wat er precies moet worden nagevraagd.",
+              voldoende: "Noemt dat er nog vragen open staan, maar niet welke toetssteen dat precies raakt.",
+              onvoldoende: "Doet alsof alle toetsstenen al beantwoord zijn, of laat deze vraag onbeantwoord.",
+            },
+          },
+        ],
+      },
+      startcontext: {
+        team: "Participatie Havenkade (fictief)",
+        huidigeWerkwijze: "Handmatig notuleren tijdens bewonersavonden, vaak onvolledig door spreektempo",
+        beoogdeTool: "Gespecialiseerde transcriptietool van een externe leverancier, nog niet in het toolregister",
+      },
+      referentieUitwerking:
+        "Een sterke aanvraag formuleert het doel als 'volledige, natrekbare transcripties van bewonersavonden maken, wat handmatig notuleren nu niet haalt' en beperkt de gebruikersgroep tot de twee of drie medewerkers die avonden bijwonen. Bij de gegevenssoort herkent de aanvraag dat een ruwe transcriptie een persoonsgegeven is — elke spreker is met naam en letterlijke uitspraak geïdentificeerd — en dat dit dataniveau een DPIA-light vereist, niet alleen de vier toetsstenen. De aanvraag benoemt expliciet dat zonder informatie van de leverancier nog niet vast te stellen is of de data binnen de EER blijft en of modeltraining contractueel is uitgesloten, en vraagt de AI-coördinator dit bij de leverancier na te trekken vóór gebruik. De aanvraag sluit af met de aanbeveling om transcripties na verwerking te anonimiseren en de audio-opname te verwijderen zodra het verslag is vastgesteld.",
       beoordeling: "ai",
     },
   ],
