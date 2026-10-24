@@ -1,4 +1,5 @@
 import { desc } from "drizzle-orm";
+import { notFound } from "next/navigation";
 import { BookMarked, FileText, ScrollText } from "lucide-react";
 import { db } from "@/db";
 import { knowledgeDocuments } from "@/db/schema";
@@ -7,9 +8,12 @@ import { PageHero } from "@/components/layout/page-hero";
 import { brandImages } from "@/lib/brand/images";
 
 export const dynamic = "force-dynamic";
+// Kennisbank is voorlopig uitgeschakeld; zet op true om de pagina weer te tonen.
+const KENNISBANK_ENABLED = false;
 const icons = { beleid: ScrollText, handleiding: BookMarked, voorbeeld: FileText } as const;
 
 export default async function KnowledgePage() {
+  if (!KENNISBANK_ENABLED) notFound();
   const docs = await db.select().from(knowledgeDocuments).orderBy(desc(knowledgeDocuments.updatedAt)).limit(30);
   return (
     <main>

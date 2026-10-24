@@ -18,6 +18,7 @@ export default async function OefenenPage({ searchParams }: { searchParams: Prom
   const lesson = lessonId ? await db.query.lessons.findFirst({ where: eq(lessons.id, lessonId) }) : null;
   const lessonModule = lesson ? await db.query.modules.findFirst({ where: eq(modules.id, lesson.moduleId) }) : null;
   const track = lessonModule ? await db.query.tracks.findFirst({ where: eq(tracks.id, lessonModule.trackId) }) : null;
+  if (track && !track.actief) notFound();
   const content = lesson?.content as Content | undefined;
   const initialPrompt = content?.sections?.find((section) => section.example)?.example;
   const backHref = track && lessonModule && lesson ? `/leren/${track.slug}/${lessonModule.slug}/${lesson.id}` : null;
@@ -36,7 +37,7 @@ export default async function OefenenPage({ searchParams }: { searchParams: Prom
         <p className="mt-6 inline-flex items-center gap-3">
           <span className="pill bg-bh-blue-50 text-bh-blue-700">Oefenomgeving</span>
         </p>
-        <h1 className="mt-4 text-4xl text-bh-blue-900">Oefen met prompten</h1>
+        <h1 className="mt-4 text-3xl text-bh-blue-900 md:text-4xl">Oefen met prompten</h1>
         <p className="mt-6 text-lg leading-relaxed text-bh-grey-600">
           {lesson ? (
             <>
@@ -57,7 +58,7 @@ export default async function OefenenPage({ searchParams }: { searchParams: Prom
           </ul>
         </div>
       </section>
-      <section className="card overflow-hidden lg:sticky lg:top-24 lg:h-[calc(100vh-8rem)]">
+      <section className="card flex flex-col overflow-hidden lg:sticky lg:top-24 lg:h-[calc(100vh-8rem)] lg:min-h-[560px]">
         <PracticeChat lessonId={lesson?.id} initialPrompt={initialPrompt} />
       </section>
     </main>

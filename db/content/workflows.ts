@@ -5,6 +5,8 @@ const track: TrackSeed = {
   niveau: 3,
   titel: "Workflows en kwaliteit",
   omschrijving: "Herhaalbaar AI-werk bouwen dat anderen vertrouwen.",
+  // Tijdelijk uitgeschakeld; zet op true (of verwijder) om dit niveau weer aan te bieden.
+  actief: false,
   modules: [
     {
       slug: "promptketens",
@@ -14,12 +16,12 @@ const track: TrackSeed = {
         "De output van een stap bewust inzetten als input voor de volgende stap",
         "Foutstapeling in ketens herkennen en voorkomen met controlemomenten",
       ],
-      geschatteMinuten: 50,
+      geschatteMinuten: 14,
       lessons: [
         {
           titel: "Waarom één grote prompt tekortschiet",
           type: "tekst",
-          geschatteMinuten: 12,
+          geschatteMinuten: 3,
           content: {
             intro:
               "Op niveau 2 heb je geleerd om sterke losse prompts te schrijven. Voor groot werk — een tender van tachtig pagina's, een participatietraject met honderd reacties — loopt die aanpak vast. In deze les zie je waarom, en wat het alternatief is.",
@@ -51,7 +53,7 @@ const track: TrackSeed = {
         {
           titel: "Een keten ontwerpen: van doel naar stappen",
           type: "interactief",
-          geschatteMinuten: 12,
+          geschatteMinuten: 4,
           content: {
             intro:
               "Een goede keten ontwerp je van achter naar voren: eerst het eindresultaat scherp, dan de stappen ernaartoe. In deze les oefen je die ontwerpvolgorde met een herkenbare casus uit de gebiedsontwikkeling.",
@@ -83,7 +85,7 @@ const track: TrackSeed = {
         {
           titel: "Controlemomenten: fouten stoppen waar ze ontstaan",
           type: "tekst",
-          geschatteMinuten: 12,
+          geschatteMinuten: 3,
           content: {
             intro:
               "De kracht van een keten is dat je tussen de stappen kunt kijken. Wie dat overslaat, bouwt een lopende band voor fouten. Deze les gaat over foutstapeling en hoe je controlemomenten inricht die dat voorkomen.",
@@ -115,7 +117,7 @@ const track: TrackSeed = {
         {
           titel: "Casus: de tenderketen van Project Zuiderveld (fictief)",
           type: "casus",
-          geschatteMinuten: 14,
+          geschatteMinuten: 4,
           content: {
             intro:
               "In deze casus volg je een tenderteam dat voor het eerst een promptketen inzet — en zie je zowel de winst als de valkuilen. Alle namen, cijfers en documenten in deze casus zijn fictief.",
@@ -154,12 +156,12 @@ const track: TrackSeed = {
         "Brongebonden antwoorden afdwingen in prompts en werkstromen",
         "Beperkingen van documentgebaseerd werken herkennen en ondervangen",
       ],
-      geschatteMinuten: 50,
+      geschatteMinuten: 14,
       lessons: [
         {
           titel: "Van los model naar kennisbank: wat RAG is",
           type: "tekst",
-          geschatteMinuten: 12,
+          geschatteMinuten: 3,
           content: {
             intro:
               "Een taalmodel weet veel over de wereld, maar niets over jouw project — tenzij je het die kennis geeft. Deze les legt uit hoe dat werkt met een kennisbank en RAG, zonder techniek die je niet nodig hebt.",
@@ -172,9 +174,9 @@ const track: TrackSeed = {
               {
                 heading: "RAG in gewone taal",
                 body:
-                  "RAG staat voor retrieval-augmented generation: eerst opzoeken, dan pas schrijven. Het werkt in drie bewegingen. Eén: jouw documenten worden vooraf in stukken geknipt ('chunks') en doorzoekbaar gemaakt op betekenis, niet alleen op letterlijke woorden — een zoekvraag over 'geluidshinder' vindt ook een passage over 'bouwlawaai'. Twee: stel je een vraag, dan zoekt het systeem eerst de meest relevante stukken op. Drie: het model krijgt jouw vraag plus die gevonden stukken aangeleverd, met de instructie om het antwoord daarop te baseren. Het model 'leert' jouw documenten dus niet — het krijgt ze als spiekbriefje bij elke vraag opnieuw. Dat verklaart ook de beperkingen die later in deze module aan bod komen: het antwoord kan nooit beter zijn dan de stukken die gevonden worden. De kennisbank van deze Academy, met de AI-tutor erbovenop, werkt precies zo.",
+                  "RAG staat voor retrieval-augmented generation: eerst opzoeken, dan pas schrijven. Het werkt in drie bewegingen. Eén: jouw documenten worden vooraf in stukken geknipt ('chunks') en doorzoekbaar gemaakt op betekenis, niet alleen op letterlijke woorden — een zoekvraag over 'geluidshinder' vindt ook een passage over 'bouwlawaai'. Twee: stel je een vraag, dan zoekt het systeem eerst de meest relevante stukken op. Drie: het model krijgt jouw vraag plus die gevonden stukken aangeleverd, met de instructie om het antwoord daarop te baseren. Het model 'leert' jouw documenten dus niet — het krijgt ze als spiekbriefje bij elke vraag opnieuw. Dat verklaart ook de beperkingen die later in deze module aan bod komen: het antwoord kan nooit beter zijn dan de stukken die gevonden worden. De zoekfunctie van de Academy-kennisbank gebruikt dezelfde eerste stap: semantisch zoeken in vooraf geknipte stukken.",
                 example:
-                  "Vraag aan de tutor: 'Mag ik een tenderdocument in een AI-tool zetten?' Het systeem vindt de chunk uit het AI-gebruiksbeleid over verboden invoer, geeft die aan het model mee, en het antwoord verwijst naar precies die passage — inclusief bron.",
+                  "Vraag aan een RAG-assistent: 'Mag ik een tenderdocument in een AI-tool zetten?' Het systeem vindt de chunk uit het AI-gebruiksbeleid over verboden invoer, geeft die aan het model mee, en het antwoord verwijst naar precies die passage — inclusief bron.",
               },
               {
                 heading: "Wat dit betekent voor je werk",
@@ -191,7 +193,7 @@ const track: TrackSeed = {
         {
           titel: "Grounding: waarom bronnen hallucinaties beperken",
           type: "tekst",
-          geschatteMinuten: 12,
+          geschatteMinuten: 3,
           content: {
             intro:
               "Op niveau 1 leerde je hallucinaties herkennen. Op niveau 3 leer je ze structureel beperken door het model aan bronnen te binden. Dat heet grounding, en het is de belangrijkste kwaliteitsmaatregel bij documentgebaseerd werken.",
@@ -211,7 +213,7 @@ const track: TrackSeed = {
               {
                 heading: "Grounding herkennen en toetsen",
                 body:
-                  "Hoe weet je of een antwoord echt gegrond is? Drie toetsen. Eén: elke feitelijke bewering moet herleidbaar zijn tot een aangeleverde passage — vraag het model per bewering de vindplaats te noemen en controleer een steekproef daarvan in de bron zelf. Twee: let op beweringen die nét iets specifieker zijn dan de bron. Als het brondocument 'circa 40 woningen' zegt en het antwoord '42 woningen', is er iets bijverzonnen. Drie: let op naadloze overgangen tussen bron en aanvulling — het model markeert zelf niet waar het brondocument ophoudt en de eigen kennis begint, tenzij jij daarom vraagt. Bouw daarom in werkstromen een vaste eindvraag in: 'Welke onderdelen van je antwoord komen niet letterlijk uit de bronnen?' In de kennisbank-tutor van de Academy is dit gedrag ingebouwd; in je eigen prompts moet je het zelf afdwingen. Gegrond werken is een gewoonte, geen knop.",
+                  "Hoe weet je of een antwoord echt gegrond is? Drie toetsen. Eén: elke feitelijke bewering moet herleidbaar zijn tot een aangeleverde passage — vraag het model per bewering de vindplaats te noemen en controleer een steekproef daarvan in de bron zelf. Twee: let op beweringen die nét iets specifieker zijn dan de bron. Als het brondocument 'circa 40 woningen' zegt en het antwoord '42 woningen', is er iets bijverzonnen. Drie: let op naadloze overgangen tussen bron en aanvulling — het model markeert zelf niet waar het brondocument ophoudt en de eigen kennis begint, tenzij jij daarom vraagt. Bouw daarom in werkstromen een vaste eindvraag in: 'Welke onderdelen van je antwoord komen niet letterlijk uit de bronnen?' In een goed ingerichte RAG-assistent is dit gedrag ingebouwd; in je eigen prompts moet je het zelf afdwingen. Gegrond werken is een gewoonte, geen knop.",
                 example:
                   "Een projectondersteuner laat het model de servicekostenregeling van Project Havenkwartier (fictief) samenvatten. Het antwoord noemt een opzegtermijn die niet in het document staat — afkomstig uit algemene modelkennis. De vaste eindvraag naar niet-brongebonden onderdelen vangt precies dit af.",
               },
@@ -223,7 +225,7 @@ const track: TrackSeed = {
         {
           titel: "Brongebonden antwoorden eisen in de praktijk",
           type: "interactief",
-          geschatteMinuten: 12,
+          geschatteMinuten: 4,
           content: {
             intro:
               "Kennis over grounding wordt pas waardevol als hij in je prompts en werkstromen zit. In deze les bouw je een vaste set promptregels die je bij elk documentgebaseerd werk kunt hergebruiken.",
@@ -243,9 +245,9 @@ const track: TrackSeed = {
                   "Verbeterd: 'Vat per artikel van de aangeleverde concept-erfpachtakte samen wat er staat, met artikelnummer als vindplaats. Markeer open of ontbrekende artikelen als ONTBREEKT. Noem alleen risico's die direct uit de aktetekst volgen en citeer daarbij het artikel. Sluit af met wat je niet uit de akte hebt gehaald.' Juridische duiding gaat daarna naar de jurist.",
               },
               {
-                heading: "Brongebonden werken in de kennisbank en de tutor",
+                heading: "Brongebonden werken met de kennisbank",
                 body:
-                  "De Academy-kennisbank en de AI-tutor passen deze principes automatisch toe: de tutor beantwoordt vragen op basis van de goedgekeurde documenten en verwijst naar de bron. Toch blijft er voor jou werk over. Controleer of de genoemde bron het antwoord werkelijk draagt — klik door en lees de passage, zeker als je op het antwoord gaat handelen. Merk je dat de tutor geen antwoord vindt op iets dat wél geregeld zou moeten zijn, dan heb je mogelijk een gat in de kennisbank gevonden: meld dat bij de contentbeheerder, want een gemelde leemte is een verbetering voor iedereen. En realiseer je wat de tutor níet is: geen jurist, geen privacycontactpersoon en geen vervanging van de formele kanalen. Bij twijfel over een concrete situatie geldt dezelfde regel als altijd — de kennisbank wijst de weg, de mens beslist. Zo houd je de verhouding zuiver tussen wat het systeem weet en wat jij moet wegen.",
+                  "De Academy-kennisbank past deze principes automatisch toe: het zoeken gebeurt uitsluitend in goedgekeurde documenten en elk resultaat verwijst naar de bron. Toch blijft er voor jou werk over. Controleer of de gevonden bron je vraag werkelijk beantwoordt — klik door en lees de passage, zeker als je op het antwoord gaat handelen. Merk je dat de kennisbank geen antwoord vindt op iets dat wél geregeld zou moeten zijn, dan heb je mogelijk een gat in de kennisbank gevonden: meld dat bij de contentbeheerder, want een gemelde leemte is een verbetering voor iedereen. En realiseer je wat de kennisbank níet is: geen jurist, geen privacycontactpersoon en geen vervanging van de formele kanalen. Bij twijfel over een concrete situatie geldt dezelfde regel als altijd — de kennisbank wijst de weg, de mens beslist. Zo houd je de verhouding zuiver tussen wat het systeem weet en wat jij moet wegen.",
               },
             ],
             takeaway:
@@ -255,7 +257,7 @@ const track: TrackSeed = {
         {
           titel: "Casus: de verouderde kennisbank van Project Havenkwartier (fictief)",
           type: "casus",
-          geschatteMinuten: 14,
+          geschatteMinuten: 4,
           content: {
             intro:
               "Grounding beschermt tegen verzinsels, maar niet tegen verouderde of onvolledige bronnen. Deze casus laat zien hoe een keurig gegrond antwoord toch fout kan zijn — en wat je daartegen organiseert. Alle namen en gegevens zijn fictief.",
@@ -294,12 +296,12 @@ const track: TrackSeed = {
         "Steekproefcontroles en het vier-ogenprincipe toepassen op AI-output",
         "Werkstromen documenteren als recept dat collega's kunnen overnemen",
       ],
-      geschatteMinuten: 50,
+      geschatteMinuten: 14,
       lessons: [
         {
           titel: "Kwaliteitscriteria vóór je begint",
           type: "tekst",
-          geschatteMinuten: 12,
+          geschatteMinuten: 3,
           content: {
             intro:
               "De meeste discussies over AI-output gaan over smaak, omdat vooraf niemand heeft gezegd wat 'goed' is. Deze les draait die volgorde om: eerst criteria, dan pas produceren.",
@@ -331,7 +333,7 @@ const track: TrackSeed = {
         {
           titel: "Steekproeven: slim controleren zonder alles te lezen",
           type: "interactief",
-          geschatteMinuten: 12,
+          geschatteMinuten: 4,
           content: {
             intro:
               "Bij grote volumes AI-output — honderd samenvattingen, vijfhonderd geëxtraheerde eisen — is alles nalopen onhaalbaar. Steekproefcontrole is dan het gereedschap: klein genoeg om vol te houden, slim genoeg om echte problemen te vinden.",
@@ -363,7 +365,7 @@ const track: TrackSeed = {
         {
           titel: "Het vier-ogenprincipe bij AI-werk",
           type: "tekst",
-          geschatteMinuten: 12,
+          geschatteMinuten: 3,
           content: {
             intro:
               "Bij belangrijk werk kijkt bij Blauwhoed altijd een tweede mens mee — dat is bij AI-werk niet anders, maar wél anders ingericht. Deze les gaat over wanneer vier ogen verplicht zijn en hoe je de tweede blik zinvol maakt.",
@@ -395,7 +397,7 @@ const track: TrackSeed = {
         {
           titel: "Casus: een werkstroom-recept dat de afdeling overneemt",
           type: "casus",
-          geschatteMinuten: 14,
+          geschatteMinuten: 4,
           content: {
             intro:
               "Een werkstroom die alleen in jouw hoofd bestaat, is een gewoonte — pas gedocumenteerd wordt het een werkstroom. In deze casus zie je hoe een goed recept eruitziet en wat er gebeurt als het ontbreekt. Alle namen en projecten zijn fictief.",
@@ -434,12 +436,12 @@ const track: TrackSeed = {
         "Ontbrekende informatie expliciet laten markeren in plaats van laten opvullen",
         "Uitleggen waarom structuur controle en hergebruik van AI-output mogelijk maakt",
       ],
-      geschatteMinuten: 50,
+      geschatteMinuten: 15,
       lessons: [
         {
           titel: "Vaste formats: tabellen, templates en JSON",
           type: "tekst",
-          geschatteMinuten: 12,
+          geschatteMinuten: 3,
           content: {
             intro:
               "Vrije tekst is prettig om te lezen maar lastig om te controleren en her te gebruiken. Deze les laat zien hoe je het model een vast format oplegt — en waarom dat de basis is onder betrouwbare werkstromen.",
@@ -471,7 +473,7 @@ const track: TrackSeed = {
         {
           titel: "Ontbrekende informatie: 'onbekend' is een antwoord",
           type: "tekst",
-          geschatteMinuten: 12,
+          geschatteMinuten: 4,
           content: {
             intro:
               "Het gevaarlijkste gedrag van een taalmodel in gestructureerd werk is een leeg veld stilletjes opvullen. Deze les leert je het model 'onbekend' te laten zeggen — en waarom dat ene woord zoveel waard is.",
@@ -503,7 +505,7 @@ const track: TrackSeed = {
         {
           titel: "Structuur als motor voor controle en hergebruik",
           type: "interactief",
-          geschatteMinuten: 12,
+          geschatteMinuten: 4,
           content: {
             intro:
               "Structured output is geen kwestie van netheid: structuur is wat controle schaalbaar maakt en hergebruik mogelijk. In deze les verbind je de formats uit deze module met de ketens en kwaliteitsborging uit eerdere modules — en bouw je zelf een template.",
@@ -535,7 +537,7 @@ const track: TrackSeed = {
         {
           titel: "Casus: eisenextractie in vaste velden voor Project Zuiderveld (fictief)",
           type: "casus",
-          geschatteMinuten: 14,
+          geschatteMinuten: 4,
           content: {
             intro:
               "In deze casus zie je hoe het tenderteam van Project Zuiderveld (fictief) de losse extractiestap uit de eerdere casus doorontwikkelt tot een gestructureerde, herbruikbare werkstroomstap. Alle gegevens zijn fictief.",
@@ -575,12 +577,12 @@ const track: TrackSeed = {
         "Bepalen wanneer een werkstroom moet worden stilgelegd en hoe je dat doet",
       ],
       isSecurityModule: true,
-      geschatteMinuten: 50,
+      geschatteMinuten: 17,
       lessons: [
         {
           titel: "Foutstapeling zonder menselijke blik",
           type: "tekst",
-          geschatteMinuten: 12,
+          geschatteMinuten: 3,
           content: {
             intro:
               "Hoe beter een werkstroom draait, hoe minder mensen kijken — en precies daar ontstaat het grootste veiligheidsrisico van geautomatiseerd AI-werk. Deze les gaat over het sluipende verdwijnen van de menselijke blik.",
@@ -612,7 +614,7 @@ const track: TrackSeed = {
         {
           titel: "Prompt-injectie in ketens",
           type: "tekst",
-          geschatteMinuten: 12,
+          geschatteMinuten: 4,
           content: {
             intro:
               "Op niveau 2 leerde je prompt-injectie kennen bij documentanalyse: verborgen instructies in een document. In een keten is het risico groter, omdat een geslaagde injectie meereist door alle volgende stappen. Deze les maakt je ketens weerbaar.",
@@ -644,7 +646,7 @@ const track: TrackSeed = {
         {
           titel: "Toegang, logging en herleidbaarheid",
           type: "interactief",
-          geschatteMinuten: 12,
+          geschatteMinuten: 5,
           content: {
             intro:
               "Een werkstroom die iedereen kan draaien en die geen sporen achterlaat, is niet te vertrouwen en niet te verantwoorden. In deze les richt je toegangsbeheer en logging in voor je eigen werkstroom.",
@@ -676,7 +678,7 @@ const track: TrackSeed = {
         {
           titel: "Casus: de noodstop — wanneer je een werkstroom stillegt",
           type: "casus",
-          geschatteMinuten: 14,
+          geschatteMinuten: 5,
           content: {
             intro:
               "Elke werkstroom heeft een noodstop nodig: vooraf afgesproken signalen waarbij je stopt, en een vaste routine voor wat daarna komt. Deze casus laat een team zien dat de noodstop op tijd gebruikt — en wat er gebeurd was als ze hadden doorgedraaid. Alle gegevens zijn fictief.",
@@ -715,12 +717,12 @@ const track: TrackSeed = {
         "Herkennen wanneer AI-gebruik hoog risico is en welke plichten daarbij horen",
         "AI Act-eisen vertalen naar concrete afspraken voor Blauwhoed-werkstromen",
       ],
-      geschatteMinuten: 50,
+      geschatteMinuten: 19,
       lessons: [
         {
           titel: "De risicopiramide van de AI Act",
           type: "tekst",
-          geschatteMinuten: 12,
+          geschatteMinuten: 4,
           content: {
             intro:
               "De EU AI Act is de eerste brede AI-wet ter wereld en raakt ook het dagelijkse werk bij Blauwhoed. De kern is een risicopiramide: hoe groter het risico van een toepassing voor mensen, hoe zwaarder de verplichtingen. Deze les geeft je dat raamwerk.",
@@ -752,7 +754,7 @@ const track: TrackSeed = {
         {
           titel: "Hoog risico: als AI over mensen oordeelt",
           type: "tekst",
-          geschatteMinuten: 12,
+          geschatteMinuten: 4,
           content: {
             intro:
               "De hoogrisicocategorie is voor Blauwhoed het meest relevant bij werving, selectie en beoordeling van personen. Deze les maakt concreet wat er dan verandert — en hoe je hoogrisicogebruik herkent vóórdat je erin stapt.",
@@ -784,7 +786,7 @@ const track: TrackSeed = {
         {
           titel: "Transparantie en AI-geletterdheid",
           type: "interactief",
-          geschatteMinuten: 12,
+          geschatteMinuten: 6,
           content: {
             intro:
               "Twee AI Act-plichten raken vrijwel iedereen bij Blauwhoed: mensen moeten weten wanneer ze met AI te maken hebben, en de organisatie moet zorgen dat medewerkers AI voldoende begrijpen. In deze les pas je beide toe op je eigen praktijk.",
@@ -816,7 +818,7 @@ const track: TrackSeed = {
         {
           titel: "Casus: Blauwhoed-werkstromen langs de AI Act-lat",
           type: "casus",
-          geschatteMinuten: 14,
+          geschatteMinuten: 5,
           content: {
             intro:
               "In deze afsluitende casus toetst een team vier bestaande en geplande AI-toepassingen aan de AI Act — en ontdekt dat de wet vooral vraagt om expliciet te maken wat goed werk toch al doet. Alle situaties zijn fictief.",

@@ -10,14 +10,14 @@ import { trackImage } from "@/lib/brand/images";
 export const dynamic = "force-dynamic";
 export default async function TrackPage({ params }: { params: Promise<{ track: string }> }) {
   const { track: slug } = await params;
-  const track = await db.query.tracks.findFirst({ where: and(eq(tracks.slug, slug), isNull(tracks.deletedAt)) });
+  const track = await db.query.tracks.findFirst({ where: and(eq(tracks.slug, slug), eq(tracks.actief, true), isNull(tracks.deletedAt)) });
   if (!track) notFound();
   const items = await db.select().from(modules).where(and(eq(modules.trackId, track.id), isNull(modules.deletedAt))).orderBy(asc(modules.volgorde));
   const totalMinutes = items.reduce((sum, item) => sum + item.geschatteMinuten, 0);
   return (
     <main>
       <PageHero eyebrow={`Niveau ${track.niveau}`} title={track.titel} description={track.omschrijving} image={trackImage(track.slug, track.niveau - 1)} compact
-        aside={<dl className="grid grid-cols-3 gap-4 rounded-2xl border border-white/15 bg-white/10 p-5 text-white backdrop-blur"><div><dt className="text-xs text-white/60">Modules</dt><dd className="text-2xl font-extrabold">{items.length}</dd></div><div><dt className="text-xs text-white/60">Leertijd</dt><dd className="text-2xl font-extrabold">{Math.round(totalMinutes / 60)}u</dd></div><div><dt className="text-xs text-white/60">Security</dt><dd className="text-2xl font-extrabold">{items.filter((item) => item.isSecurityModule).length}</dd></div></dl>}>
+        aside={<dl className="grid grid-cols-3 gap-4 rounded-2xl border border-white/15 bg-white/10 p-5 text-white backdrop-blur"><div><dt className="text-xs text-white/60">Modules</dt><dd className="text-2xl font-extrabold">{items.length}</dd></div><div><dt className="text-xs text-white/60">Leertijd</dt><dd className="text-2xl font-extrabold">{totalMinutes >= 60 ? `${Math.floor(totalMinutes / 60)}u ${totalMinutes % 60}m` : `${totalMinutes}m`}</dd></div><div><dt className="text-xs text-white/60">Security</dt><dd className="text-2xl font-extrabold">{items.filter((item) => item.isSecurityModule).length}</dd></div></dl>}>
         <Link href={`/examen/${track.slug}`} className="btn btn-primary">Naar het examen <ArrowRight size={17} /></Link>
         <Link href={`/examen/${track.slug}?security=1`} className="btn btn-ghost-light">Securitydeeltoets</Link>
       </PageHero>

@@ -2,7 +2,7 @@ import { Logo } from "./logo";
 import { NavLinks } from "./nav-links";
 import { getCurrentUser } from "@/lib/auth/current-user";
 
-const links = [["Dashboard", "/dashboard"], ["Leren", "/leren"], ["Opdrachten", "/opdrachten"], ["Oefenen", "/oefenen"], ["Kennisbank", "/kennisbank"], ["Prompts", "/promptbibliotheek"], ["Certificaten", "/certificaten"]] as const;
+const links = [["Dashboard", "/dashboard"], ["Leren", "/leren"], ["Opdrachten", "/opdrachten"], ["Oefenen", "/oefenen"], ["Prompts", "/promptbibliotheek"], ["Certificaten", "/certificaten"]] as const;
 const adminRoles = new Set(["teamlead", "beoordelaar", "contentbeheerder", "admin"]);
 
 export async function PlatformHeader() {

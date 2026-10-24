@@ -37,15 +37,15 @@ export function PracticeChat({ lessonId, initialPrompt }: { lessonId?: string; i
   }
 
   return (
-    <div className="flex h-full min-h-[650px] flex-col">
-      <div className="flex-1 space-y-4 overflow-y-auto p-6" aria-live="polite">
+    <div className="flex h-full min-h-0 flex-col">
+      <div className="max-h-[60vh] min-h-48 flex-1 space-y-4 overflow-y-auto p-6 lg:max-h-none" aria-live="polite">
         {messages.length === 0 && (
           <div className="rounded-xl bg-bh-blue-50 p-5 text-sm text-bh-blue-900">
             Dit is een vrije oefenomgeving: typ een prompt zoals je dat bij een echte, goedgekeurde AI-tool zou doen. Er wordt niets beoordeeld en niets bewaard na dit gesprek — gebruik dus geen echte vertrouwelijke gegevens of persoonsgegevens, oefen met geanonimiseerde of fictieve voorbeelden.
           </div>
         )}
         {messages.map((item, index) => (
-          <div key={index} className={`max-w-[88%] rounded-xl p-4 text-sm ${item.role === "user" ? "ml-auto bg-bh-blue-900 text-white" : "border bg-white shadow-sm"}`}>
+          <div key={index} className={`max-w-[88%] whitespace-pre-wrap break-words rounded-xl p-4 text-sm ${item.role === "user" ? "ml-auto bg-bh-blue-900 text-white" : "border bg-white shadow-sm"}`}>
             {item.content || "Claude denkt…"}
           </div>
         ))}
@@ -61,7 +61,7 @@ export function PracticeChat({ lessonId, initialPrompt }: { lessonId?: string; i
           </div>
         )}
       </div>
-      <form onSubmit={send} className="border-t p-4">
+      <form onSubmit={send} className="shrink-0 border-t p-4">
         <label htmlFor="practice-chat" className="sr-only">
           Bericht aan AI
         </label>

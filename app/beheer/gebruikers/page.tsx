@@ -47,9 +47,9 @@ export default async function UsersAdmin() {
           <thead className="bg-bh-sand text-xs font-bold uppercase tracking-wider text-bh-grey-600">
             <tr>
               <th className="p-4">Naam</th>
-              <th>Afdeling</th>
-              <th>Rol</th>
-              <th>AVG-verwijdering</th>
+              <th className="p-4">Afdeling</th>
+              <th className="p-4">Rol</th>
+              <th className="p-4">AVG-verwijdering</th>
             </tr>
           </thead>
           <tbody>
@@ -59,8 +59,8 @@ export default async function UsersAdmin() {
                   <p>{item.naam}</p>
                   <p className="text-xs text-bh-grey-600">{item.email}</p>
                 </td>
-                <td>{item.afdeling}</td>
-                <td>
+                <td className="p-4">{item.afdeling}</td>
+                <td className="p-4">
                   <form
                     action={updateUserRole}
                     className="flex items-center gap-2"
@@ -80,7 +80,7 @@ export default async function UsersAdmin() {
                     </button>
                   </form>
                 </td>
-                <td>
+                <td className="p-4">
                   <form action={removeUserData} className="flex gap-2">
                     <input type="hidden" name="userId" value={item.id} />
                     <input
@@ -89,7 +89,7 @@ export default async function UsersAdmin() {
                       placeholder="VERWIJDER"
                       aria-label={`Typ VERWIJDER voor ${item.naam}`}
                     />
-                    <button className="text-bh-red">Anonimiseer</button>
+                    <button className="whitespace-nowrap text-sm font-semibold text-bh-red">Anonimiseer</button>
                   </form>
                 </td>
               </tr>

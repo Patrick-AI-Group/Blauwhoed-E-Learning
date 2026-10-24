@@ -5,7 +5,7 @@ import { and, desc, eq, isNull } from "drizzle-orm";
 import { revalidatePath } from "next/cache";
 import { z } from "zod";
 import { db } from "@/db";
-import { examAttempts, exams, questions } from "@/db/schema";
+import { examAttempts, exams, questions, tracks } from "@/db/schema";
 import { getCurrentUser } from "@/lib/auth/current-user";
 import { scoreExam } from "@/lib/exams/scoring";
 
@@ -21,6 +21,7 @@ function equalAnswer(actual: unknown, expected: unknown) { const normalize = (va
 export async function startExam(input: z.infer<typeof startSchema>) {
   const { examId } = startSchema.parse(input); const user = await getCurrentUser(); if (!user) throw new Error("Niet ingelogd");
   const exam = await db.query.exams.findFirst({ where: eq(exams.id, examId) }); if (!exam) throw new Error("Examen niet gevonden");
+  const track = await db.query.tracks.findFirst({ where: eq(tracks.id, exam.trackId) }); if (!track?.actief) throw new Error("Dit niveau is momenteel niet beschikbaar");
   const latest = await db.query.examAttempts.findFirst({ where: and(eq(examAttempts.examId, examId), eq(examAttempts.userId, user.id)), orderBy: desc(examAttempts.poging) });
   if (latest && !latest.ingeleverdOp) return { attemptId: latest.id };
   if (latest && latest.ingeleverdOp && !exam.isSecurityExam) { if (latest.poging >= exam.maxPogingen && !latest.overrideDoor) throw new Error("Je maximale aantal pogingen is bereikt. Vraag je teamlead om een herkansing."); const cooldownUntil = latest.ingeleverdOp.getTime() + exam.cooldownUren * 3_600_000; if (cooldownUntil > Date.now() && !latest.overrideDoor) throw new Error(`Je volgende poging is beschikbaar op ${new Date(cooldownUntil).toLocaleString("nl-NL")}.`); }

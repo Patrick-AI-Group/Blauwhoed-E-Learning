@@ -30,6 +30,7 @@ function validate() {
     for (const a of track.assignments) if (!slugs.has(a.moduleSlug)) errors.push(`${track.slug}: opdracht "${a.titel}" verwijst naar onbekende module "${a.moduleSlug}"`);
     for (const a of track.assignments) { const sum = a.rubric.criteria.reduce((s, c) => s + c.gewicht, 0); if (sum !== 100) errors.push(`${track.slug}: rubric van "${a.titel}" telt op tot ${sum} in plaats van 100`); }
     for (const m of track.modules) if (m.lessons.length < 3) errors.push(`${track.slug}/${m.slug}: minder dan 3 lessen`);
+    for (const m of track.modules) { const sum = m.lessons.reduce((s, l) => s + l.geschatteMinuten, 0); if (sum !== m.geschatteMinuten) errors.push(`${track.slug}/${m.slug}: module staat op ${m.geschatteMinuten} min, lessen tellen op tot ${sum}`); }
   }
   if (errors.length) { console.error(errors.join("\n")); process.exit(1); }
 }
@@ -47,7 +48,7 @@ async function seed() {
 
   let previousTrackId: string | undefined;
   for (const seed of trackSeeds) {
-    const [track] = await db.insert(tracks).values({ slug: seed.slug, niveau: seed.niveau, titel: seed.titel, omschrijving: seed.omschrijving, volgorde: seed.niveau, vereistTrackId: previousTrackId }).returning();
+    const [track] = await db.insert(tracks).values({ slug: seed.slug, niveau: seed.niveau, titel: seed.titel, omschrijving: seed.omschrijving, actief: seed.actief ?? true, volgorde: seed.niveau, vereistTrackId: previousTrackId }).returning();
     previousTrackId = track.id;
     const moduleIdBySlug = new Map<string, string>();
     for (const [index, moduleSeed] of seed.modules.entries()) {

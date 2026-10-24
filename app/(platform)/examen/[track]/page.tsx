@@ -25,7 +25,7 @@ export default async function ExamPage({
   const track = await db.query.tracks.findFirst({
     where: eq(tracks.slug, slug),
   });
-  if (!track) notFound();
+  if (!track || !track.actief) notFound();
   const security = query.security === "1";
   const exam = await db.query.exams.findFirst({
     where: and(eq(exams.trackId, track.id), eq(exams.isSecurityExam, security)),
@@ -80,7 +80,7 @@ export default async function ExamPage({
             Securitydeeltoets
           </Link>
         </div>
-        <h1 className="mt-5 text-5xl text-bh-blue-900">
+        <h1 className="mt-5 text-4xl text-bh-blue-900 md:text-5xl">
           {exam.titel}
         </h1>
         <p className="mt-6 text-lg text-bh-grey-600">

@@ -1,14 +1,14 @@
 import Link from "next/link";
-import { eq } from "drizzle-orm";
+import { and, eq } from "drizzle-orm";
 import { ArrowRight } from "lucide-react";
 import { db } from "@/db";
-import { assignments } from "@/db/schema";
+import { assignments, modules, tracks } from "@/db/schema";
 import { PageHero } from "@/components/layout/page-hero";
 import { brandImages } from "@/lib/brand/images";
 
 export const dynamic = "force-dynamic";
 export default async function AssignmentsPage() {
-  const items = await db.select().from(assignments).where(eq(assignments.moeilijkheid, 1)).limit(12);
+  const items = await db.select({ id: assignments.id, titel: assignments.titel, opdrachttekst: assignments.opdrachttekst, type: assignments.type, moeilijkheid: assignments.moeilijkheid }).from(assignments).innerJoin(modules, eq(assignments.moduleId, modules.id)).innerJoin(tracks, eq(modules.trackId, tracks.id)).where(and(eq(assignments.moeilijkheid, 1), eq(tracks.actief, true))).limit(12);
   return (
     <main>
       <PageHero eyebrow="Praktijk" title="Opdrachten" description="Je proces telt mee. Experimenteer in de AI-werkomgeving en lever je beste resultaat in." image={brandImages.toepassen} compact />

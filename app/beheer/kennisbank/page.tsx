@@ -27,8 +27,7 @@ export default async function KnowledgeAdmin({
     <main>
       <h1 className="text-4xl text-bh-blue-900">Kennisbank beheren</h1>
       <p className="mt-2 text-bh-grey-600">
-        Opslaan maakt direct nieuwe embeddings voor semantisch zoeken en de
-        tutor.
+        Opslaan maakt direct nieuwe embeddings voor semantisch zoeken.
       </p>
       <div className="mt-8 grid gap-6 xl:grid-cols-2">
         <section className="card p-5">
@@ -86,7 +85,7 @@ export default async function KnowledgeAdmin({
               placeholder="Volledige goedgekeurde brontekst"
               required
             />
-            <button className="btn btn-primary btn-sm">
+            <button className="btn btn-primary btn-sm justify-self-start">
               Opslaan en indexeren
             </button>
           </form>

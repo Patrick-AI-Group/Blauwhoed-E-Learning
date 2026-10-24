@@ -14,12 +14,12 @@ const track: TrackSeed = {
         "Prompt-injectie in aangeleverde documenten herkennen en neutraliseren",
         "AI-bevindingen systematisch verifiëren in het brondocument",
       ],
-      geschatteMinuten: 50,
+      geschatteMinuten: 14,
       lessons: [
         {
           titel: "Een tender in een middag doorgronden",
           type: "tekst",
-          geschatteMinuten: 12,
+          geschatteMinuten: 3,
           content: {
             intro:
               "Een tenderleidraad van tweehonderd pagina's lezen kost dagen; de eisen eruit halen kost nog langer. Met AI kun je zo'n document in een middag doorgronden, mits je gestructureerd werkt en zelf de regie houdt.",
@@ -51,7 +51,7 @@ const track: TrackSeed = {
         {
           titel: "Documenten bevragen in plaats van lezen",
           type: "interactief",
-          geschatteMinuten: 13,
+          geschatteMinuten: 4,
           content: {
             intro:
               "Naast samenvatten kun je een document ook bevragen: gerichte vragen stellen alsof het document een collega is die alles heeft gelezen. Dat is vaak sneller en preciezer dan een algemene samenvatting.",
@@ -83,7 +83,7 @@ const track: TrackSeed = {
         {
           titel: "Prompt-injectie: instructies in documenten zijn data",
           type: "casus",
-          geschatteMinuten: 13,
+          geschatteMinuten: 4,
           content: {
             intro:
               "Een document dat je laat analyseren kan zelf instructies bevatten die het model proberen te sturen. Dat heet prompt-injectie, en juist bij documenten van externe partijen moet je erop bedacht zijn.",
@@ -115,7 +115,7 @@ const track: TrackSeed = {
         {
           titel: "Verifiëren in de bron",
           type: "tekst",
-          geschatteMinuten: 12,
+          geschatteMinuten: 3,
           content: {
             intro:
               "Elke AI-analyse eindigt op dezelfde plek: terug in het brondocument. Verificatie is geen wantrouwen tegen de techniek, maar de stap die van een vlotte samenvatting een bruikbaar werkdocument maakt.",
@@ -154,12 +154,12 @@ const track: TrackSeed = {
         "Few-shot prompten met goedgekeurde, geanonimiseerde voorbeeldteksten",
         "AI-conceptteksten redigeren tot verzendklare bewoners- en koperscommunicatie",
       ],
-      geschatteMinuten: 50,
+      geschatteMinuten: 15,
       lessons: [
         {
           titel: "De schrijfwijzer als prompt",
           type: "tekst",
-          geschatteMinuten: 12,
+          geschatteMinuten: 3,
           content: {
             intro:
               "Blauwhoed schrijft helder, warm en eerlijk. Een taalmodel kent die toon niet vanzelf: het schrijft standaard formeler, wolliger en gladder dan wij willen. In deze les leer je de schrijfwijzer om te zetten in promptinstructies die wél de juiste toon opleveren.",
@@ -191,7 +191,7 @@ const track: TrackSeed = {
         {
           titel: "Bewonersbrieven: slecht nieuws goed brengen",
           type: "casus",
-          geschatteMinuten: 13,
+          geschatteMinuten: 5,
           content: {
             intro:
               "Slechtnieuwsbrieven zijn het echte examen voor de Blauwhoed-toon. In deze casus schrijf je met AI een vertragingsbrief aan kopers — en zie je waar het model helpt en waar jij onmisbaar blijft.",
@@ -223,7 +223,7 @@ const track: TrackSeed = {
         {
           titel: "Few-shot: goedgekeurde voorbeelden als stijlanker",
           type: "interactief",
-          geschatteMinuten: 12,
+          geschatteMinuten: 4,
           content: {
             intro:
               "De krachtigste manier om stijl over te brengen is geen beschrijving, maar een voorbeeld. Few-shot prompten — een goedgekeurde tekst meegeven als model — maakt van elke collega een schrijver in Blauwhoed-toon.",
@@ -255,7 +255,7 @@ const track: TrackSeed = {
         {
           titel: "Menselijke eindredactie",
           type: "tekst",
-          geschatteMinuten: 13,
+          geschatteMinuten: 3,
           content: {
             intro:
               "AI schrijft het concept, maar een mens tekent ervoor. Eindredactie is geen formaliteit achteraf: het is de stap waarin verantwoordelijkheid, feitenkennis en menselijkheid samenkomen — en die alleen jij kunt zetten.",
@@ -294,12 +294,12 @@ const track: TrackSeed = {
         "Beoordelen wanneer je AI-rekenwerk kunt vertrouwen en wanneer je het narekent",
         "Opties gestructureerd vergelijken met een beslistabel waarin de mens weegt",
       ],
-      geschatteMinuten: 50,
+      geschatteMinuten: 15,
       lessons: [
         {
           titel: "Van ruwe tekst naar gestructureerde data",
           type: "interactief",
-          geschatteMinuten: 12,
+          geschatteMinuten: 4,
           content: {
             intro:
               "Veel informatie in ons werk zit opgesloten in lopende tekst: mails, verslagen, offertes, rapporten. Taalmodellen zijn uitstekend in het omzetten daarvan naar tabellen en vaste velden — als je het format zelf bepaalt.",
@@ -331,7 +331,7 @@ const track: TrackSeed = {
         {
           titel: "Rekenwerk: vertrouwen naar risico, niet blind wantrouwen",
           type: "tekst",
-          geschatteMinuten: 13,
+          geschatteMinuten: 4,
           content: {
             intro:
               "Een paar jaar geleden struikelden taalmodellen geregeld over meerstapsberekeningen. Bij de huidige generatie is dat grotendeels voorbij: moderne modellen rekenen betrouwbaar, ook bij percentages op percentages, indexeringen en verdeelsleutels. Dat verandert de vraag die je stelt: niet meer 'mag dit wel', maar 'wat kost het als deze uitkomst onopgemerkt fout is'.",
@@ -363,7 +363,7 @@ const track: TrackSeed = {
         {
           titel: "Opties vergelijken met een beslistabel",
           type: "casus",
-          geschatteMinuten: 13,
+          geschatteMinuten: 4,
           content: {
             intro:
               "Twee aannemers, drie gevelvarianten, vier parkeeroplossingen: ons werk zit vol keuzes tussen opties. AI helpt die keuzes scherper te maken met gestructureerde vergelijkingen — zolang de weging bij de mens blijft.",
@@ -395,7 +395,7 @@ const track: TrackSeed = {
         {
           titel: "Vaste formats en ontbrekende waarden",
           type: "tekst",
-          geschatteMinuten: 12,
+          geschatteMinuten: 3,
           content: {
             intro:
               "Het verschil tussen een handige AI-truc en een betrouwbare werkstroom zit in het format. Wie vaste velden afspreekt en gaten expliciet maakt, krijgt output die telkens dezelfde vorm heeft — en dus telkens op dezelfde manier te controleren is.",
@@ -434,12 +434,12 @@ const track: TrackSeed = {
         "Vergaderverslagen samenvatten zonder dat het model iets toevoegt of aandikt",
         "Deelnemersgegevens anonimiseren vóór elke AI-verwerking van vergadermateriaal",
       ],
-      geschatteMinuten: 50,
+      geschatteMinuten: 16,
       lessons: [
         {
           titel: "Van notulen naar besluitenlijst",
           type: "tekst",
-          geschatteMinuten: 12,
+          geschatteMinuten: 4,
           content: {
             intro:
               "Na een projectoverleg wil niemand het verslag schrijven, maar iedereen wil weten wat er is besloten. AI maakt van ruwe notulen in minuten een besluitenlijst — als je het model een strak format geeft en zelf controleert of elk besluit echt is genomen.",
@@ -471,7 +471,7 @@ const track: TrackSeed = {
         {
           titel: "Actiepunten met eigenaar en deadline",
           type: "interactief",
-          geschatteMinuten: 12,
+          geschatteMinuten: 4,
           content: {
             intro:
               "Acties zijn de motor van een project — en het eerste dat sneuvelt in een rommelig verslag. In deze les train je AI om actiepunten scherp te extraheren: concreet geformuleerd, met eigenaar en deadline, en zonder dubbelingen.",
@@ -503,7 +503,7 @@ const track: TrackSeed = {
         {
           titel: "Samenvatten zonder toe te voegen",
           type: "casus",
-          geschatteMinuten: 13,
+          geschatteMinuten: 4,
           content: {
             intro:
               "Een samenvatting hoort minder te zeggen dan het origineel, nooit méér. Toch voegen taalmodellen ongemerkt van alles toe: conclusies, stemmingen, verbanden. In deze casus leer je strak samenvatten — trouw aan wat er werkelijk is gezegd.",
@@ -535,7 +535,7 @@ const track: TrackSeed = {
         {
           titel: "Anonimiseren van deelnemers",
           type: "tekst",
-          geschatteMinuten: 13,
+          geschatteMinuten: 4,
           content: {
             intro:
               "Notulen zitten vol persoonsgegevens: namen, functies, wie wat zei en wie het ergens niet mee eens was. Vóór elke AI-verwerking anonimiseer je deelnemers — een kleine moeite die een wereld aan privacyrisico scheelt.",
@@ -575,12 +575,12 @@ const track: TrackSeed = {
         "Rechten van betrokkenen en bewaartermijnen vertalen naar je dagelijkse AI-gebruik",
         "Uitleggen wat er met prompts gebeurt bij de verwerkers en waarom dat kaders stelt",
       ],
-      geschatteMinuten: 50,
+      geschatteMinuten: 18,
       lessons: [
         {
           titel: "Dataminimalisatie in de praktijk",
           type: "tekst",
-          geschatteMinuten: 13,
+          geschatteMinuten: 4,
           content: {
             intro:
               "Dataminimalisatie is de kernregel van de AVG: verwerk alleen gegevens die noodzakelijk zijn voor het concrete doel. Voor AI-gebruik betekent dat een simpele reflex vóór elke prompt: heeft het model dit écht nodig? Meestal kan de helft weg.",
@@ -612,7 +612,7 @@ const track: TrackSeed = {
         {
           titel: "Herleidbaarheid: pseudonimiseren versus anonimiseren",
           type: "casus",
-          geschatteMinuten: 13,
+          geschatteMinuten: 5,
           content: {
             intro:
               "'Ik heb de namen eruit gehaald, dus het is anoniem.' Die zin is de gevaarlijkste misvatting in dagelijks AI-gebruik. In deze casus leer je het verschil tussen pseudonimiseren en anonimiseren — en waarom dat verschil juridisch alles bepaalt.",
@@ -644,7 +644,7 @@ const track: TrackSeed = {
         {
           titel: "Rechten van betrokkenen en bewaartermijnen",
           type: "tekst",
-          geschatteMinuten: 12,
+          geschatteMinuten: 4,
           content: {
             intro:
               "De AVG geeft mensen rechten over hun gegevens: inzage, correctie, verwijdering, bezwaar. Wie met AI werkt, moet weten hoe die rechten doorwerken in prompts, chatgeschiedenis en opgeslagen output — en hoe lang wat bewaard blijft.",
@@ -676,7 +676,7 @@ const track: TrackSeed = {
         {
           titel: "Wat gebeurt er met je prompt?",
           type: "interactief",
-          geschatteMinuten: 12,
+          geschatteMinuten: 5,
           content: {
             intro:
               "Waar gaat je prompt eigenlijk heen als je op verzenden drukt? Wie dat weet, begrijpt waarom sommige tools zijn goedgekeurd en andere verboden — en kan collega's het ook uitleggen. Dat is precies de AI-geletterdheid die de wet vraagt.",

@@ -91,7 +91,7 @@ export function ExamRunner({
           className={`mx-auto ${result.passed ? "text-bh-green" : "text-bh-red"}`}
           size={44}
         />
-        <h1 className="mt-6 text-4xl text-bh-blue-900">
+        <h1 className="mt-6 text-3xl text-bh-blue-900 md:text-4xl">
           {result.passed ? "Examen behaald" : "Nog niet behaald"}
         </h1>
         <p className="mt-4 text-lg">
@@ -139,7 +139,7 @@ export function ExamRunner({
             style={{ width: `${((index + 1) / questions.length) * 100}%` }}
           />
         </div>
-        <h1 className="text-3xl leading-snug text-bh-blue-900">
+        <h1 className="text-2xl leading-snug text-bh-blue-900 md:text-3xl">
           {question.vraag}
         </h1>
         {question.type === "scenario_open" ? (
@@ -149,7 +149,7 @@ export function ExamRunner({
               setAnswers({ ...answers, [question.id]: event.target.value })
             }
             onBlur={(event) => choose(event.target.value)}
-            className="mt-8 min-h-48 w-full card p-4"
+            className="mt-8 min-h-48 w-full resize-y card p-4"
             aria-label="Antwoord"
           />
         ) : (

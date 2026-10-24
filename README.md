@@ -31,5 +31,3 @@ De seed levert 4 tracks, 21 modules, 84 lessen, 45 praktijkopdrachten, 200 exame
 Gebruik `pnpm test` en `pnpm build`. Koppel de repository daarna aan Vercel, voeg dezelfde omgevingsvariabelen toe en gebruik Neon als productie-Postgres. `vercel.json` plant de dagelijkse retentiecontrole. Stel voor productie een eigen Clerk-domein, Microsoft Entra SSO, Resend-domeinvalidatie en Blob-token in.
 
 Na het behalen van alle lessen, opdrachten, het examen en 100% op de securitydeeltoets genereert de Academy automatisch een PDF met QR-code. De PDF gaat naar Vercel Blob en wordt via Resend gemaild. De publieke verificatie toont uitsluitend naam, niveau, datum en geldigheid. Dertig dagen voor verlopen volgt automatisch een hercertificeringsmail. Chattranscripten worden na 12 maanden leeggemaakt en examenpogingen na 24 maanden verwijderd. Certificaten blijven 7 jaar bewaard.
-
-De RAG-tutor gebruikt OpenAI `text-embedding-3-small` voor bronselectie en Claude voor het Nederlandstalige antwoord. Hij wordt server-side geblokkeerd zolang de gebruiker een open examenpoging heeft en weigert antwoorden op lopende opdrachten of examens.

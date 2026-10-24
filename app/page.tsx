@@ -6,15 +6,15 @@ import { SiteFooter } from "@/components/layout/site-footer";
 import { brandImages } from "@/lib/brand/images";
 
 const levels = [
-  { number: "01", slug: "fundament", title: "Fundament", text: "Veilig starten met AI in je dagelijkse werk.", time: "4 uur", image: brandImages.fundament },
-  { number: "02", slug: "toepassen", title: "Toepassen in je vak", text: "Van documentanalyse tot bewonerscommunicatie.", time: "8 uur", image: brandImages.toepassen },
-  { number: "03", slug: "workflows", title: "Workflows en kwaliteit", text: "Bouw herhaalbaar werk dat anderen vertrouwen.", time: "10 uur", image: brandImages.workflows },
-  { number: "04", slug: "multiplier", title: "Multiplier", text: "Zet verantwoord AI-gebruik op in je afdeling.", time: "10 uur", image: brandImages.multiplier },
+  { number: "01", slug: "fundament", title: "Fundament", text: "Veilig starten met AI in je dagelijkse werk.", time: "85 min", image: brandImages.fundament },
+  { number: "02", slug: "toepassen", title: "Toepassen in je vak", text: "Van documentanalyse tot bewonerscommunicatie.", time: "80 min", image: brandImages.toepassen },
+  { number: "03", slug: "workflows", title: "Workflows en kwaliteit", text: "Bouw herhaalbaar werk dat anderen vertrouwen.", time: "95 min", image: brandImages.workflows },
+  { number: "04", slug: "multiplier", title: "Multiplier", text: "Zet verantwoord AI-gebruik op in je afdeling.", time: "90 min", image: brandImages.multiplier },
 ];
 const pillars = [
   { icon: BookOpenCheck, title: "Leren door te doen", text: "Minimaal zestig procent van je tijd werk je zelf met AI aan geanonimiseerde casussen uit gebiedsontwikkeling." },
   { icon: ShieldCheck, title: "Veiligheid als voorwaarde", text: "Elke niveau sluit af met een securitydeeltoets die je met 100% moet halen. AVG en projectvertrouwelijkheid zitten in ieder onderdeel." },
-  { icon: Bot, title: "Een tutor die bronnen kent", text: "De AI-tutor zoekt uitsluitend in goedgekeurd Blauwhoed-beleid en handleidingen en geeft nooit examenantwoorden weg." },
+  { icon: Bot, title: "Oefenen in een veilige omgeving", text: "In de oefenomgeving probeer je prompts en werkwijzen uit op geanonimiseerde casussen, zonder risico voor echte projectdata." },
 ];
 
 export default function Home() {

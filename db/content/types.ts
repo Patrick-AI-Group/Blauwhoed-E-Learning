@@ -58,6 +58,8 @@ export type TrackSeed = {
   niveau: 1 | 2 | 3 | 4;
   titel: string;
   omschrijving: string;
+  /** Uitgeschakelde niveaus blijven in de seed bewaard, maar zijn niet zichtbaar of toegankelijk. Standaard true. */
+  actief?: boolean;
   modules: ModuleSeed[];
   questions: QuestionSeed[];
   assignments: AssignmentSeed[];

@@ -10,7 +10,7 @@ import { trackImage } from "@/lib/brand/images";
 export const dynamic = "force-dynamic";
 export default async function ModulePage({ params }: { params: Promise<{ track: string; module: string }> }) {
   const route = await params;
-  const [track] = await db.select().from(tracks).where(eq(tracks.slug, route.track)).limit(1);
+  const [track] = await db.select().from(tracks).where(and(eq(tracks.slug, route.track), eq(tracks.actief, true))).limit(1);
   if (!track) notFound();
   const [module] = await db.select().from(modules).where(and(eq(modules.trackId, track.id), eq(modules.slug, route.module), isNull(modules.deletedAt))).limit(1);
   if (!module) notFound();
@@ -27,7 +27,7 @@ export default async function ModulePage({ params }: { params: Promise<{ track: 
                 <Link href={`/leren/${route.track}/${route.module}/${lesson.id}`} className="card card-hover grid gap-4 p-6 md:grid-cols-[56px_1fr_auto] md:items-center">
                   <span className="grid h-12 w-12 place-items-center rounded-xl bg-bh-blue-50 font-extrabold text-bh-blue-700">{String(index + 1).padStart(2, "0")}</span>
                   <div><h2 className="text-lg text-bh-blue-900">{lesson.titel}</h2><p className="mt-1 inline-flex items-center gap-3 text-sm text-bh-grey-600"><span className="pill bg-bh-sand capitalize text-bh-blue-900">{lesson.type}</span><span className="inline-flex items-center gap-1"><Clock3 size={13} /> {lesson.geschatteMinuten} min</span></p></div>
-                  <ArrowRight size={18} className="text-bh-blue-600" />
+                  <ArrowRight size={18} className="hidden text-bh-blue-600 md:block" />
                 </Link>
               </li>
             ))}

@@ -26,7 +26,7 @@ export default async function CertificatesPage() {
                 <div className="relative"><span className="grid h-12 w-12 place-items-center rounded-2xl bg-bh-blue-900 text-white"><Award size={24} /></span>
                 <p className="eyebrow mt-6">Niveau {track.niveau}</p>
                 <h2 className="mt-1 text-2xl text-bh-blue-900">{track.titel}</h2>
-                <dl className="mt-5 grid grid-cols-2 gap-3 text-sm"><div><dt className="text-bh-grey-600">Geldig tot</dt><dd className="font-bold">{certificate.verlooptOp.toLocaleDateString("nl-NL")}</dd></div><div><dt className="text-bh-grey-600">Verificatiecode</dt><dd className="font-mono font-bold">{certificate.code}</dd></div></dl>
+                <dl className="mt-5 grid grid-cols-2 gap-3 text-sm"><div><dt className="text-bh-grey-600">Geldig tot</dt><dd className="font-bold">{certificate.verlooptOp.toLocaleDateString("nl-NL")}</dd></div><div><dt className="text-bh-grey-600">Verificatiecode</dt><dd className="break-all font-mono font-bold">{certificate.code}</dd></div></dl>
                 <div className="mt-6 flex flex-wrap gap-3">{certificate.pdfUrl && <a href={certificate.pdfUrl} className="btn btn-primary btn-sm"><Download size={15} /> Download PDF</a>}<Link href={`/verificatie/${certificate.code}`} className="btn btn-outline btn-sm"><ShieldCheck size={15} /> Verifieer</Link></div></div>
               </article>
             ))}

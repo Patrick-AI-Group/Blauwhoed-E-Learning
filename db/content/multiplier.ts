@@ -5,6 +5,8 @@ const track: TrackSeed = {
   niveau: 4,
   titel: "Multiplier",
   omschrijving: "AI-gebruik in de eigen afdeling opzetten en bewaken.",
+  // Tijdelijk uitgeschakeld; zet op true (of verwijder) om dit niveau weer aan te bieden.
+  actief: false,
   modules: [
     {
       slug: "ai-kansen-scannen",
@@ -14,12 +16,12 @@ const track: TrackSeed = {
         "AI-kansen prioriteren op impact en risico",
         "Herkennen wanneer een oplossing naar een technologie zoekt in plaats van andersom",
       ],
-      geschatteMinuten: 50,
+      geschatteMinuten: 16,
       lessons: [
         {
           titel: "De takeninventarisatie: waar zit het werk echt?",
           type: "tekst",
-          geschatteMinuten: 12,
+          geschatteMinuten: 3,
           content: {
             intro:
               "Als multiplier begin je niet bij de tool, maar bij het werk. Een goede kansenscan start met een eerlijke inventarisatie van de taken die jouw afdeling week in, week uit uitvoert. Pas daarna komt de vraag waar AI kan helpen.",
@@ -51,7 +53,7 @@ const track: TrackSeed = {
         {
           titel: "Oefening: taken scoren op de drie signalen",
           type: "interactief",
-          geschatteMinuten: 13,
+          geschatteMinuten: 4,
           content: {
             intro:
               "Signalen herkennen leer je door te doen. In deze les scoor je zelf een reeks taken uit een fictieve afdeling en vergelijk je jouw oordeel met de uitwerking. Let vooral op de twijfelgevallen: daar zit het leren.",
@@ -83,7 +85,7 @@ const track: TrackSeed = {
         {
           titel: "Prioriteren op impact en risico",
           type: "tekst",
-          geschatteMinuten: 12,
+          geschatteMinuten: 4,
           content: {
             intro:
               "Een shortlist van vijf kansen is geen plan. Prioriteren betekent kiezen wat eerst komt, wat wacht en wat je bewust laat liggen. De twee assen daarvoor zijn impact en risico.",
@@ -115,7 +117,7 @@ const track: TrackSeed = {
         {
           titel: "Casus: de kansenscan van team Gebiedsmarketing",
           type: "casus",
-          geschatteMinuten: 13,
+          geschatteMinuten: 5,
           content: {
             intro:
               "In deze casus volg je Samira, kersvers multiplier bij het fictieve team Gebiedsmarketing, tijdens haar eerste volledige kansenscan. De casus laat zien hoe de methode uit de vorige lessen in de praktijk schuurt — en hoe je daarmee omgaat.",
@@ -154,12 +156,12 @@ const track: TrackSeed = {
         "Alle kostenposten van een AI-toepassing volledig in beeld brengen",
         "Meetcriteria en evaluatiemomenten vooraf vastleggen en eerlijk concluderen bij tegenvallende resultaten",
       ],
-      geschatteMinuten: 50,
+      geschatteMinuten: 18,
       lessons: [
         {
           titel: "Baten kwantificeren zonder jezelf rijk te rekenen",
           type: "tekst",
-          geschatteMinuten: 13,
+          geschatteMinuten: 4,
           content: {
             intro:
               "Een businesscase voor AI staat of valt met geloofwaardige baten. De verleiding is groot om met grote getallen te zwaaien; de kunst is om klein en hard te rekenen, met bandbreedtes die je kunt verdedigen.",
@@ -191,7 +193,7 @@ const track: TrackSeed = {
         {
           titel: "De volledige kostenkant: meer dan een licentie",
           type: "tekst",
-          geschatteMinuten: 12,
+          geschatteMinuten: 4,
           content: {
             intro:
               "De kostenkant van een AI-businesscase wordt stelselmatig onderschat, omdat alleen de licentie zichtbaar op de factuur staat. De grootste posten zitten in mensen: implementatie, training en beheer.",
@@ -223,7 +225,7 @@ const track: TrackSeed = {
         {
           titel: "Meetcriteria en evaluatiemomenten vastleggen",
           type: "interactief",
-          geschatteMinuten: 12,
+          geschatteMinuten: 5,
           content: {
             intro:
               "Wat je niet vooraf afspreekt, kun je achteraf niet eerlijk beoordelen. In deze les formuleer je zelf meetcriteria en evaluatiemomenten voor een fictieve toepassing, en toets je ze aan de valkuilen.",
@@ -255,7 +257,7 @@ const track: TrackSeed = {
         {
           titel: "Casus: de businesscase die sneuvelde",
           type: "casus",
-          geschatteMinuten: 13,
+          geschatteMinuten: 5,
           content: {
             intro:
               "Niet elke goede businesscase eindigt in een goedkeuring — en niet elke afwijzing is een verlies. In deze casus schrijft multiplier Jeroen een businesscase voor het fictieve team Kopersbegeleiding, en leert hij het meest van wat er misgaat.",
@@ -294,12 +296,12 @@ const track: TrackSeed = {
         "Escalatiepaden bij vragen, twijfels en incidenten toepassen",
         "Aanspreekbaarheid in de afdeling organiseren zonder politieagent te worden",
       ],
-      geschatteMinuten: 50,
+      geschatteMinuten: 18,
       lessons: [
         {
           titel: "Zes rollen, één keten van verantwoordelijkheid",
           type: "tekst",
-          geschatteMinuten: 12,
+          geschatteMinuten: 4,
           content: {
             intro:
               "Verantwoord AI-gebruik is geen kwestie van één functionaris die alles bewaakt, maar van heldere rollen die op elkaar aansluiten. Deze les zet de keten op een rij en laat zien waar jij als multiplier in past.",
@@ -331,7 +333,7 @@ const track: TrackSeed = {
         {
           titel: "Waarom de multiplier geen privacybeslissingen neemt",
           type: "tekst",
-          geschatteMinuten: 12,
+          geschatteMinuten: 4,
           content: {
             intro:
               "De grens tussen begeleiden en beslissen is nergens zo belangrijk als bij privacy. Deze les maakt precies waar die grens ligt, waarom hij daar ligt, en hoe je hem bewaakt zonder collega's van het kastje naar de muur te sturen.",
@@ -363,7 +365,7 @@ const track: TrackSeed = {
         {
           titel: "Escalatiepaden: van vraag tot incident",
           type: "interactief",
-          geschatteMinuten: 13,
+          geschatteMinuten: 5,
           content: {
             intro:
               "Escaleren is geen falen maar een vaardigheid: het juiste signaal op het juiste moment bij de juiste persoon. In deze les oefen je met situaties uit de praktijk en bepaal je per geval het escalatiepad.",
@@ -395,7 +397,7 @@ const track: TrackSeed = {
         {
           titel: "Casus: wie is hier aan zet?",
           type: "casus",
-          geschatteMinuten: 13,
+          geschatteMinuten: 5,
           content: {
             intro:
               "Eén week uit het leven van multiplier Fatima bij de fictieve afdeling Ontwikkeling Rivieroever, met drie situaties waarin rollen en escalatiepaden door elkaar dreigen te lopen. Bepaal steeds zelf wie aan zet is voordat je de uitwerking leest.",
@@ -434,13 +436,13 @@ const track: TrackSeed = {
         "Beoordelen wanneer een volledige DPIA wettelijk verplicht is",
         "Risico's voor betrokkenen concreet maken en koppelen aan maatregelen en eigenaarschap",
       ],
-      geschatteMinuten: 50,
+      geschatteMinuten: 18,
       isSecurityModule: true,
       lessons: [
         {
           titel: "De vijf vragen van de DPIA-light",
           type: "tekst",
-          geschatteMinuten: 13,
+          geschatteMinuten: 4,
           content: {
             intro:
               "De DPIA-light is de verkorte risicoanalyse die Blauwhoed uitvoert voordat een nieuwe AI-toepassing met (mogelijk) persoonsgegevens in gebruik gaat. Vijf vragen, één document, en een harde regel: zonder vastgelegde eigenaar gaat niets live.",
@@ -474,7 +476,7 @@ const track: TrackSeed = {
         {
           titel: "Light of volledig? De grens van de DPIA-plicht",
           type: "tekst",
-          geschatteMinuten: 12,
+          geschatteMinuten: 4,
           content: {
             intro:
               "Niet elke risicoanalyse mag licht zijn. Bij sommige verwerkingen is een volledige DPIA wettelijk verplicht, en die inschatting verkeerd maken is zelf een compliancerisico. Deze les leert je de signalen herkennen — en de beslissing op de juiste plek leggen.",
@@ -506,7 +508,7 @@ const track: TrackSeed = {
         {
           titel: "Risico's concreet maken en maatregelen koppelen",
           type: "interactief",
-          geschatteMinuten: 12,
+          geschatteMinuten: 5,
           content: {
             intro:
               "Het zwakste onderdeel van de meeste risicoanalyses is vaagheid: 'er kan data lekken' als risico en 'we zijn er alert op' als maatregel. In deze les train je het concreet maken van risico's voor betrokkenen en het koppelen van maatregelen die echt iets afdekken.",
@@ -538,7 +540,7 @@ const track: TrackSeed = {
         {
           titel: "Casus: DPIA-light voor de leadassistent van De Zuidkade",
           type: "casus",
-          geschatteMinuten: 13,
+          geschatteMinuten: 5,
           content: {
             intro:
               "In deze casus doorloop je een volledige DPIA-light zoals die bij Blauwhoed op tafel komt: een fictief verkoopteam wil een AI-assistent voor de opvolging van woningzoekenden. Je ziet het hele traject — inclusief het moment waarop de livegang wordt tegengehouden.",
@@ -577,12 +579,12 @@ const track: TrackSeed = {
         "Productief omgaan met scepsis en overenthousiasme in het team",
         "Een veilige oefenomgeving bieden en risico's signaleren zonder politieagent te worden",
       ],
-      geschatteMinuten: 50,
+      geschatteMinuten: 18,
       lessons: [
         {
           titel: "Voordoen, samen doen, zelf doen",
           type: "tekst",
-          geschatteMinuten: 12,
+          geschatteMinuten: 4,
           content: {
             intro:
               "Collega's leren geen AI-vaardigheden van een presentatie of een handleiding, maar van begeleide praktijk. Het didactische model daarvoor is zo oud als het ambacht: voordoen, samen doen, zelf doen — in die volgorde, met echt werk.",
@@ -614,7 +616,7 @@ const track: TrackSeed = {
         {
           titel: "Sceptici en enthousiastelingen: twee gesprekken, één doel",
           type: "tekst",
-          geschatteMinuten: 13,
+          geschatteMinuten: 4,
           content: {
             intro:
               "In elk team tref je beide uitersten: de collega die 'er niks mee moet' en de collega die alles direct met AI wil doen. Beide houdingen bevatten iets waardevols — en beide vragen een eigen gesprek.",
@@ -646,7 +648,7 @@ const track: TrackSeed = {
         {
           titel: "Een veilige oefenomgeving inrichten",
           type: "interactief",
-          geschatteMinuten: 12,
+          geschatteMinuten: 5,
           content: {
             intro:
               "Mensen leren alleen als fouten maken geen kwaad kan — technisch niet en sociaal niet. In deze les richt je stap voor stap een veilige oefenomgeving in voor je afdeling en toets je je keuzes aan twee scenario's.",
@@ -678,7 +680,7 @@ const track: TrackSeed = {
         {
           titel: "Casus: het eerste kwartaal als multiplier",
           type: "casus",
-          geschatteMinuten: 13,
+          geschatteMinuten: 5,
           content: {
             intro:
               "Deze slotcasus volgt multiplier Ruben gedurende zijn eerste drie maanden bij de fictieve afdeling Ontwikkeling Havenkwartier — inclusief de fout die bijna iedereen in deze rol maakt: te veel zelf doen.",

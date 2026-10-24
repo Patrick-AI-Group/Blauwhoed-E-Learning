@@ -14,12 +14,12 @@ const track: TrackSeed = {
         "Herkennen welke taken een taalmodel goed en slecht uitvoert",
         "Benoemen wat tokens en context zijn en wat dat betekent voor je prompt",
       ],
-      geschatteMinuten: 45,
+      geschatteMinuten: 15,
       lessons: [
         {
           titel: "Wat een taalmodel echt doet: voorspellen, niet opzoeken",
           type: "tekst",
-          geschatteMinuten: 12,
+          geschatteMinuten: 3,
           content: {
             intro:
               "ChatGPT, Copilot en vergelijkbare tools voelen als een collega die alles weet. Dat beeld klopt niet, en dat misverstand is de bron van de meeste AI-fouten op de werkvloer. In deze les leer je wat er werkelijk gebeurt als je een vraag stelt.",
@@ -51,7 +51,7 @@ const track: TrackSeed = {
         {
           titel: "Waar AI sterk in is — en waar het faalt",
           type: "tekst",
-          geschatteMinuten: 11,
+          geschatteMinuten: 4,
           content: {
             intro:
               "Niet elke taak past bij een taalmodel. Wie het verschil kent tussen sterke en zwakke taken, bespaart tijd én voorkomt fouten. Deze les geeft je een praktische indeling die je direct kunt toepassen.",
@@ -85,7 +85,7 @@ const track: TrackSeed = {
         {
           titel: "Tokens en context: het werkgeheugen van het model",
           type: "interactief",
-          geschatteMinuten: 10,
+          geschatteMinuten: 4,
           content: {
             intro:
               "Waarom 'vergeet' een model soms wat je eerder in het gesprek vertelde? En waarom werkt een lange, rommelige prompt slechter dan een korte, scherpe? Het antwoord zit in tokens en het contextvenster. Probeer de voorbeelden in deze les zelf uit in de oefenomgeving.",
@@ -117,7 +117,7 @@ const track: TrackSeed = {
         {
           titel: "Casus: het overtuigende maar foute advies",
           type: "casus",
-          geschatteMinuten: 12,
+          geschatteMinuten: 4,
           content: {
             intro:
               "Een junior ontwikkelaar krijgt van een chatbot een prachtig onderbouwd advies over geluidsnormen — dat op twee punten aantoonbaar fout is. Deze casus is fictief, maar het patroon komt in elke organisatie voor. Loop mee door wat er gebeurde en wat er beter kon.",
@@ -156,12 +156,12 @@ const track: TrackSeed = {
         "Toepassen van de vier verificatiestappen op AI-output vóór gebruik",
         "Beoordelen hoeveel controle AI-rekenwerk verdient, naar gelang het gevolg van een fout",
       ],
-      geschatteMinuten: 45,
+      geschatteMinuten: 16,
       lessons: [
         {
           titel: "Waarom een model liever iets verzint dan zwijgt",
           type: "tekst",
-          geschatteMinuten: 11,
+          geschatteMinuten: 3,
           content: {
             intro:
               "Een hallucinatie is AI-output die er betrouwbaar uitziet maar niet klopt: een verzonnen feit, bron of detail. Het is geen storing maar een direct gevolg van hoe taalmodellen werken. Deze les legt uit waarom het gebeurt, zodat je weet wanneer je extra alert moet zijn.",
@@ -193,7 +193,7 @@ const track: TrackSeed = {
         {
           titel: "Vijf signalen van een hallucinatie",
           type: "interactief",
-          geschatteMinuten: 10,
+          geschatteMinuten: 4,
           content: {
             intro:
               "Hallucinaties laten sporen na. In deze les leer je vijf herkenbare signalen, en je oefent ermee op een voorbeeldtekst. Na afloop scan je AI-output sneller en gerichter dan wanneer je alles even wantrouwt.",
@@ -225,7 +225,7 @@ const track: TrackSeed = {
         {
           titel: "De vier verificatiestappen in de praktijk",
           type: "tekst",
-          geschatteMinuten: 12,
+          geschatteMinuten: 4,
           content: {
             intro:
               "Signalen herkennen is stap één; er systematisch mee omgaan is stap twee. Blauwhoed hanteert vier vaste verificatiestappen voor AI-output. Deze les maakt ze concreet, inclusief de vraag hoeveel controle bij welke taak past.",
@@ -257,7 +257,7 @@ const track: TrackSeed = {
         {
           titel: "Casus: de verzonnen parkeernorm",
           type: "casus",
-          geschatteMinuten: 12,
+          geschatteMinuten: 5,
           content: {
             intro:
               "Eén verzonnen getal in een verder uitstekende tekst — en het scheelde weinig of het stond in een presentatie aan de gemeente. Deze fictieve casus laat zien hoe een hallucinatie bijna doorglipt, en hoe de verificatiestappen het verschil maakten.",
@@ -296,12 +296,12 @@ const track: TrackSeed = {
         "Verbeteren van AI-output door gericht te itereren",
         "Inzetten van voorbeelden en aannamemarkering voor betrouwbaardere output",
       ],
-      geschatteMinuten: 45,
+      geschatteMinuten: 16,
       lessons: [
         {
           titel: "De vier bouwstenen: rol, context, taak, format",
           type: "tekst",
-          geschatteMinuten: 12,
+          geschatteMinuten: 4,
           content: {
             intro:
               "Het verschil tussen een matige en een sterke AI-uitkomst zit meestal niet in het model, maar in de prompt. Blauwhoed werkt met vier vaste bouwstenen: rol, context, taak en format. Deze les maakt ze alle vier concreet.",
@@ -333,7 +333,7 @@ const track: TrackSeed = {
         {
           titel: "Itereren: van eerste versie naar bruikbaar resultaat",
           type: "interactief",
-          geschatteMinuten: 10,
+          geschatteMinuten: 4,
           content: {
             intro:
               "De beste AI-gebruikers schrijven geen perfecte prompts — ze itereren slim. Beoordelen, gericht bijsturen, opnieuw beoordelen. Deze les leert je die cyclus, en je oefent hem direct in de oefenomgeving.",
@@ -365,7 +365,7 @@ const track: TrackSeed = {
         {
           titel: "Voorbeelden meegeven en aannames laten markeren",
           type: "tekst",
-          geschatteMinuten: 11,
+          geschatteMinuten: 3,
           content: {
             intro:
               "Twee technieken tillen je prompts boven de basis uit: een goed voorbeeld meegeven en het model zijn eigen aannames laten benoemen. Beide kosten nauwelijks moeite en leveren direct betere, betrouwbaardere output op.",
@@ -397,7 +397,7 @@ const track: TrackSeed = {
         {
           titel: "Casus: de bewonersbrief die eerst niet klonk",
           type: "casus",
-          geschatteMinuten: 12,
+          geschatteMinuten: 5,
           content: {
             intro:
               "Van een stijve, wollige eerste versie naar een brief die bewoners echt bereikt — in drie iteraties. Deze fictieve casus volgt een omgevingsmanager die de haltechnieken uit deze module stap voor stap toepast.",
@@ -436,13 +436,13 @@ const track: TrackSeed = {
         "Toepassen van anonimiseren en het verschil met pseudonimiseren uitleggen",
         "Uitvoeren van de meldprocedure bij een (mogelijk) datalek of AI-incident",
       ],
-      geschatteMinuten: 45,
+      geschatteMinuten: 18,
       isSecurityModule: true,
       lessons: [
         {
           titel: "Dataclassificatie: wat mag waar",
           type: "tekst",
-          geschatteMinuten: 12,
+          geschatteMinuten: 4,
           content: {
             intro:
               "Niet alle bedrijfsinformatie is even gevoelig, en niet elke AI-tool biedt dezelfde waarborgen. Blauwhoed werkt daarom met vier dataniveaus die precies bepalen wat waar mag. Deze les leert je de indeling en, minstens zo belangrijk, waarom hij zo is vastgesteld.",
@@ -474,7 +474,7 @@ const track: TrackSeed = {
         {
           titel: "Anonimiseren of pseudonimiseren: het verschil dat telt",
           type: "interactief",
-          geschatteMinuten: 11,
+          geschatteMinuten: 5,
           content: {
             intro:
               "'Ik heb de namen weggehaald, dus het is anoniem.' Was het maar zo simpel. Deze les leert je het verschil tussen pseudonimiseren en echt anonimiseren, en je oefent met een casus die je vóór AI-gebruik veilig moet maken.",
@@ -506,7 +506,7 @@ const track: TrackSeed = {
         {
           titel: "Casus: de klantenlijst in de chatbot",
           type: "casus",
-          geschatteMinuten: 12,
+          geschatteMinuten: 5,
           content: {
             intro:
               "Eén handeling onder tijdsdruk, en persoonsgegevens van 34 kopers staan in een gratis chatbot. Deze fictieve casus laat zien hoe snel het gebeurt, wat er daarna goed ging — en wat jij eruit meeneemt.",
@@ -538,7 +538,7 @@ const track: TrackSeed = {
         {
           titel: "Het datalek: melden zonder schuldvraag",
           type: "tekst",
-          geschatteMinuten: 10,
+          geschatteMinuten: 4,
           content: {
             intro:
               "Wie weet wat er na een melding gebeurt, meldt sneller — en snelheid is bij een datalek alles. Deze les zet de meldprocedure van Blauwhoed op een rij: wat een incident is, wat jij doet en wat de organisatie daarna doet.",
@@ -577,12 +577,12 @@ const track: TrackSeed = {
         "Herkennen van de risico's van gratis consumententools voor werkgebruik",
         "Doorlopen van de aanvraagprocedure voor een nieuwe AI-tool",
       ],
-      geschatteMinuten: 45,
+      geschatteMinuten: 18,
       lessons: [
         {
           titel: "De goedgekeurde lijst: wat mag en waarom",
           type: "tekst",
-          geschatteMinuten: 11,
+          geschatteMinuten: 4,
           content: {
             intro:
               "Niet elke AI-tool is verboden en niet elke tool is toegestaan — er is een duidelijke lijst. Deze les behandelt welke tools je mag gebruiken, waar je die lijst vindt en, belangrijker, waaróm juist deze tools zijn goedgekeurd.",
@@ -614,7 +614,7 @@ const track: TrackSeed = {
         {
           titel: "Waarom gratis chatbots duur kunnen uitpakken",
           type: "tekst",
-          geschatteMinuten: 10,
+          geschatteMinuten: 4,
           content: {
             intro:
               "Gratis consumentenversies van chatbots zijn verboden voor werkgerelateerde invoer. Dat is geen overdreven voorzichtigheid maar een afweging met vier concrete risico's. Wie ze kent, legt het ook overtuigend uit aan een collega.",
@@ -646,7 +646,7 @@ const track: TrackSeed = {
         {
           titel: "Casus: de handige tool van de aannemer",
           type: "casus",
-          geschatteMinuten: 12,
+          geschatteMinuten: 5,
           content: {
             intro:
               "Een externe partner introduceert een slimme AI-tool en wil dat Blauwhoed meedoet. Klinkt als vooruitgang — maar wie toetst wat? Deze fictieve casus oefent precies het beoordelingsmoment dat je in de praktijk vaker tegenkomt dan je denkt.",
@@ -678,7 +678,7 @@ const track: TrackSeed = {
         {
           titel: "Zelf een tool aanvragen: zo werkt het",
           type: "interactief",
-          geschatteMinuten: 11,
+          geschatteMinuten: 5,
           content: {
             intro:
               "Zie je een AI-tool die je werk echt beter maakt? Mooi — de aanvraagprocedure is er om ja mogelijk te maken, niet om nee te verkopen. Deze les loopt de procedure door en je bereidt als oefening zelf een aanvraag voor.",

@@ -127,7 +127,7 @@ export default async function AssignmentAdmin({
                 required
               />
             </label>
-            <button className="btn btn-primary btn-sm">
+            <button className="btn btn-primary btn-sm justify-self-start">
               Opslaan
             </button>
           </form>

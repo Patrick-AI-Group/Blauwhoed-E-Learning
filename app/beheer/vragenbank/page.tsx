@@ -130,7 +130,7 @@ export default async function QuestionsAdmin({
               />{" "}
               Security/AVG
             </label>
-            <button className="btn btn-primary btn-sm">
+            <button className="btn btn-primary btn-sm justify-self-start">
               Opslaan
             </button>
           </form>
