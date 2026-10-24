@@ -21,7 +21,7 @@ export default async function LearnPage() {
   ]);
   return (
     <main>
-      <PageHero eyebrow="Jouw leerpad" title="Van fundament naar verantwoord leider." description="Ieder niveau combineert korte lessen met praktijkwerk. Je veiligheidsdeeltoets moet je altijd volledig goed maken." image={brandImages.hero} compact />
+      <PageHero eyebrow="Jouw leerpad" title="Van fundament naar vakdeskundige." description="Ieder niveau combineert korte lessen met praktijkwerk. Je veiligheidsdeeltoets moet je altijd volledig goed maken." image={brandImages.hero} compact />
       <div className="container-page -mt-8 grid gap-6 pb-4 md:grid-cols-2">
         {allTracks.map((track, index) => {
           const unlocked = canAccessTrack({ niveau: track.niveau, previousTrackId: track.vereistTrackId, certificates: userCertificates.map((item) => ({ trackId: item.trackId, revoked: item.ingetrokken, expiresAt: item.verlooptOp })) });

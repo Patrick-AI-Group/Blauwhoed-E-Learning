@@ -6,10 +6,11 @@ import { SiteFooter } from "@/components/layout/site-footer";
 import { brandImages } from "@/lib/brand/images";
 
 const levels = [
-  { number: "01", slug: "fundament", title: "Fundament", text: "Veilig starten met AI in je dagelijkse werk.", time: "85 min", image: brandImages.fundament },
-  { number: "02", slug: "toepassen", title: "Toepassen in je vak", text: "Van documentanalyse tot bewonerscommunicatie.", time: "80 min", image: brandImages.toepassen },
-  { number: "03", slug: "workflows", title: "Workflows en kwaliteit", text: "Bouw herhaalbaar werk dat anderen vertrouwen.", time: "95 min", image: brandImages.workflows },
-  { number: "04", slug: "multiplier", title: "Multiplier", text: "Zet verantwoord AI-gebruik op in je afdeling.", time: "90 min", image: brandImages.multiplier },
+  { number: "01", slug: "fundament", title: "Fundament", text: "Veilig starten met AI in je dagelijkse werk.", time: "83 min", image: brandImages.fundament },
+  { number: "02", slug: "toepassen", title: "Toepassen in je vak", text: "Van documentanalyse tot bewonerscommunicatie.", time: "78 min", image: brandImages.toepassen },
+  // Niveau 3 en 4 zijn tijdelijk uitgeschakeld (zie actief in db/content); haal het commentaar weg om ze weer te tonen.
+  // { number: "03", slug: "workflows", title: "Workflows en kwaliteit", text: "Bouw herhaalbaar werk dat anderen vertrouwen.", time: "95 min", image: brandImages.workflows },
+  // { number: "04", slug: "multiplier", title: "Multiplier", text: "Zet verantwoord AI-gebruik op in je afdeling.", time: "90 min", image: brandImages.multiplier },
 ];
 const pillars = [
   { icon: BookOpenCheck, title: "Leren door te doen", text: "Minimaal zestig procent van je tijd werk je zelf met AI aan geanonimiseerde casussen uit gebiedsontwikkeling." },
@@ -43,7 +44,7 @@ export default function Home() {
               <Link href="/beleid" className="btn btn-ghost-light">Lees het AI-beleid</Link>
             </div>
             <dl className="mt-14 grid max-w-xl grid-cols-3 gap-6 border-t border-white/15 pt-8">
-              {[["4", "niveaus"], ["21", "modules"], ["100%", "veiligheidseis"]].map(([value, label]) => <div key={label}><dt className="text-sm text-white/60">{label}</dt><dd className="text-3xl font-extrabold">{value}</dd></div>)}
+              {[["2", "niveaus"], ["10", "modules"], ["100%", "veiligheidseis"]].map(([value, label]) => <div key={label}><dt className="text-sm text-white/60">{label}</dt><dd className="text-3xl font-extrabold">{value}</dd></div>)}
             </dl>
           </div>
           <div className="relative hidden lg:block" aria-hidden>
@@ -66,14 +67,14 @@ export default function Home() {
 
       <section className="container-page py-24">
         <div className="mb-14 grid gap-6 md:grid-cols-[1.2fr_1fr] md:items-end">
-          <div><p className="eyebrow">Het leerpad</p><h2 className="mt-3 text-4xl text-bh-blue-900 md:text-5xl">Vier niveaus.<br />Eén veilige werkwijze.</h2></div>
-          <p className="max-w-xl text-lg text-bh-grey-600">Je begint bij de basis en groeit door naar workflows en afdelingsbeleid. Ieder niveau sluit je af met een examen en een certificaat.</p>
+          <div><p className="eyebrow">Het leerpad</p><h2 className="mt-3 text-4xl text-bh-blue-900 md:text-5xl">Twee niveaus.<br />Eén veilige werkwijze.</h2></div>
+          <p className="max-w-xl text-lg text-bh-grey-600">Je begint bij de basis en groeit door tot vakdeskundige die AI zelfstandig en veilig inzet in het eigen werk. Ieder niveau sluit je af met een examen en een certificaat.</p>
         </div>
-        <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+        <div className="grid gap-6 md:grid-cols-2">
           {levels.map((level) => (
             <article key={level.number} className="card card-hover group overflow-hidden">
               <div className="relative aspect-[4/3]">
-                <Image src={level.image.src} alt={level.image.alt} fill sizes="(min-width:1280px) 25vw, (min-width:768px) 50vw, 100vw" className="object-cover transition-transform duration-500 group-hover:scale-105" />
+                <Image src={level.image.src} alt={level.image.alt} fill sizes="(min-width:768px) 50vw, 100vw" className="object-cover transition-transform duration-500 group-hover:scale-105" />
                 <div className="img-overlay" />
                 <p className="absolute left-5 top-5 rounded-full bg-white/90 px-3 py-1 text-xs font-bold text-bh-blue-900">{level.number} · {level.time}</p>
                 <h3 className="absolute bottom-5 left-5 right-5 text-2xl text-white">{level.title}</h3>
