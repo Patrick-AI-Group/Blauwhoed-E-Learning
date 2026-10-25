@@ -21,6 +21,9 @@ export async function completeLesson(input: z.infer<typeof completeLessonSchema>
   } else {
     await db.insert(progress).values({ userId: user.id, lessonId: data.lessonId, status: "voltooid", voltooidOp: new Date(), tijdBesteedSec: data.timeSpentSec });
   }
-  revalidatePath(data.path);
+  // Ververs ook het lesoverzicht van de module en de niveaupagina, zodat de voortgang direct klopt.
+  const segments = data.path.split("/");
+  for (let depth = segments.length; depth >= 3; depth -= 1) revalidatePath(segments.slice(0, depth).join("/"));
+  revalidatePath("/dashboard");
   return { ok: true as const };
 }

@@ -49,7 +49,7 @@ export default async function LessonPage({ params }: { params: Promise<{ track: 
             ))}
           </div>
           {content.takeaway && <div className="mt-12 flex gap-4 rounded-2xl bg-bh-blue-900 p-7 text-white"><Lightbulb className="shrink-0 text-bh-blue-600" size={26} /><div><p className="text-xs font-bold uppercase tracking-wider text-white/70">Onthoud dit</p><p className="mt-2 text-lg font-semibold">{content.takeaway}</p></div></div>}
-          <div className="mt-12 border-t pt-7"><CompleteLessonButton lessonId={lesson.id} path={path} completed={saved?.status === "voltooid"} /></div>
+          <div className="mt-12 border-t pt-7"><CompleteLessonButton lessonId={lesson.id} path={path} backHref={`/leren/${route.track}/${route.module}`} completed={saved?.status === "voltooid"} /></div>
         </article>
       </div>
     </main>
