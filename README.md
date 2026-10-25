@@ -24,7 +24,7 @@ Alle voortgang, inzendingen en examens worden server-side opgeslagen. De interac
 3. Voer `pnpm db:migrate`, `pnpm db:seed` en daarna `pnpm db:ingest` uit. De laatste stap maakt embeddings voor de RAG-kennisbank.
 4. Start met `pnpm dev`.
 
-De seed levert 4 tracks, 21 modules, 84 lessen, 45 praktijkopdrachten, 200 examenvragen, 8 examens, 15 kennisdocumenten, 25 voorbeeldprompts en 8 demogebruikers. De demo-e-mailadressen eindigen bewust op `.invalid`.
+De seed levert 4 tracks, 22 modules, 89 lessen, 46 praktijkopdrachten, 214 examenvragen, 8 examens, 15 kennisdocumenten, 25 voorbeeldprompts en 8 demogebruikers. De demo-e-mailadressen eindigen bewust op `.invalid`.
 
 ## Validatie en uitrol
 

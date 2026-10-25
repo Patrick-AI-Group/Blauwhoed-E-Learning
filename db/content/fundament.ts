@@ -1,10 +1,11 @@
 import type { TrackSeed } from "./types";
+import { tenderplatformAssignments, tenderplatformModule, tenderplatformQuestions } from "./tenderplatform";
 
 const track: TrackSeed = {
   slug: "fundament",
   niveau: 1,
   titel: "Fundament",
-  omschrijving: "Veilig en zinvol AI inzetten in het dagelijkse werk.",
+  omschrijving: "Veilig en zinvol AI inzetten in het dagelijkse werk, en het tenderplatform leren gebruiken.",
   modules: [
     {
       slug: "generatieve-ai-begrijpen",
@@ -590,7 +591,7 @@ const track: TrackSeed = {
               {
                 heading: "De drie toolcategorieën: Copilot, vakspecifieke apps, Academy",
                 body:
-                  "Blauwhoed werkt met drie categorieën goedgekeurde tools, elk met een eigen rol. Eén: Microsoft 365 Copilot onder de zakelijke Blauwhoed-tenant, voor iedereen toegestaan en het standaardgereedschap voor het dagelijkse werk in mail, documenten en vergaderingen. Let op de precieze formulering: het gaat om de zakelijke licentie onder de Blauwhoed-tenant. Dezelfde Microsoft-producten onder een privéaccount vallen er niet onder, ook al ziet het scherm er hetzelfde uit — controleer bij twijfel rechtsboven met welk account je bent ingelogd. Twee: vakspecifieke AI-applicaties, per vakgebied goedgekeurd voor een specifieke taak die Copilot niet (goed genoeg) doet — denk aan beeldgeneratie voor sfeerimpressies, transcriptie van overleggen, of contract- en data-analyse. Elke vakspecifieke tool heeft een tooleigenaar: iemand die de tool functioneel beheert, weet wat de verwerkersovereenkomst wel en niet dekt, en het aanspreekpunt is voor vragen over die specifieke tool. Drie: de Blauwhoed AI Academy-omgeving, waarin je leert en oefent — inclusief de oefenchat en de opdrachten. Alle drie staan met naam, tooleigenaar en toegestane dataniveaus in het toolregister op het intranet onder IT > AI-tools; die pagina is altijd leidend, want de lijst verandert. Alles daarbuiten — inclusief gratis of privé-accounts van ChatGPT en vergelijkbare diensten — is verboden voor werkinformatie, ongeacht hoe onschuldig de taak lijkt.",
+                  "Blauwhoed werkt met drie categorieën goedgekeurde tools, elk met een eigen rol. Eén: Microsoft 365 Copilot onder de zakelijke Blauwhoed-tenant, voor iedereen toegestaan en het standaardgereedschap voor het dagelijkse werk in mail, documenten en vergaderingen. Let op de precieze formulering: het gaat om de zakelijke licentie onder de Blauwhoed-tenant. Dezelfde Microsoft-producten onder een privéaccount vallen er niet onder, ook al ziet het scherm er hetzelfde uit — controleer bij twijfel rechtsboven met welk account je bent ingelogd. Twee: vakspecifieke AI-applicaties, per vakgebied goedgekeurd voor een specifieke taak die Copilot niet (goed genoeg) doet — denk aan beeldgeneratie voor sfeerimpressies, transcriptie van overleggen, of contract- en data-analyse. Voor acquisitie zijn dat bijvoorbeeld het Blauwhoed tenderplatform, waarover de laatste module van dit niveau gaat, en de Partnerdatabase. Elke vakspecifieke tool heeft een tooleigenaar: iemand die de tool functioneel beheert, weet wat de verwerkersovereenkomst wel en niet dekt, en het aanspreekpunt is voor vragen over die specifieke tool. Drie: de Blauwhoed AI Academy-omgeving, waarin je leert en oefent — inclusief de oefenchat en de opdrachten. Alle drie staan met naam, tooleigenaar en toegestane dataniveaus in het toolregister op het intranet onder IT > AI-tools; die pagina is altijd leidend, want de lijst verandert. Alles daarbuiten — inclusief gratis of privé-accounts van ChatGPT en vergelijkbare diensten — is verboden voor werkinformatie, ongeacht hoe onschuldig de taak lijkt.",
                 example:
                   "Een projectassistent van Project Rietveldkwartier (fictief) vat het geanonimiseerde bouwoverleg samen met Copilot onder haar Blauwhoed-account: toegestaan. Wil ze er ook een sfeerimpressie bij laten genereren, dan gebruikt ze de vakspecifieke beeldgeneratietool uit het toolregister, niet Copilot en niet een gratis app op haar telefoon.",
               },
@@ -709,6 +710,7 @@ const track: TrackSeed = {
         },
       ],
     },
+    tenderplatformModule,
   ],
   questions: [
     // — Module 1: Generatieve AI begrijpen —
@@ -1459,6 +1461,7 @@ const track: TrackSeed = {
       moeilijkheid: 3,
       isSecurity: false,
     },
+    ...tenderplatformQuestions,
   ],
   assignments: [
     {
@@ -1968,6 +1971,7 @@ const track: TrackSeed = {
         "Een sterke aanvraag formuleert het doel als 'volledige, natrekbare transcripties van bewonersavonden maken, wat handmatig notuleren nu niet haalt' en beperkt de gebruikersgroep tot de twee of drie medewerkers die avonden bijwonen. Bij de gegevenssoort herkent de aanvraag dat een ruwe transcriptie een persoonsgegeven is — elke spreker is met naam en letterlijke uitspraak geïdentificeerd — en dat dit dataniveau een DPIA-light vereist, niet alleen de vier toetsstenen. De aanvraag benoemt expliciet dat zonder informatie van de leverancier nog niet vast te stellen is of de data binnen de EER blijft en of modeltraining contractueel is uitgesloten, en vraagt de AI-coördinator dit bij de leverancier na te trekken vóór gebruik. De aanvraag sluit af met de aanbeveling om transcripties na verwerking te anonimiseren en de audio-opname te verwijderen zodra het verslag is vastgesteld.",
       beoordeling: "ai",
     },
+    ...tenderplatformAssignments,
   ],
 };
 

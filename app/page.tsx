@@ -6,7 +6,7 @@ import { SiteFooter } from "@/components/layout/site-footer";
 import { brandImages } from "@/lib/brand/images";
 
 const levels = [
-  { number: "01", slug: "fundament", title: "Fundament", text: "Veilig starten met AI in je dagelijkse werk.", time: "83 min", image: brandImages.fundament },
+  { number: "01", slug: "fundament", title: "Fundament", text: "Veilig starten met AI en met het tenderplatform.", time: "106 min", image: brandImages.fundament },
   { number: "02", slug: "toepassen", title: "Toepassen in je vak", text: "Van documentanalyse tot bewonerscommunicatie.", time: "78 min", image: brandImages.toepassen },
   // Niveau 3 en 4 zijn tijdelijk uitgeschakeld (zie actief in db/content); haal het commentaar weg om ze weer te tonen.
   // { number: "03", slug: "workflows", title: "Workflows en kwaliteit", text: "Bouw herhaalbaar werk dat anderen vertrouwen.", time: "95 min", image: brandImages.workflows },
@@ -44,7 +44,7 @@ export default function Home() {
               <Link href="/beleid" className="btn btn-ghost-light">Lees het AI-beleid</Link>
             </div>
             <dl className="mt-14 grid max-w-xl grid-cols-3 gap-6 border-t border-white/15 pt-8">
-              {[["2", "niveaus"], ["10", "modules"], ["100%", "veiligheidseis"]].map(([value, label]) => <div key={label}><dt className="text-sm text-white/60">{label}</dt><dd className="text-3xl font-extrabold">{value}</dd></div>)}
+              {[["2", "niveaus"], ["11", "modules"], ["100%", "veiligheidseis"]].map(([value, label]) => <div key={label}><dt className="text-sm text-white/60">{label}</dt><dd className="text-3xl font-extrabold">{value}</dd></div>)}
             </dl>
           </div>
           <div className="relative hidden lg:block" aria-hidden>
