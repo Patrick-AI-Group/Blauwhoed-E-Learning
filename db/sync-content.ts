@@ -11,8 +11,9 @@ import multiplier from "./content/multiplier";
  * Brengt nieuwe en gewijzigde leerstof uit db/content naar de database zonder
  * voortgang, inzendingen of certificaten te wissen (db:seed:full wist alles).
  * Alleen toevoegen en bijwerken: nieuwe modules, lessen, vragen en opdrachten
- * worden ingevoegd; bestaande lessen krijgen de inhoud uit db/content als die
- * afwijkt. Er wordt nooit iets verwijderd.
+ * worden ingevoegd; bestaande modules, lessen, vragen (herkend aan de
+ * vraagtekst) en opdrachten (herkend aan de titel) krijgen de inhoud uit
+ * db/content als die afwijkt. Er wordt nooit iets verwijderd.
  *
  * Standaard een proefrun die alleen toont wat er zou veranderen; pas met
  * --apply wordt er geschreven.
@@ -46,6 +47,11 @@ async function sync() {
         continue;
       }
       moduleIdBySlug.set(moduleSeed.slug, existing.id);
+      const moduleFields = { titel: moduleSeed.titel, doelen: moduleSeed.doelen, geschatteMinuten: moduleSeed.geschatteMinuten };
+      if (canonical({ titel: existing.titel, doelen: existing.doelen, geschatteMinuten: existing.geschatteMinuten }) !== canonical(moduleFields)) {
+        console.log(`${seed.slug}/${moduleSeed.slug}: titel, doelen of leertijd bijwerken`);
+        if (apply) await db.update(modules).set(moduleFields).where(eq(modules.id, existing.id));
+      }
       const existingLessons = await db.select().from(lessons).where(and(eq(lessons.moduleId, existing.id), isNull(lessons.deletedAt)));
       for (const [lessonIndex, lesson] of moduleSeed.lessons.entries()) {
         const current = existingLessons.find((row) => row.titel === lesson.titel);
@@ -59,9 +65,18 @@ async function sync() {
       }
     }
 
-    const existingQuestions = await db.select({ vraag: questions.vraag }).from(questions).where(eq(questions.trackId, track.id));
-    const knownQuestions = new Set(existingQuestions.map((row) => row.vraag));
-    const newQuestions = seed.questions.filter((q) => !knownQuestions.has(q.vraag));
+    const existingQuestions = await db.select().from(questions).where(and(eq(questions.trackId, track.id), isNull(questions.deletedAt)));
+    const questionByText = new Map(existingQuestions.map((row) => [row.vraag, row]));
+    const newQuestions = seed.questions.filter((q) => !questionByText.has(q.vraag));
+    for (const q of seed.questions) {
+      const current = questionByText.get(q.vraag);
+      if (!current) continue;
+      const fields = { type: q.type, opties: q.opties ?? null, juist: q.juist, toelichting: q.toelichting, tags: q.tags, moeilijkheid: q.moeilijkheid, isSecurity: q.isSecurity };
+      if (canonical({ type: current.type, opties: current.opties, juist: current.juist, toelichting: current.toelichting, tags: current.tags, moeilijkheid: current.moeilijkheid, isSecurity: current.isSecurity }) !== canonical(fields)) {
+        console.log(`${seed.slug}: examenvraag bijwerken "${q.vraag.slice(0, 60)}…"`);
+        if (apply) await db.update(questions).set(fields).where(eq(questions.id, current.id));
+      }
+    }
     if (newQuestions.length) {
       console.log(`${seed.slug}: ${newQuestions.length} nieuwe examenvragen (${newQuestions.filter((q) => q.isSecurity).length} security)`);
       if (apply) await db.insert(questions).values(newQuestions.map((q) => ({ trackId: track.id, type: q.type, vraag: q.vraag, opties: q.opties ?? null, juist: q.juist, toelichting: q.toelichting, tags: q.tags, moeilijkheid: q.moeilijkheid, isSecurity: q.isSecurity })));
@@ -70,8 +85,15 @@ async function sync() {
     for (const a of seed.assignments) {
       const moduleId = moduleIdBySlug.get(a.moduleSlug);
       if (moduleId) {
-        const existing = await db.query.assignments.findFirst({ where: and(eq(assignments.moduleId, moduleId), eq(assignments.titel, a.titel)) });
-        if (existing) continue;
+        const existing = await db.query.assignments.findFirst({ where: and(eq(assignments.moduleId, moduleId), eq(assignments.titel, a.titel), isNull(assignments.deletedAt)) });
+        if (existing) {
+          const fields = { opdrachttekst: a.opdrachttekst, moeilijkheid: a.moeilijkheid, type: a.type, rubric: a.rubric, startcontext: a.startcontext, referentieUitwerking: a.referentieUitwerking, beoordeling: a.beoordeling };
+          if (canonical({ opdrachttekst: existing.opdrachttekst, moeilijkheid: existing.moeilijkheid, type: existing.type, rubric: existing.rubric, startcontext: existing.startcontext, referentieUitwerking: existing.referentieUitwerking, beoordeling: existing.beoordeling }) !== canonical(fields)) {
+            console.log(`${seed.slug}/${a.moduleSlug}: opdracht bijwerken "${a.titel}"`);
+            if (apply) await db.update(assignments).set(fields).where(eq(assignments.id, existing.id));
+          }
+          continue;
+        }
       }
       console.log(`${seed.slug}/${a.moduleSlug}: nieuwe opdracht "${a.titel}"`);
       if (apply && moduleId) await db.insert(assignments).values({ moduleId, titel: a.titel, opdrachttekst: a.opdrachttekst, moeilijkheid: a.moeilijkheid, type: a.type, rubric: a.rubric, startcontext: a.startcontext, referentieUitwerking: a.referentieUitwerking, beoordeling: a.beoordeling });
